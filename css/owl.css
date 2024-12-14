@@ -1,0 +1,12 @@
+.owl_itemm {
+  transition: 0.3s;
+}
+.owl_itemm:hover {
+  scale: 1.05;
+}
+
+.relative_section {
+  position: relative !important;
+}
+
+

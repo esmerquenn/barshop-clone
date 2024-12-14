@@ -1,0 +1,121 @@
+.about_section {
+  background: url(./../img/12.jpg) center/cover;
+}
+.about_section2 {
+  background: url(./../img/11.jpg) center/cover;
+}
+
+.btn-more,
+.btn-more2 {
+  position: relative;
+  border: 2px solid transparent;
+  cursor: pointer;
+  outline: none;
+  margin-top: 10px;
+  transition: all 0.3s;
+}
+.btn-more:before,
+.btn-more:after {
+  background-color: #fff;
+}
+.btn-more2:before,
+.btn-more2:after {
+  background-color: #3d8c30;
+}
+
+.btn-more:before,
+.btn-more:after,
+.btn-more2:before,
+.btn-more2:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  transition: width 0.3s;
+}
+
+.btn-more:before,
+.btn-more2:before {
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+}
+
+.btn-more:after,
+.btn-more2:after {
+  bottom: 0;
+  right: 0;
+  transform-origin: bottom right;
+}
+
+.btn-more:hover:before,
+.btn-more2:hover:before {
+  width: 100%;
+  background-color: #3d8c30;
+  transform: translateX(0) translateY(0) scaleX(1) scaleY(1);
+}
+.btn-more:hover {
+  background: white;
+}
+
+.btn-more:hover:after,
+.btn-more2:hover:after {
+  width: 100%;
+  background-color: #3d8c30;
+  transform: translateX(0) translateY(0) scaleX(1) scaleY(1);
+}
+
+.bg-img-div:hover img {
+  scale: 1.3;
+}
+.grid1-con {
+  overflow: hidden;
+}
+
+
+.grid1 {
+  background: url(../img/2.jpg) center/cover no-repeat;
+}
+.grid-slide {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all .4s transform 0.4s;
+}
+
+.grid-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  transition: background 0.4s, transform 0.4s;
+  z-index: 1;
+  transform: translateY(100%);
+}
+
+.grid-slide:hover::before {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  transform: translateY(0);
+}
+
+.grid-slide:hover {
+  scale: 1.05;
+}
+.grid-slide h4{transition: .4s;}
+.grid-slide:hover h4{
+ background: #3d8c30;
+}
+
+.grid-slide * {
+  position: relative;
+  z-index: 2;
+}

@@ -1,0 +1,11 @@
+.footer-span  .footer-hover-div{
+    color: white;
+    background: #3c2117
+}
+.footer-span:hover  .footer-hover-div{
+    background: white;
+    color: #3c2117
+}
+.footer-span:hover{
+  border-bottom: 1px solid #fff;
+}

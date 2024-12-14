@@ -1,0 +1,157 @@
+{
+  "products": [
+    {
+      "name": "Coffee Beans",
+      "price": 15.99,
+      "description": "Freshly roasted Arabica coffee beans.",
+      "region": "Ethiopia",
+      "category_id": 1,
+      "discount": 10,
+      "brend_id": 1,
+      "isnew": true,
+      "stock": 150,
+      "img": "111.jpg",
+      "sumImages": ["111.jpg", "111.jpg"],
+      "model": "AB123",
+      "weight": "500g"
+    },
+    {
+      "name": "Espresso Coffee Machine",
+      "price": 249.99,
+      "description": "High-quality espresso machine for home use.",
+      "region": "Italy",
+      "category_id": 2,
+      "discount": 5,
+      "brend_id": 2,
+      "isnew": true,
+      "stock": 0,
+      "img": "111.jpg",
+      "sumImages": ["111.jpg", "111.jpg"],
+      "model": "ES456",
+      "weight": "3kg"
+    },
+    {
+      "name": "Coffee Mug",
+      "price": 9.99,
+      "description": "Stylish coffee mug for daily use.",
+      "region": "China",
+      "category_id": 3,
+      "discount": 0,
+      "brend_id": 3,
+      "isnew": false,
+      "stock": 200,
+      "img": "111.jpg",
+      "sumImages": ["111.jpg", "111.jpg"],
+      "model": "CM789",
+      "weight": "350g"
+    },
+    {
+      "name": "Coffee Filter Paper",
+      "price": 4.99,
+      "description": "High-quality coffee filter paper for brewing.",
+      "region": "USA",
+      "category_id": 3,
+      "discount": 0,
+      "brend_id": 4,
+      "isnew": true,
+      "stock": 300,
+      "img": "111.jpg",
+      "sumImages": ["111.jpg", "111.jpg"],
+      "model": "CF012",
+      "weight": "200g"
+    },
+    {
+      "name": "Coffee Grinder",
+      "price": 45.99,
+      "description": "Manual coffee grinder for fresh ground coffee.",
+      "region": "Germany",
+      "category_id": 3,
+      "discount": 20,
+      "brend_id": 5,
+      "isnew": false,
+      "stock": 75,
+      "img": "111.jpg",
+      "sumImages": ["111.jpg", "111.jpg"],
+      "model": "CG234",
+      "weight": "1kg"
+    },
+    {
+      "name": "Smart Coffee Cup",
+      "price": 39.99,
+      "description": "A smart coffee cup that maintains your drink's temperature.",
+      "region": "South Korea",
+      "category_id": 2,
+      "discount": 15,
+      "brend_id": 6,
+      "isnew": true,
+      "stock": 120,
+      "img": "111.jpg",
+      "sumImages": ["111.jpg", "111.jpg"],
+      "model": "SCC567",
+      "weight": "400g"
+    },
+    {
+      "name": "Other Accessories",
+      "price": 19.99,
+      "description": "Miscellaneous coffee accessories and tools.",
+      "region": "Various",
+      "category_id": 4,
+      "discount": 5,
+      "brend_id": 7,
+      "isnew": true,
+      "stock": 250,
+      "img": "111.jpg",
+      "sumImages": ["111.jpg", "111.jpg"],
+      "model": "OA001",
+      "weight": "150g"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Coffee"
+    },
+    {
+      "id": 2,
+      "name": "Coffee Machines"
+    },
+    {
+      "id": 3,
+      "name": "Accessories"
+    },
+    {
+      "id": 4,
+      "name": "Others"
+    }
+  ],
+  "brands": [
+    {
+      "id": 1,
+      "name": "Arabica"
+    },
+    {
+      "id": 2,
+      "name": "EspressoPro"
+    },
+    {
+      "id": 3,
+      "name": "CafeStyle"
+    },
+    {
+      "id": 4,
+      "name": "FilterTech"
+    },
+    {
+      "id": 5,
+      "name": "GrindMaster"
+    },
+    {
+      "id": 6,
+      "name": "SmartBrew"
+    },
+    {
+      "id": 7,
+      "name": "Misc"
+    }
+  ]
+}

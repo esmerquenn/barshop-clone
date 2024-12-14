@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barshop</title>
+    <link rel="shortcut icon" href="logo2.png" type="image/x-icon" />
+    <link href="./css/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/slider.css" />
+    <link rel="stylesheet" href="css/owl.css" />
+    <link rel="stylesheet" href="css/category.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-brown_bg_light font-roboto">
+    <header>
+      <nav class="py-6 bg-brown_bg fixed top-0 left-0 z-20 w-full">
+        <div class="container_my flex items-center justify-between">
+          <div class="text-center">
+            <a href="/"><img class="block w-full" src="./img/logo.png" alt="birS" /></a>
+          </div>
+
+          <div class="flex justify-center items-center">
+            <ul class="hidden_dropdown md:py-4 lg:flex">
+              <li class="p-2 lg:p-0">
+                <a
+                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal font-roboto text-white mix-blend-difference transition-all duration-300"
+                  href="/"
+                  data-key="home"
+                  >ANA SƏHİFƏ</a
+                >
+              </li>
+              <li class="p-2 lg:p-0 relative dropdown_li bg-white md:bg-transparent">
+                <a
+                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
+                  href="#"
+                  data-key="about_company"
+                  >qəhvə <i class="fa-solid fa-angle-down duration-500 pl-1"></i
+                ></a>
+                <div class="drop_div mt-2 px-3 bg-brown_bg overflow-hidden max-h-0 min-w-[200px] md:absolute">
+                  <ul>
+                    <li class="pt-1">
+                      <a
+                        data-key="info"
+                        class="capitalize inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
+                        href="about.html?page=melumat"
+                        >Məlumat</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="p-2 lg:p-0 bg-white md:bg-transparent">
+                <a
+                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
+                  href="contact.html"
+                  data-key="contact"
+                  >Kofe aparatlari</a
+                >
+              </li>
+              <li class="p-2 lg:p-0 bg-white md:bg-transparent">
+                <a
+                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
+                  href="contact.html"
+                  data-key="contact"
+                  >aksesuarlar</a
+                >
+              </li>
+              <li class="p-2 lg:p-0 bg-white md:bg-transparent">
+                <a
+                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
+                  href="contact.html"
+                  data-key="contact"
+                  >Əlavələr</a
+                >
+              </li>
+
+              <li class="p-2 lg:p-0 bg-white md:bg-transparent">
+                <a
+                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
+                  href="contact.html"
+                  data-key="contact"
+                  >haqqimizda</a
+                >
+              </li>
+              <li class="p-2 lg:p-0 bg-white md:bg-transparent">
+                <a
+                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
+                  href="contact.html"
+                  data-key="contact"
+                  >ƏLAQƏ</a
+                >
+              </li>
+              <li class="p-2 lg:p-0 relative dropdown_li_lang bg-white md:bg-transparent">
+                <a
+                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
+                  href="#"
+                  data-key="about_company"
+                  >lang <i class="fa-solid fa-angle-down duration-500 pl-1"></i
+                ></a>
+                <div
+                  class="drop_div_lang mt-2 px-3 bg-brown_bg overflow-hidden max-h-0 min-w-[40px] md:absolute md:left-1/2 md:-translate-x-1/2"
+                >
+                  <ul>
+                    <li class="pt-1">
+                      <a
+                        class="uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
+                        href="about.html?page=melumat"
+                        >AZ</a
+                      >
+                    </li>
+                    <li class="pt-1">
+                      <a
+                        class="uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
+                        href="about.html?page=melumat"
+                        >en</a
+                      >
+                    </li>
+                    <li class="pt-1">
+                      <a
+                        class="uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
+                        href="about.html?page=melumat"
+                        >ru</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="p-2 lg:p-0 bg-white md:bg-transparent">
+                <i onclick="searchBar()" class="fa-solid fa-magnifying-glass lg:text-white block px-2"></i>
+                <span
+                  class="absolute searchbox rounded-md overflow-hidden bg-brown_bg top-full right-0 w-[300px] h-0 text-center font-montserrat text-sm"
+                >
+                  <input
+                    oninput="searchData()"
+                    class="w-full p-2 outline-none border-b-2 border-brown_bg text-white placeholder:text-white bg-brown"
+                    type="text"
+                    placeholder="Axtarış..."
+                  />
+                  <ul class="text-white text-left p-2 searchmenu">
+                    <li class="border-b-2 border-brown py-1"><a href="#">Axtarış 1</a></li>
+                    <li class="border-b-2 border-brown py-1"><a href="#">Axtarış 2</a></li>
+                    <li class="border-b-2 border-brown py-1"><a href="#">Axtarış 3</a></li>
+                    <li class="border-b-2 border-brown py-1"><a href="#">Axtarış 4</a></li>
+                    <li class="border-b-2 border-brown py-1"><a href="#">Axtarış 5</a></li>
+                  </ul>
+                </span>
+              </li>
+              <li class="p-2 lg:p-0 relative bg-white md:bg-transparent">
+                <a class="uppercase xl:px-2 pb-1 block text-white transition-all duration-300" href="#" data-key="about_company">
+                  <span class="absolute bg-green -top-2 right-0 w-4 h-4 text-center rounded-full font-mono text-[10px]">1</span>
+                  <img class="w-6" src="./img/food-basket.png" alt="basket" />
+                </a>
+              </li>
+            </ul>
+
+            <i onclick="closeDropdown()" class="fa-solid fa-bars text-[2rem] text-white ml-2 lg:hidden"></i>
+          </div>
+        </div>
+      </nav>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide-1">
+            <div class="text-white font-montserrat title text-left max-w-[700px]">
+              <h1 class="text-3xl md:text-5xl font-light capitalize" data-key="slide3_title">
+                Hər yudumda mükəmməllik, hər fincanda zövq
+              </h1>
+            </div>
+          </div>
+          <div class="swiper-slide slide-2">
+            <div class="text-white font-montserrat title text-left max-w-[700px]">
+              <h1 class="text-3xl md:text-5xl font-light capitalize" data-key="slide3_title">
+                Hər yudumda mükəmməllik, hər fincanda zövq
+              </h1>
+            </div>
+          </div>
+          <div class="swiper-slide slide-3">
+            <div class="text-white font-montserrat title text-left max-w-[700px]">
+              <h1 class="text-3xl md:text-5xl font-light capitalize" data-key="slide3_title">
+                Hər yudumda mükəmməllik, hər fincanda zövq
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </header>
+    <main>
+      <!-- category start -->
+      <div class="all_category container_my my-20 p-4">
+        <h3 class="text-2xl md:text-3xl font-montserrat text-center">Our products</h3>
+        <div class="categories flex flex-wrap justify-center items-center gap-6 font-montserrat text-lg my-8"></div>
+
+        <div class="cards flex flex-wrap gap-10 justify-center"></div>
+      </div>
+      <!-- category end -->
+      <!-- About start -->
+      <section class="container_my flex flex-col md:flex-row my-20">
+        <div class="about_section md:w-1/2 h-[50vh] md:h-screen flex items-end gap-5">
+          <div
+            class="font-montserrat bg-yellow inline-flex flex-col justify-center items-start gap-2 md:w-60 h-[200px] p-5 text-white"
+          >
+            <h4 class="uppercase font-semibold">Lorem, ipsum dolor.</h4>
+            <p>Lorem ipsum dolor sit.</p>
+            <button
+              class="border-b-2 border-green text-white hover:text-green p-2 btn-more text-base uppercase font-semibold font-montserrat"
+            >
+              learn more
+            </button>
+          </div>
+        </div>
+        <div class="md:w-1/2 pl-4 pt-10 font-montserrat text-green md:h-screen flex flex-col justify-between items-center gap-5">
+          <div class="flex justify-center flex-col items-center gap-4">
+            <h4 class="uppercase font-semibold text-2xl mb-10">Haqqimizda basliq</h4>
+            <p class="text-xl text-center w-[90%]">Bizim haqqimizda bir cumle qeyd et, ki qisa ve esas olsun.</p>
+            <button class="p-2 btn-more2 text-base uppercase font-semibold font-montserrat">Bizimle elaqe</button>
+          </div>
+          <img src="./img/7.jpg" alt="" />
+        </div>
+      </section>
+      <section class="container_my flex flex-col md:flex-row my-20">
+        <div
+          class="md:w-1/2 order-2 md:order-1 px-4 pt-10 font-montserrat text-green md:h-screen flex flex-col justify-between items-center gap-5"
+        >
+          <div class="flex justify-center flex-col items-center gap-4">
+            <h4 class="uppercase font-semibold text-2xl mb-10">Haqqimizda basliq</h4>
+            <p class="text-xl text-center w-[90%]">Bizim haqqimizda bir cumle qeyd et, ki qisa ve esas olsun.</p>
+            <button class="p-2 btn-more2 text-base uppercase font-semibold font-montserrat">Bizimle elaqe</button>
+          </div>
+          <img src="./img/9.jpg" alt="" />
+        </div>
+        <div class="about_section2 order-1 md:order-2 md:w-1/2 h-[50vh] md:h-screen flex items-end gap-5">
+          <div
+            class="font-montserrat bg-yellow inline-flex flex-col justify-center items-start gap-2 md:w-60 h-[200px] p-5 text-white"
+          >
+            <h4 class="uppercase font-semibold">Lorem, ipsum dolor.</h4>
+            <p>Lorem ipsum dolor sit.</p>
+            <button
+              class="border-b-2 border-green text-white hover:text-green p-2 btn-more text-base uppercase font-semibold font-montserrat"
+            >
+              learn more
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- About end -->
+
+      <div class="my-20 container_my grid justify-center grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 bg-white">
+        <div class="bg-img-div md:col-span-2 md:row-span-2 shadow-md">
+          <div class="overflow-hidden">
+            <img
+              src="img/bg.png"
+              alt="Eletta Explore Qəhvəbişirən"
+              class="w-full object-cover transition-all duration-1000 scale-75"
+            />
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="text-lg font-montserrat text-gray-800">Eletta Explore Qəhvəbişirən DeLonghi ECAM450.65 S</h3>
+            <p class="text-xl font-montserrat border-b border-brown text-green inline-block px-2 mt-3">2 590 ₼</p>
+          </div>
+        </div>
+        <div class="bg-img-div md:col-span-2 flex flex-col lg:flex-row items-center shadow-md">
+          <div class="overflow-hidden lg:w-3/5">
+            <img
+              src="img/bg.png"
+              alt="Eletta Explore Qəhvəbişirən"
+              class="w-full object-cover transition-all duration-1000 scale-75"
+            />
+          </div>
+          <div class="p-4 text-center lg:w-2/5">
+            <h3 class="text-lg font-montserrat text-gray-800">Eletta Explore Qəhvəbişirən DeLonghi ECAM450.65 S</h3>
+            <p class="text-xl font-montserrat border-b border-brown text-green inline-block px-2 mt-3">2 590 ₼</p>
+          </div>
+        </div>
+        <div class="bg-img-div row-span-1 flex flex-col items-center shadow-md">
+          <div class="overflow-hidden">
+            <img
+              src="img/bg.png"
+              alt="Eletta Explore Qəhvəbişirən"
+              class="w-full object-cover transition-all duration-1000 scale-75"
+            />
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="text-lg font-montserrat text-gray-800">Eletta Explore Qəhvəbişirən DeLonghi ECAM450.65 S</h3>
+            <p class="text-xl font-montserrat border-b border-brown text-green inline-block px-2 mt-3">2 590 ₼</p>
+          </div>
+        </div>
+        <div class="bg-img-div row-span-1 flex flex-col items-center shadow-md">
+          <div class="overflow-hidden">
+            <img
+              src="img/bg.png"
+              alt="Eletta Explore Qəhvəbişirən"
+              class="w-full object-cover transition-all duration-1000 scale-75"
+            />
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="text-lg font-montserrat text-gray-800">Eletta Explore Qəhvəbişirən DeLonghi ECAM450.65 S</h3>
+            <p class="text-xl font-montserrat border-b border-brown text-green inline-block px-2 mt-3">2 590 ₼</p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="container_my h-screen grid grid-cols-4 grid-rows-2 gap-2 p-4 bg-white">
+        <div class="bg-img-div col-span-2 row-span-2  shadow-md h-full flex flex-col">
+          <div class="overflow-hidden">
+            <img
+              src="img/bg.png"
+              alt="Eletta Explore Qəhvəbişirən"
+              class="w-full h-full object-cover transition-all duration-1000 scale-75"
+            />
+          </div>
+          <div class="p-4 text-center flex-shrink-0">
+            <h3 class="text-lg font-montserrat text-gray-800 truncate">
+              Eletta Explore Qəhvəbişirən DeLonghi ECAM450.65 S
+            </h3>
+            <p class="text-xl font-montserrat border-b border-brown text-green inline-block px-2 mt-3">
+              2 590 ₼
+            </p>
+          </div>
+        </div>
+      
+        <div class="bg-img-div col-span-2 shadow-md flex flex-col">
+          <div class="overflow-hidden">
+            <img
+              src="img/bg.png"
+              alt="Eletta Explore Qəhvəbişirən"
+              class="w-full h-full object-cover transition-all duration-1000 scale-75"
+            />
+          </div>
+          <div class="p-4 text-center flex-shrink-0">
+            <h3 class="text-lg font-montserrat text-gray-800 truncate">
+              Eletta Explore Qəhvəbişirən DeLonghi ECAM450.65 S
+            </h3>
+            <p class="text-xl font-montserrat border-b border-brown text-green inline-block px-2 mt-3">
+              2 590 ₼
+            </p>
+          </div>
+        </div>
+      
+        <div class="bg-img-div row-span-1 shadow-md h-full flex flex-col">
+          <div class="overflow-hidden">
+            <img
+              src="img/bg.png"
+              alt="Eletta Explore Qəhvəbişirən"
+              class="w-full h-full object-cover transition-all duration-1000 scale-75"
+            />
+          </div>
+          <div class="p-4 text-center flex-shrink-0">
+            <h3 class="text-lg font-montserrat text-gray-800 truncate">
+              Eletta Explore Qəhvəbişirən DeLonghi ECAM450.65 S
+            </h3>
+            <p class="text-xl font-montserrat border-b border-brown text-green inline-block px-2 mt-3">
+              2 590 ₼
+            </p>
+          </div>
+        </div>
+      
+        <div class="bg-img-div row-span-1 shadow-md h-full flex flex-col">
+          <div class="overflow-hidden">
+            <img
+              src="img/bg.png"
+              alt="Eletta Explore Qəhvəbişirən"
+              class="w-full h-full object-cover transition-all duration-1000 scale-75"
+            />
+          </div>
+          <div class="p-4 text-center flex-shrink-0">
+            <h3 class="text-lg font-montserrat text-gray-800 truncate">
+              Eletta Explore Qəhvəbişirən DeLonghi ECAM450.65 S
+            </h3>
+            <p class="text-xl font-montserrat border-b border-brown text-green inline-block px-2 mt-3">
+              2 590 ₼
+            </p>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- OWL FIRST START -->
+      <section class="slider1 container_my owl-carousel carousel-1 owl-theme">
+        <div class="item grid place-items-center grid1-con">
+          <div class="grid1 grid-slide font-montserrat">
+            <span class="bg-green text-white px-4 py-1">20%</span>
+            <div class="w-full flex flex-col justify-center items-center">
+              <h4 class="bg-brown text-white text-xl mb-2 py-1 px-3">Yeni mehsul adi</h4>
+              <p class="text-white text-lg">Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+        <div class="item grid place-items-center grid1-con">
+          <div class="grid1 grid-slide font-montserrat">
+            <span class="bg-green text-white px-4 py-1">20%</span>
+            <div class="w-full flex flex-col justify-center items-center">
+              <h4 class="bg-brown text-white text-xl mb-2 py-1 px-3">Yeni mehsul adi</h4>
+              <p class="text-white text-lg">Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+        <div class="item grid place-items-center grid1-con">
+          <div class="grid1 grid-slide font-montserrat">
+            <span class="bg-green text-white px-4 py-1">20%</span>
+            <div class="w-full flex flex-col justify-center items-center">
+              <h4 class="bg-brown text-white text-xl mb-2 py-1 px-3">Yeni mehsul adi</h4>
+              <p class="text-white text-lg">Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+        <div class="item grid place-items-center grid1-con">
+          <div class="grid1 grid-slide font-montserrat">
+            <span class="bg-green text-white px-4 py-1">20%</span>
+            <div class="w-full flex flex-col justify-center items-center">
+              <h4 class="bg-brown text-white text-xl mb-2 py-1 px-3">Yeni mehsul adi</h4>
+              <p class="text-white text-lg">Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+        <div class="item grid place-items-center grid1-con">
+          <div class="grid1 grid-slide font-montserrat">
+            <span class="bg-green text-white px-4 py-1">20%</span>
+            <div class="w-full flex flex-col justify-center items-center">
+              <h4 class="bg-brown text-white text-xl mb-2 py-1 px-3">Yeni mehsul adi</h4>
+              <p class="text-white text-lg">Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+        <div class="item grid place-items-center grid1-con">
+          <div class="grid2 grid-slide font-montserrat">
+            <span class="bg-green text-white px-4 py-1">20%</span>
+            <div class="w-full flex flex-col justify-center items-center">
+              <h4 class="bg-brown text-white text-xl mb-2 py-1 px-3">Yeni mehsul adi</h4>
+              <p class="text-white text-lg">Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- OWL FIRST END -->
+    </main>
+    <footer class="py-10 bg-brown">
+      <div class="container_my flex flex-col md:flex-row items-start justify-between">
+        <div class="md:w-1/2 flex flex-col items-start">
+          <img class="w-[80px] block mb-1" src="img/bar-logo.png" alt="" />
+          <a href="#" class="footer-span font-montserrat text-white flex w-[140px] py-2 gap-3 items-center">
+            <div class="footer-hover-div duration-500 transition-all !w-8 !h-8 flex justify-center items-center rounded-md">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            Instagram
+          </a>
+          <a href="#" class="footer-span font-montserrat text-white flex w-[140px] py-2 gap-3 items-center">
+            <div class="footer-hover-div duration-500 transition-all !w-8 !h-8 flex justify-center items-center rounded-md">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            Instagram
+          </a>
+          <a href="#" class="footer-span font-montserrat text-white flex w-[140px] py-2 gap-3 items-center">
+            <div class="footer-hover-div duration-500 transition-all !w-8 !h-8 flex justify-center items-center rounded-md">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            Instagram
+          </a>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.3344996875057!2d49.83885647552581!3d40.37927845791869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d00673abcab%3A0xe1bca78e66178e5e!2sBARSHOP-%20MMC!5e0!3m2!1str!2saz!4v1733941021601!5m2!1str!2saz"
+          class="md:w-1/2 min-h-[270px]"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </footer>
+
+    <div
+      class="fixed bottom-10 right-3 z-10 py-1 px-2 rounded-xl"
+      style="background: rgb(46, 183, 46); background: linear-gradient(0deg, rgba(46, 183, 46, 1) 20%, rgba(92, 242, 117, 1) 66%)"
+    >
+      <a target="_blank" href="https://wa.me/"> <i class="fa-brands fa-whatsapp text-4xl text-white"></i> </a>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.14.1/cdn.min.js"
+      integrity="sha512-ytM6hP1K9BkRTjUQZpxZKFjJ2TvE4QXaK7phVymsm7NimaI5H09TWWW6f2JMbonLp4ftYU6xfwQGoe3C8jta9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- <script src="js/translate.js"></script> -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/nav.js"></script>
+    <script>
+      // SEARCHBAR START
+      const searchbox = document.querySelector(".searchbox");
+      const searchmenu = document.querySelector(".searchmenu");
+      function searchBar() {
+        searchbox.classList.toggle("active");
+      }
+      // SEARCHBAR END
+      const categories = document.querySelector(".categories");
+      const cards = document.querySelector(".cards");
+      let allData = {};
+
+      function searchData() {
+        console.log(event.target.value);
+      }
+
+      //////////////////////////////////////////////////
+      function fetchData() {
+        fetch("./js/data.json")
+          .then((res) => res.json())
+          .then((data) => {
+            allData = data;
+            showCategories(data);
+            showProduct(3);
+          });
+      }
+      fetchData();
+
+      // //////////////////////////////////////////////////////////////
+      function showCategories(data) {
+        let cat = "";
+        data.categories?.forEach((element) => {
+          cat += `<button id="a${element.id}" onclick="showProduct('${element.id}')">${element.name}</button>`;
+        });
+        categories.innerHTML += cat;
+      }
+
+      // ///////////////////////////////////////////////////////////////
+      function showProduct(id) {
+        cards.innerHTML = "";
+
+        let btn = categories.querySelector(`#a${id}`);
+        categories.querySelector(".btn-active")?.classList.remove("btn-active");
+        btn.classList.add("btn-active");
+
+        let data = allData.products.filter((item) => {
+          return item.category_id == Number(id);
+        });
+
+        data.forEach((product) => {
+          const price = product.discount
+            ? ` ${(product.price - (product.price / 100) * product.discount).toFixed(2)}₼ <s class="!text-red-600 ml-2 text-sm">${
+                product.price
+              }₼</s>`
+            : `${product.price}₼`;
+          let stock =
+            product.stock != 0
+              ? `<h6 class="font-montserrat text-green capitalize my-2 text-sm text-brown">Stokdadır</h6>`
+              : `<h6 class="font-montserrat  text-gray-500 capitalize my-2 text-sm">Anbarda tükənmişdir</h6>`;
+          write_to_card(product, price, stock);
+        });
+        animationProduct();
+      }
+      // ///////////////////////////////////////////////////////////
+
+      function write_to_card(product, price, stock) {
+        cards.innerHTML += `
+          <div class="box w-[300px] text-center rounded-md overflow-hidden bg-white">
+              <div class="box-div relative">
+                <img class="box-img w-full max-h-72 object-cover" src="img/${product.img}" alt="coffee" />
+                ${
+                  product.isnew
+                    ? ` <div class="bg-green text-white text-[.6em] flex items-center justify-center uppercase gap-1 rounded-full w-[40px] h-[40px] absolute top-2 left-2">
+                  new
+                  <i class="fa-solid fa-percent"></i>
+                </div> `
+                    : ""
+                }
+
+                <div class="bg-white my_absolute">
+                  <i class="fa-solid fa-cart-shopping text-brown"></i>
+                </div>
+              </div>
+              <div class="p-4">
+                <h5 class="mt-2 font-montserrat font-semibold capitalize text-brown">${product.name}</h5>
+                <h6 class="font-montserrat capitalize my-2 text-sm text-brown">category</h6>
+              ${stock}
+                <span class="font-bold font-montserrat text-lg text-brown">${price ? price : ""}</span>
+              </div>
+            </div>`;
+      }
+
+      // ///////////////////////////////////////////////////////////
+
+      function animationProduct() {
+        const boxes = cards.querySelectorAll(".box");
+
+        boxes.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add("show");
+          }, index * 100);
+        });
+      }
+    </script>
+  </body>
+</html>
