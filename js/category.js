@@ -1,53 +1,53 @@
 function fetchData() {
-    fetch("./js/data.json")
-      .then((res) => res.json())
-      .then((data) => {
-        allData = data;
-        showCategories(data);
-        showProduct(3);
-      });
-  }
-  fetchData();
-
-  // //////////////////////////////////////////////////////////////
-  function showCategories(data) {
-    let cat = "";
-    data.categories?.forEach((element) => {
-      cat += `<button id="a${element.id}" onclick="showProduct('${element.id}')">${element.name}</button>`;
+  fetch("./js/data.json")
+    .then((res) => res.json())
+    .then((data) => {
+      allData = data;
+      showCategories(data);
+      showProduct(3);
     });
-    categories.innerHTML += cat;
-  }
+}
+fetchData();
 
-  // ///////////////////////////////////////////////////////////////
-  function showProduct(id) {
-    cards.innerHTML = "";
+// //////////////////////////////////////////////////////////////
+function showCategories(data) {
+  let cat = "";
+  data.categories?.forEach((element) => {
+    cat += `<button id="a${element.id}" onclick="showProduct('${element.id}')">${element.name}</button>`;
+  });
+  categories.innerHTML += cat;
+}
 
-    let btn = categories.querySelector(`#a${id}`);
-    categories.querySelector(".btn-active")?.classList.remove("btn-active");
-    btn.classList.add("btn-active");
+// ///////////////////////////////////////////////////////////////
+function showProduct(id) {
+  cards.innerHTML = "";
 
-    let data = allData.products.filter((item) => {
-      return item.category_id == Number(id);
-    });
+  let btn = categories.querySelector(`#a${id}`);
+  categories.querySelector(".btn-active")?.classList.remove("btn-active");
+  btn.classList.add("btn-active");
 
-    data.forEach((product) => {
-      const price = product.discount
-        ? ` ${(product.price - (product.price / 100) * product.discount).toFixed(2)}₼ <s class="!text-red-600 ml-2 text-sm">${
-            product.price
-          }₼</s>`
-        : `${product.price}₼`;
-      let stock =
-        product.stock != 0
-          ? `<h6 class="font-montserrat text-green capitalize my-2 text-sm text-brown">Stokdadır</h6>`
-          : `<h6 class="font-montserrat  text-gray-500 capitalize my-2 text-sm">Anbarda tükənmişdir</h6>`;
-      write_to_card(product, price, stock);
-    });
-    animationProduct();
-  }
-  // ///////////////////////////////////////////////////////////
+  let data = allData.products.filter((item) => {
+    return item.category_id == Number(id);
+  });
 
-  function write_to_card(product, price, stock) {
-    cards.innerHTML += `
+  data.forEach((product) => {
+    const price = product.discount
+      ? ` ${(product.price - (product.price / 100) * product.discount).toFixed(2)}₼ <s class="!text-red-600 ml-2 text-sm">${
+          product.price
+        }₼</s>`
+      : `${product.price}₼`;
+    let stock =
+      product.stock != 0
+        ? `<h6 class="font-montserrat text-green capitalize my-2 text-sm text-brown">Stokdadır</h6>`
+        : `<h6 class="font-montserrat  text-gray-500 capitalize my-2 text-sm">Anbarda tükənmişdir</h6>`;
+    write_to_card(product, price, stock);
+  });
+  animationProduct();
+}
+// ///////////////////////////////////////////////////////////
+
+function write_to_card(product, price, stock) {
+  cards.innerHTML += `
               <div class="box w-[300px] text-center rounded-md overflow-hidden bg-white">
                   <div class="box-div relative">
                     <img class="box-img w-full max-h-72 object-cover" src="img/${product.img}" alt="coffee" />
@@ -71,16 +71,16 @@ function fetchData() {
                     <span class="font-bold font-montserrat text-lg text-brown">${price ? price : ""}</span>
                   </div>
                 </div>`;
-  }
+}
 
-  // ///////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////
 
-  function animationProduct() {
-    const boxes = cards.querySelectorAll(".box");
+function animationProduct() {
+  const boxes = cards.querySelectorAll(".box");
 
-    boxes.forEach((card, index) => {
-      setTimeout(() => {
-        card.classList.add("show");
-      }, index * 100);
-    });
-  }
+  boxes.forEach((card, index) => {
+    setTimeout(() => {
+      card.classList.add("show");
+    }, index * 100);
+  });
+}

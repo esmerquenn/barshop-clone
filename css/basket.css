@@ -1,0 +1,36 @@
+/* .sebet-sidebar {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s ease;
+}
+
+.sebet-sidebar.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.basket-width {
+  width: min(400px, 80vw);
+  transform: translateX(100%);
+  transition: 1s;
+}
+.basket-width.active {
+  transform: translateX(0);
+} */
+.sebet-sidebar {
+  width: min(400px, 80vw);
+  right: 0;
+  transform: translateX(100%);
+  transition: 1s;
+}
+.sebet-sidebar.active {
+  transform: translateX(0);
+}
+.sebet-sidebar-bg {
+  visibility: hidden;
+  opacity: 0;
+}
+.sebet-sidebar-bg.active {
+  visibility: visible;
+  opacity: 1;
+}
