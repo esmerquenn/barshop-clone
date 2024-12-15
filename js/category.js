@@ -1,3 +1,7 @@
+const categories = document.querySelector(".categories");
+const cards = document.querySelector(".cards");
+let allData = {};
+
 function fetchData() {
   fetch("./js/data.json")
     .then((res) => res.json())
@@ -38,7 +42,7 @@ function showProduct(id) {
       : `${product.price}₼`;
     let stock =
       product.stock != 0
-        ? `<h6 class="font-montserrat text-green capitalize my-2 text-sm text-brown">Stokdadır</h6>`
+        ? `<h6 class="font-montserrat text-green capitalize my-2 text-sm">Stokdadır</h6>`
         : `<h6 class="font-montserrat  text-gray-500 capitalize my-2 text-sm">Anbarda tükənmişdir</h6>`;
     write_to_card(product, price, stock);
   });
@@ -60,7 +64,7 @@ function write_to_card(product, price, stock) {
                         : ""
                     }
 
-                    <div class="bg-white my_absolute">
+                    <div onclick="sendBasket('${product.id}')" class="bg-white my_absolute">
                       <i class="fa-solid fa-cart-shopping text-brown"></i>
                     </div>
                   </div>
@@ -83,4 +87,18 @@ function animationProduct() {
       card.classList.add("show");
     }, index * 100);
   });
+}
+
+// /////////////////////////////////////////////////////////
+function sendBasket(id) {
+  let newObj = allData.products.find((item) => item.id == id);
+  // if (!basket.some((item) => item.id == newObj.id)) {
+  //   basket.push({ ...newObj, quantity: 1 });
+  //   console.log(basket, allData, id);
+  //   newBasketItem();
+  // } else {
+  //   console.log("Bu ürün zaten sepete eklenmiş!");
+  //   toggleSidebar();
+  // }
+  BasketManager.addItem(newObj);
 }

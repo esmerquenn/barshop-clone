@@ -1,6 +1,7 @@
 {
   "products": [
     {
+      "id": 1,
       "name": "Coffee Beans",
       "price": 15.99,
       "description": "Freshly roasted Arabica coffee beans.",
@@ -16,6 +17,7 @@
       "weight": "500g"
     },
     {
+      "id": 2,
       "name": "Espresso Coffee Machine",
       "price": 249.99,
       "description": "High-quality espresso machine for home use.",
@@ -31,6 +33,7 @@
       "weight": "3kg"
     },
     {
+      "id": 3,
       "name": "Coffee Mug",
       "price": 9.99,
       "description": "Stylish coffee mug for daily use.",
@@ -46,6 +49,7 @@
       "weight": "350g"
     },
     {
+      "id": 4,
       "name": "Coffee Filter Paper",
       "price": 4.99,
       "description": "High-quality coffee filter paper for brewing.",
@@ -61,6 +65,7 @@
       "weight": "200g"
     },
     {
+      "id": 5,
       "name": "Coffee Grinder",
       "price": 45.99,
       "description": "Manual coffee grinder for fresh ground coffee.",
@@ -76,6 +81,7 @@
       "weight": "1kg"
     },
     {
+      "id": 6,
       "name": "Smart Coffee Cup",
       "price": 39.99,
       "description": "A smart coffee cup that maintains your drink's temperature.",
@@ -91,6 +97,7 @@
       "weight": "400g"
     },
     {
+      "id": 7,
       "name": "Other Accessories",
       "price": 19.99,
       "description": "Miscellaneous coffee accessories and tools.",
