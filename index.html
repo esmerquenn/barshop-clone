@@ -55,7 +55,7 @@
                   >ANA SƏHİFƏ</a
                 >
               </li>
-              <li class="p-2 lg:p-0 relative dropdown_li bg-white md:bg-transparent">
+              <li class="p-2 lg:p-0 relative dropdown_li">
                 <a
                   class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
                   href="#"
@@ -75,7 +75,7 @@
                   </ul>
                 </div>
               </li>
-              <li class="p-2 lg:p-0 bg-white md:bg-transparent">
+              <li class="p-2 lg:p-0">
                 <a
                   class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
                   href="contact.html"
@@ -83,7 +83,7 @@
                   >Kofe aparatlari</a
                 >
               </li>
-              <li class="p-2 lg:p-0 bg-white md:bg-transparent">
+              <li class="p-2 lg:p-0">
                 <a
                   class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
                   href="contact.html"
@@ -91,7 +91,7 @@
                   >aksesuarlar</a
                 >
               </li>
-              <li class="p-2 lg:p-0 bg-white md:bg-transparent">
+              <li class="p-2 lg:p-0">
                 <a
                   class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
                   href="contact.html"
@@ -100,7 +100,7 @@
                 >
               </li>
 
-              <li class="p-2 lg:p-0 bg-white md:bg-transparent">
+              <li class="p-2 lg:p-0">
                 <a
                   class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
                   href="contact.html"
@@ -108,7 +108,7 @@
                   >haqqimizda</a
                 >
               </li>
-              <li class="p-2 lg:p-0 bg-white md:bg-transparent">
+              <li class="p-2 lg:p-0">
                 <a
                   class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
                   href="contact.html"
@@ -116,45 +116,39 @@
                   >ƏLAQƏ</a
                 >
               </li>
-              <li class="p-2 lg:p-0 relative dropdown_li_lang bg-white md:bg-transparent">
-                <a
-                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
-                  href="#"
-                  data-key="about_company"
-                  >lang <i class="fa-solid fa-angle-down duration-500 pl-1"></i
-                ></a>
+              <li
+                class="hidden md:block dropdown_li_lang cursor-pointer p-2 lg:p-0 relative uppercase text-base font-normal text-white transition-all duration-300"
+              >
+                <span id="lang">az</span><i class="fa-solid fa-angle-down duration-500 pl-1"></i>
                 <div
                   class="drop_div_lang mt-2 px-3 bg-brown_bg overflow-hidden max-h-0 min-w-[40px] md:absolute md:left-1/2 md:-translate-x-1/2"
                 >
                   <ul>
-                    <li class="pt-1">
-                      <a
-                        class="uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
-                        href="about.html?page=melumat"
-                        >AZ</a
-                      >
+                    <li
+                      onclick="changeLanguage('az')"
+                      class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
+                    >
+                      AZ
                     </li>
-                    <li class="pt-1">
-                      <a
-                        class="uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
-                        href="about.html?page=melumat"
-                        >en</a
-                      >
+                    <li
+                      onclick="changeLanguage('en')"
+                      class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
+                    >
+                      en
                     </li>
-                    <li class="pt-1">
-                      <a
-                        class="uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
-                        href="about.html?page=melumat"
-                        >ru</a
-                      >
+                    <li
+                      onclick="changeLanguage('ru')"
+                      class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
+                    >
+                      ru
                     </li>
                   </ul>
                 </div>
               </li>
-              <li class="p-2 lg:p-0 bg-white md:bg-transparent">
-                <i onclick="searchBar()" class="fa-solid fa-magnifying-glass lg:text-white block px-2"></i>
+              <li class="p-2 lg:p-0 hidden md:block">
+                <i onclick="searchBar()" class="fa-solid fa-magnifying-glass text-white block px-2"></i>
                 <span
-                  class="absolute searchbox rounded-md overflow-hidden bg-brown_bg top-full right-0 w-[300px] h-0 text-center font-montserrat text-sm"
+                  class="absolute searchbox rounded-md !overflow-hidden bg-brown_bg top-full right-0 w-[300px] text-center font-montserrat text-sm"
                 >
                   <input
                     oninput="searchData()"
@@ -162,16 +156,14 @@
                     type="text"
                     placeholder="Axtarış..."
                   />
-                  <ul class="text-white text-left p-2 searchmenu">
-                    <li class="border-b-2 border-brown py-1"><a href="#">Axtarış 1</a></li>
-                    <li class="border-b-2 border-brown py-1"><a href="#">Axtarış 2</a></li>
-                    <li class="border-b-2 border-brown py-1"><a href="#">Axtarış 3</a></li>
-                    <li class="border-b-2 border-brown py-1"><a href="#">Axtarış 4</a></li>
-                    <li class="border-b-2 border-brown py-1"><a href="#">Axtarış 5</a></li>
+                  <ul class="text-white text-left p-2 resultList">
+                    <li class="border-b-2 border-brown py-1 text-center">
+                      <i class="fa-regular fa-folder-open text-2xl text-white"></i>
+                    </li>
                   </ul>
                 </span>
               </li>
-              <li class="p-2 lg:p-0 relative bg-white md:bg-transparent">
+              <li class="p-2 lg:p-0 relative hidden md:block">
                 <a class="uppercase xl:px-2 pb-1 block text-white transition-all duration-300" href="#" data-key="about_company">
                   <span class="absolute bg-green -top-2 right-0 w-4 h-4 text-center rounded-full font-mono text-[10px]">1</span>
                   <img class="w-6" src="./img/food-basket.png" alt="basket" />
@@ -183,6 +175,68 @@
           </div>
         </div>
       </nav>
+      <div class="bg-brown fixed bottom-0 h-[8vh] w-full z-10 px-3 text-xl lg:hidden">
+        <ul class="flex justify-between items-center h-full">
+          <li
+            class="dropdown_li_lang2 cursor-pointer p-2 lg:p-0 relative uppercase text-base font-normal text-white transition-all duration-300"
+          >
+            <span id="lang2">az</span> <i class="fa-solid fa-angle-up duration-500 pl-1"></i>
+            <div
+              class="drop_div_lang2 mt-2 px-3 bg-brown overflow-hidden min-w-full absolute bottom-10 max-h-0 left-1/2 -translate-x-1/2"
+            >
+              <ul class="w-full text-center py-1">
+                <li
+                  onclick="changeLanguage('az')"
+                  class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
+                >
+                  AZ
+                </li>
+                <li
+                  onclick="changeLanguage('en')"
+                  class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
+                >
+                  en
+                </li>
+                <li
+                  onclick="changeLanguage('ru')"
+                  class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
+                >
+                  ru
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="p-2 lg:p-0 relative">
+            <a class="uppercase xl:px-2 pb-1 block text-white transition-all duration-300" href="#">
+              <i class="fa-brands fa-whatsapp text-2xl"></i>
+            </a>
+          </li>
+          <li class="p-2 lg:p-0 relative">
+            <a class="uppercase xl:px-2 pb-1 block text-white transition-all duration-300" href="#" data-key="about_company">
+              <span class="absolute bg-green -top-1 right-0 w-4 h-4 text-center rounded-full font-mono text-[10px]">1</span>
+              <img class="w-6" src="./img/food-basket.png" alt="basket" />
+            </a>
+          </li>
+          <li class="p-3 lg:p-0 relative">
+            <i onclick="searchBar()" class="fa-solid fa-magnifying-glass text-white block px-2"></i>
+            <span
+              class="rounded-md searchbox2 w-[300px] absolute bottom-[100%] right-0 bg-brown text-center font-montserrat text-sm"
+            >
+              <ul class="text-white text-left p-2 resultList2">
+                <li class="border-b-2 border-brown py-1 text-center">
+                  <i class="fa-regular fa-folder-open text-2xl text-white"></i>
+                </li>
+              </ul>
+              <input
+                oninput="searchData()"
+                class="w-full p-2 outline-none border-b-2 border-brown_bg text-white placeholder:text-white bg-brown"
+                type="text"
+                placeholder="Axtarış..."
+              />
+            </span>
+          </li>
+        </ul>
+      </div>
 
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
@@ -462,7 +516,7 @@
     <footer class="py-10 bg-brown">
       <div class="container_my flex flex-col md:flex-row items-start justify-between">
         <div class="md:w-1/2 flex flex-col items-start">
-          <img class="w-[80px] block mb-1" src="img/bar-logo.png" alt="" />
+          <img class="w-[60px] block mb-1" src="img/bar-logo.png" alt="" />
           <a href="#" class="footer-span font-montserrat text-white flex w-[140px] py-2 gap-3 items-center">
             <div class="footer-hover-div duration-500 transition-all !w-8 !h-8 flex justify-center items-center rounded-md">
               <i class="fa-brands fa-instagram"></i>
@@ -471,20 +525,20 @@
           </a>
           <a href="#" class="footer-span font-montserrat text-white flex w-[140px] py-2 gap-3 items-center">
             <div class="footer-hover-div duration-500 transition-all !w-8 !h-8 flex justify-center items-center rounded-md">
-              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-whatsapp"></i>
             </div>
-            Instagram
+            Whatsapp
           </a>
           <a href="#" class="footer-span font-montserrat text-white flex w-[140px] py-2 gap-3 items-center">
             <div class="footer-hover-div duration-500 transition-all !w-8 !h-8 flex justify-center items-center rounded-md">
-              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-youtube"></i>
             </div>
-            Instagram
+            Youtube
           </a>
         </div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.3344996875057!2d49.83885647552581!3d40.37927845791869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d00673abcab%3A0xe1bca78e66178e5e!2sBARSHOP-%20MMC!5e0!3m2!1str!2saz!4v1733941021601!5m2!1str!2saz"
-          class="md:w-1/2 min-h-[270px]"
+          class="w-full md:w-1/2 min-h-[200px]"
           style="border: 0"
           allowfullscreen=""
           loading="lazy"
@@ -493,12 +547,12 @@
       </div>
     </footer>
 
-    <div
+    <!-- <div
       class="fixed bottom-10 right-3 z-10 py-1 px-2 rounded-xl"
       style="background: rgb(46, 183, 46); background: linear-gradient(0deg, rgba(46, 183, 46, 1) 20%, rgba(92, 242, 117, 1) 66%)"
     >
       <a target="_blank" href="https://wa.me/"> <i class="fa-brands fa-whatsapp text-4xl text-white"></i> </a>
-    </div>
+    </div> -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
       integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -526,19 +580,47 @@
     <script>
       // SEARCHBAR START
       const searchbox = document.querySelector(".searchbox");
+      const searchbox2 = document.querySelector(".searchbox2");
       const searchmenu = document.querySelector(".searchmenu");
-      function searchBar() {
-        searchbox.classList.toggle("active");
-      }
-      // SEARCHBAR END
+      const resultList = document.querySelector(".resultList");
+      const resultList2 = document.querySelector(".resultList2");
       const categories = document.querySelector(".categories");
       const cards = document.querySelector(".cards");
       let allData = {};
 
-      function searchData() {
-        console.log(event.target.value);
+      function isMobileView() {
+        return window.innerWidth < 992;
+      }
+      function searchBar() {
+        const activeSearchbox = isMobileView() ? searchbox2 : searchbox;
+        activeSearchbox.classList.toggle("active");
       }
 
+      function writeUnFound() {
+        return `<li class="border-b-2 border-brown py-1 text-center">
+                  <i class="fa-regular fa-folder-open text-2xl text-white"></i>
+                </li>`;
+      }
+      function filterData(query) {
+        return allData.products.filter((item) => item.name.toLowerCase().includes(query));
+      }
+
+      function searchData() {
+        const query = event.target.value.toLowerCase();
+        const filteredData = query.length >= 1 ? filterData(query) : [];
+        const isMobile = isMobileView();
+        const resultElement = isMobile ? resultList2 : resultList;
+        updateResults(filteredData, resultElement);
+      }
+
+      function updateResults(filteredData, resultElement) {
+        resultElement.innerHTML = "";
+        resultElement.innerHTML = filteredData.length
+          ? filteredData.map((item) => `<li class="border-b-2 border-brown py-1"><a href="#">${item.name}</a></li>`).join("")
+          : writeUnFound();
+      }
+
+      // SEARCHBAR END
       //////////////////////////////////////////////////
       function fetchData() {
         fetch("./js/data.json")
@@ -590,29 +672,29 @@
 
       function write_to_card(product, price, stock) {
         cards.innerHTML += `
-          <div class="box w-[300px] text-center rounded-md overflow-hidden bg-white">
-              <div class="box-div relative">
-                <img class="box-img w-full max-h-72 object-cover" src="img/${product.img}" alt="coffee" />
-                ${
-                  product.isnew
-                    ? ` <div class="bg-green text-white text-[.6em] flex items-center justify-center uppercase gap-1 rounded-full w-[40px] h-[40px] absolute top-2 left-2">
-                  new
-                  <i class="fa-solid fa-percent"></i>
-                </div> `
-                    : ""
-                }
+                  <div class="box w-[300px] text-center rounded-md overflow-hidden bg-white">
+                      <div class="box-div relative">
+                        <img class="box-img w-full max-h-72 object-cover" src="img/${product.img}" alt="coffee" />
+                        ${
+                          product.isnew
+                            ? ` <div class="bg-green text-white text-[.6em] flex items-center justify-center uppercase gap-1 rounded-full w-[40px] h-[40px] absolute top-2 left-2">
+                          new
+                          <i class="fa-solid fa-percent"></i>
+                        </div> `
+                            : ""
+                        }
 
-                <div class="bg-white my_absolute">
-                  <i class="fa-solid fa-cart-shopping text-brown"></i>
-                </div>
-              </div>
-              <div class="p-4">
-                <h5 class="mt-2 font-montserrat font-semibold capitalize text-brown">${product.name}</h5>
-                <h6 class="font-montserrat capitalize my-2 text-sm text-brown">category</h6>
-              ${stock}
-                <span class="font-bold font-montserrat text-lg text-brown">${price ? price : ""}</span>
-              </div>
-            </div>`;
+                        <div class="bg-white my_absolute">
+                          <i class="fa-solid fa-cart-shopping text-brown"></i>
+                        </div>
+                      </div>
+                      <div class="p-4">
+                        <h5 class="mt-2 font-montserrat font-semibold capitalize text-brown">${product.name}</h5>
+                        <h6 class="font-montserrat capitalize my-2 text-sm text-brown">category</h6>
+                      ${stock}
+                        <span class="font-bold font-montserrat text-lg text-brown">${price ? price : ""}</span>
+                      </div>
+                    </div>`;
       }
 
       // ///////////////////////////////////////////////////////////
