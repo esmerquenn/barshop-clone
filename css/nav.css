@@ -1,7 +1,7 @@
 [x-cloak] {
   display: none !important;
 }
-*{
+* {
   line-height: 1.5 !important;
 }
 .container_my {
@@ -24,7 +24,8 @@
   transition: all 0.5s ease-in;
 }
 .drop_div,
-.drop_div_lang,.drop_div_lang2 {
+.drop_div_lang,
+.drop_div_lang2 {
   transition: 0.5s ease-out;
 }
 .drop_active {
@@ -51,24 +52,22 @@
   }
 }
 
-
 .logo_letter {
   letter-spacing: 1.1px;
   padding-left: 2px;
 }
 
-.searchbox,.searchbox2{
+.searchbox,
+.searchbox2 {
   max-height: 0;
   overflow: hidden;
-  transition: 1s ;
+  transition: 1s;
 }
-.searchbox.active{
+.searchbox.active {
   max-height: 200px;
-
 }
-.searchbox2.active{
+.searchbox2.active {
   max-height: 200px;
-
 }
 @media only screen and (min-width: 1024px) {
   .hidden_dropdown {
@@ -98,3 +97,8 @@
     padding-inline: 30px;
   }
 }
+
+
+/* https://codepen.io/thisisroger/pen/vYXaZm */
+/* https://codepen.io/hjdesigner/pen/jvyJdX */
+/* //////////////////////////////// */

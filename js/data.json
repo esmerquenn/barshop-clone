@@ -10,8 +10,8 @@
       "brend_id": 1,
       "isnew": true,
       "stock": 150,
-      "img": "111.jpg",
-      "sumImages": ["111.jpg", "111.jpg"],
+      "img": "2.webp",
+      "sumImages": ["2.webp", "2.webp"],
       "model": "AB123",
       "weight": "500g"
     },
@@ -55,7 +55,7 @@
       "brend_id": 4,
       "isnew": true,
       "stock": 300,
-      "img": "111.jpg",
+      "img": "2.webp",
       "sumImages": ["111.jpg", "111.jpg"],
       "model": "CF012",
       "weight": "200g"
@@ -85,7 +85,7 @@
       "brend_id": 6,
       "isnew": true,
       "stock": 120,
-      "img": "111.jpg",
+      "img": "2.webp",
       "sumImages": ["111.jpg", "111.jpg"],
       "model": "SCC567",
       "weight": "400g"
