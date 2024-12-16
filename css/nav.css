@@ -94,7 +94,7 @@
 @media only screen and (max-width: 998px) {
   .container_my {
     max-width: 100%;
-    padding-inline: 30px;
+    padding-inline: 10px;
   }
 }
 

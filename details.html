@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barshop</title>
+    <link rel="shortcut icon" href="logo2.png" type="image/x-icon" />
+    <link href="./css/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/slider.css" />
+    <link rel="stylesheet" href="css/owl.css" />
+    <link rel="stylesheet" href="css/category.css" />
+    <link rel="stylesheet" href="css/basket.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .swiper-container {
+        height: 500px;
+      }
+      .swiper-slide img {
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body class="bg-brown_bg_light font-roboto">
+    <header>
+      <nav class="py-6 bg-brown_bg fixed top-0 left-0 z-20 w-full">
+        <div class="container_my flex items-center justify-between">
+          <div class="text-center">
+            <a href="/"><img class="block w-full" src="./img/logo.png" alt="birS" /></a>
+          </div>
+
+          <div class="flex justify-center items-center">
+            <ul class="hidden_dropdown md:py-4 lg:flex">
+              <li class="p-2 lg:p-0">
+                <a
+                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal font-roboto text-white mix-blend-difference transition-all duration-300"
+                  href="/"
+                  data-key="home"
+                  >ANA SƏHİFƏ</a
+                >
+              </li>
+              <li class="p-2 lg:p-0 relative dropdown_li">
+                <a
+                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
+                  href="#"
+                  data-key="about_company"
+                  >qəhvə <i class="fa-solid fa-angle-down duration-500 pl-1"></i
+                ></a>
+                <div class="drop_div mt-2 px-3 bg-brown_bg overflow-hidden max-h-0 min-w-[200px] md:absolute">
+                  <ul>
+                    <li class="pt-1">
+                      <a
+                        data-key="info"
+                        class="capitalize inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
+                        href="about.html?page=melumat"
+                        >Məlumat</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="p-2 lg:p-0">
+                <a
+                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
+                  href="contact.html"
+                  data-key="contact"
+                  >Kofe aparatlari</a
+                >
+              </li>
+              <li class="p-2 lg:p-0">
+                <a
+                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
+                  href="contact.html"
+                  data-key="contact"
+                  >aksesuarlar</a
+                >
+              </li>
+              <li class="p-2 lg:p-0">
+                <a
+                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
+                  href="contact.html"
+                  data-key="contact"
+                  >Əlavələr</a
+                >
+              </li>
+
+              <li class="p-2 lg:p-0">
+                <a
+                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
+                  href="about.html"
+                  data-key="contact"
+                  >haqqimizda</a
+                >
+              </li>
+              <li class="p-2 lg:p-0">
+                <a
+                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
+                  href="contact.html"
+                  data-key="contact"
+                  >ƏLAQƏ</a
+                >
+              </li>
+              <li
+                class="hidden md:block dropdown_li_lang cursor-pointer p-2 lg:p-0 relative uppercase text-base font-normal text-white transition-all duration-300"
+              >
+                <span id="lang">az</span><i class="fa-solid fa-angle-down duration-500 pl-1"></i>
+                <div
+                  class="drop_div_lang mt-2 px-3 bg-brown_bg overflow-hidden max-h-0 min-w-[40px] md:absolute md:left-1/2 md:-translate-x-1/2"
+                >
+                  <ul>
+                    <li
+                      onclick="changeLanguage('az')"
+                      class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
+                    >
+                      AZ
+                    </li>
+                    <li
+                      onclick="changeLanguage('en')"
+                      class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
+                    >
+                      en
+                    </li>
+                    <li
+                      onclick="changeLanguage('ru')"
+                      class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
+                    >
+                      ru
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="p-2 lg:p-0 hidden md:block">
+                <i onclick="searchBar()" class="fa-solid fa-magnifying-glass text-white block px-2"></i>
+                <span
+                  class="absolute searchbox rounded-md !overflow-hidden bg-brown_bg top-full right-0 w-[300px] text-center font-montserrat text-sm"
+                >
+                  <input
+                    oninput="searchData()"
+                    class="w-full p-2 outline-none border-b-2 border-brown_bg text-white placeholder:text-white bg-brown"
+                    type="text"
+                    placeholder="Axtarış..."
+                  />
+                  <ul class="text-white text-left p-2 resultList">
+                    <li class="border-b-2 border-brown py-1 text-center">
+                      <i class="fa-regular fa-folder-open text-2xl text-white"></i>
+                    </li>
+                  </ul>
+                </span>
+              </li>
+              <li onclick="openBasketSidebar()" class="p-2 lg:p-0 relative hidden md:block">
+                <a class="uppercase xl:px-2 pb-1 block text-white transition-all duration-300" href="#" data-key="about_company">
+                  <span
+                    id="basket-quantity"
+                    class="absolute bg-green -top-2 right-0 w-4 h-4 text-center rounded-full font-mono text-[10px] hidden"
+                    >1</span
+                  >
+                  <img class="w-6" src="./img/food-basket.png" alt="basket" />
+                </a>
+              </li>
+            </ul>
+
+            <i onclick="closeDropdown()" class="fa-solid fa-bars text-[2rem] text-white ml-2 lg:hidden"></i>
+          </div>
+        </div>
+      </nav>
+      <div class="bg-brown fixed bottom-0 h-[8vh] w-full z-20 px-3 text-xl lg:hidden">
+        <ul class="flex justify-between items-center h-full">
+          <li
+            class="dropdown_li_lang2 cursor-pointer p-2 lg:p-0 relative uppercase text-base font-normal text-white transition-all duration-300"
+          >
+            <span id="lang2">az</span> <i class="fa-solid fa-angle-up duration-500 pl-1"></i>
+            <div
+              class="drop_div_lang2 mt-2 px-3 bg-brown overflow-hidden min-w-full absolute bottom-10 max-h-0 left-1/2 -translate-x-1/2"
+            >
+              <ul class="w-full text-center py-1">
+                <li
+                  onclick="changeLanguage('az')"
+                  class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
+                >
+                  AZ
+                </li>
+                <li
+                  onclick="changeLanguage('en')"
+                  class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
+                >
+                  en
+                </li>
+                <li
+                  onclick="changeLanguage('ru')"
+                  class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
+                >
+                  ru
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="p-2 lg:p-0 relative">
+            <a class="uppercase xl:px-2 pb-1 block text-white transition-all duration-300" href="#">
+              <i class="fa-brands fa-whatsapp text-2xl"></i>
+            </a>
+          </li>
+          <li onclick="openBasketSidebar()" class="p-2 lg:p-0 relative">
+            <a class="uppercase xl:px-2 pb-1 block text-white transition-all duration-300" href="#" data-key="about_company">
+              <span
+                id="basket-quantity-mobile"
+                class="absolute bg-green -top-1 right-0 w-4 h-4 text-center rounded-full font-mono text-[10px] hidden"
+                >1</span
+              >
+              <img class="w-6" src="./img/food-basket.png" alt="basket" />
+            </a>
+          </li>
+          <li class="p-3 lg:p-0 relative">
+            <i onclick="searchBar()" class="fa-solid fa-magnifying-glass text-white block px-2"></i>
+            <span
+              class="rounded-md searchbox2 w-[300px] absolute bottom-[100%] right-0 bg-brown text-center font-montserrat text-sm"
+            >
+              <ul class="text-white text-left p-2 resultList2">
+                <li class="border-b-2 border-brown py-1 text-center">
+                  <i class="fa-regular fa-folder-open text-2xl text-white"></i>
+                </li>
+              </ul>
+              <input
+                oninput="searchData()"
+                class="w-full p-2 outline-none border-b-2 border-brown_bg text-white placeholder:text-white bg-brown"
+                type="text"
+                placeholder="Axtarış..."
+              />
+            </span>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="mt-[15vh]">
+      <section class="my-20 container_my bg-lime-200">
+        <div class="img"></div>
+        <div class="word"></div>
+      </section>
+      <div class="flex max-w-5xl w-full bg-white rounded-lg shadow-lg overflow-hidden">
+        <!-- Thumbs Swiper (Left Small Images) -->
+        <div class="w-1/4">
+          <div class="swiper swiper-thumbs h-full">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide cursor-pointer">
+                <img src="https://via.placeholder.com/100x150?text=1" alt="thumb-1" />
+              </div>
+              <div class="swiper-slide cursor-pointer">
+                <img src="https://via.placeholder.com/100x150?text=2" alt="thumb-2" />
+              </div>
+              <div class="swiper-slide cursor-pointer">
+                <img src="https://via.placeholder.com/100x150?text=3" alt="thumb-3" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Swiper (Right Big Image) -->
+        <div class="w-3/4">
+          <div class="swiper swiper-main">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="https://via.placeholder.com/500x700?text=1" alt="main-1" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://via.placeholder.com/500x700?text=2" alt="main-2" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://via.placeholder.com/500x700?text=3" alt="main-3" />
+              </div>
+            </div>
+            <!-- Navigation Arrows -->
+            <div class="swiper-button-prev text-gray-700 hover:text-gray-900"></div>
+            <div class="swiper-button-next text-gray-700 hover:text-gray-900"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-10 bg-brown">
+      <div class="container_my flex flex-col md:flex-row items-start justify-between">
+        <div class="md:w-1/2 flex flex-col items-start">
+          <img class="w-[60px] block mb-1" src="img/bar-logo.png" alt="" />
+          <a href="#" class="footer-span font-montserrat text-white flex w-[140px] py-2 gap-3 items-center">
+            <div class="footer-hover-div duration-500 transition-all !w-8 !h-8 flex justify-center items-center rounded-md">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            Instagram
+          </a>
+          <a href="#" class="footer-span font-montserrat text-white flex w-[140px] py-2 gap-3 items-center">
+            <div class="footer-hover-div duration-500 transition-all !w-8 !h-8 flex justify-center items-center rounded-md">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            Whatsapp
+          </a>
+          <a href="#" class="footer-span font-montserrat text-white flex w-[140px] py-2 gap-3 items-center">
+            <div class="footer-hover-div duration-500 transition-all !w-8 !h-8 flex justify-center items-center rounded-md">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+            Youtube
+          </a>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.3344996875057!2d49.83885647552581!3d40.37927845791869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d00673abcab%3A0xe1bca78e66178e5e!2sBARSHOP-%20MMC!5e0!3m2!1str!2saz!4v1733941021601!5m2!1str!2saz"
+          class="w-full md:w-1/2 min-h-[200px]"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </footer>
+    <section>
+      <div class="sebet-sidebar-bg z-20 bg-[#00000085] fixed w-full bottom-0 top-0 left-0 right-0"></div>
+      <div class="bg-white fixed sebet-sidebar h-screen w-full top-0 bottom-0 z-20">
+        <span class="h-[8vh] flex justify-between items-center border-b border-brown p-4">
+          <h3 class="font-semibold font-montserrat text-lg">Səbətiniz</h3>
+          <i onclick="openBasketSidebar()" class="fa-solid fa-x text-xl !font-medium"></i>
+        </span>
+        <div class="h-[92vh] flex flex-col justify-between">
+          <!-- ///////////////////////// -->
+          <div class="all-card-baskets"></div>
+          <!-- ///////////////////// -->
+          <div class="flex flex-col justify-center gap-2 p-4">
+            <span class="flex justify-between items-center py-2 font-semibold font-montserrat text-lg">
+              <b class="font-semibold">Ümumi :</b> <span id="total-price" class="border-b-2 border-green">0₼</span>
+            </span>
+            <button
+              class="bg-slate-50 hover:bg-gray-100 transition duration-300 text-brown border border-green font-montserrat font-medium text-lg p-2"
+            >
+              Səbətə keç
+            </button>
+            <button
+              class="bg-green hover:bg-greenDark transition duration-300 text-white font-montserrat font-medium text-lg p-2"
+            >
+              Rəsmiləşdir
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/nav.js"></script>
+    <script src="js/category.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/basket.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      // Thumbs Swiper
+      const thumbsSwiper = new Swiper(".swiper-thumbs", {
+        direction: "vertical", // Dikey yönlendirme
+        slidesPerView: 3,
+        spaceBetween: 10,
+        watchSlidesProgress: true,
+      });
+
+      // Main Swiper
+      const mainSwiper = new Swiper(".swiper-main", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: thumbsSwiper, // Thumbs Swiper ile bağlantı
+        },
+      });
+    </script>
+  </body>
+</html>

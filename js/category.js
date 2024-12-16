@@ -52,7 +52,7 @@ function showProduct(id) {
 
 function write_to_card(product, price, stock) {
   cards.innerHTML += `
-              <div class="box w-[300px] text-center rounded-md overflow-hidden bg-white">
+              <div class="box  text-center rounded-md overflow-hidden bg-white">
                   <div class="box-div relative">
                     <img class="box-img w-full max-h-72 object-cover" src="img/${product.img}" alt="coffee" />
                     ${
