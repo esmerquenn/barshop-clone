@@ -101,3 +101,6 @@ function createBasketItemHTML(item) {
         </span>
       </div>`;
 }
+
+
+// ////////////////////////////////
