@@ -29,10 +29,84 @@
       rel="stylesheet"
     />
     <style>
-      .swiper-container {
-        height: 500px;
+      html,
+      body {
+        position: relative;
+        height: 100%;
       }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      body {
+        background: #000;
+        color: #000;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .swiper-slide {
+        background-size: cover;
+        background-position: center;
+      }
+
+      .mySwiper2 {
+        height: 100%;
+        width: 50%;
+      }
+
+      .mySwiper {
+        width: 20%;
+        box-sizing: border-box;
+        padding: 10px 0;
+      }
+
+      .mySwiper .swiper-slide {
+        width: 25%;
+        height: 100%;
+        opacity: 0.4;
+      }
+
+      .mySwiper .swiper-slide-thumb-active {
+        opacity: 1;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
       }
     </style>
@@ -252,44 +326,113 @@
         <div class="img"></div>
         <div class="word"></div>
       </section>
-      <div class="flex max-w-5xl w-full bg-white rounded-lg shadow-lg overflow-hidden">
-        <!-- Thumbs Swiper (Left Small Images) -->
+      <section class=" bg-lime-200">
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div thumbsSlider="" class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <div class="flex max-w-5xl w-full bg-white rounded-lg shadow-lg overflow-hidden">
         <div class="w-1/4">
           <div class="swiper swiper-thumbs h-full">
             <div class="swiper-wrapper">
               <div class="swiper-slide cursor-pointer">
-                <img src="https://via.placeholder.com/100x150?text=1" alt="thumb-1" />
+                <img src="./img/1.jpg" alt="thumb-1" />
               </div>
               <div class="swiper-slide cursor-pointer">
-                <img src="https://via.placeholder.com/100x150?text=2" alt="thumb-2" />
+                <img src="./img/1.jpg" alt="thumb-2" />
               </div>
               <div class="swiper-slide cursor-pointer">
-                <img src="https://via.placeholder.com/100x150?text=3" alt="thumb-3" />
+                <img src="./img/1.jpg" alt="thumb-3" />
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Main Swiper (Right Big Image) -->
-        <div class="w-3/4">
+     <div class="w-3/4">
           <div class="swiper swiper-main">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="https://via.placeholder.com/500x700?text=1" alt="main-1" />
+                <img src="./img/1.jpg" alt="main-1" />
               </div>
               <div class="swiper-slide">
-                <img src="https://via.placeholder.com/500x700?text=2" alt="main-2" />
+                <img src="./img/1.jpg" alt="main-2" />
               </div>
               <div class="swiper-slide">
-                <img src="https://via.placeholder.com/500x700?text=3" alt="main-3" />
+                <img src="./img/1.jpg" alt="main-3" />
               </div>
             </div>
-            <!-- Navigation Arrows -->
             <div class="swiper-button-prev text-gray-700 hover:text-gray-900"></div>
             <div class="swiper-button-next text-gray-700 hover:text-gray-900"></div>
           </div>
-        </div>
-      </div>
+        </div> 
+      </div> -->
     </main>
 
     <footer class="py-10 bg-brown">
@@ -361,7 +504,7 @@
     <script src="js/basket.js"></script>
 
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       // Thumbs Swiper
       const thumbsSwiper = new Swiper(".swiper-thumbs", {
@@ -381,6 +524,27 @@
         },
         thumbs: {
           swiper: thumbsSwiper, // Thumbs Swiper ile bağlantı
+        },
+      });
+    </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper(".mySwiper2", {
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: swiper,
         },
       });
     </script>
