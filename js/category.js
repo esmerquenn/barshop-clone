@@ -57,12 +57,21 @@ function write_to_card(product, price, stock) {
                     <img class="box-img w-full max-h-72 object-cover" src="img/${product.img}" alt="coffee" />
                     ${
                       product.isnew
-                        ? ` <div class="bg-green text-white text-xs flex items-center justify-center uppercase gap-1 rounded-full w-[40px] h-[40px] absolute top-[60px] lg:top-2 left-2">
+                        ? ` <div class="bg-green text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute top-10 lg:top-2 left-2">
                       new
-                      <i class="fa-solid fa-percent"></i>
                     </div> `
                         : ""
                     }
+                     ${
+                       product.discount != 0
+                         ? ` <div class="bg-red-600 text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute  left-2 ${
+                             product.isnew ? "top-[70px] lg:top-14 " : "top-10 lg:top-2"
+                           } ">
+                      ${product.discount}
+                      <i class="fa-solid fa-percent"></i>
+                    </div> `
+                         : ""
+                     }
 
                     <div onclick="sendBasket('${product.id}')" class="bg-white my_absolute">
                       <i class="fa-solid fa-cart-shopping text-brown"></i>

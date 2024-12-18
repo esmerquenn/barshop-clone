@@ -29,8 +29,8 @@
   border-bottom: 2px solid #3c2117;
 }
 .my_absolute {
-  width: 40px;
-  height: 40px;
+  width: 28px;
+  height: 28px;
   position: absolute;
   top: 8px;
   left: 8px;
@@ -40,7 +40,7 @@
   box-shadow: 0 0 20px #3c211753;
   border-radius: 100%;
 }
-.my_absolute  i{font-size: 1em;}
+.my_absolute  i{font-size: .7em;}
 @media only screen and (min-width: 992px) {
   .my_absolute {
     width: 150px;
@@ -52,10 +52,11 @@
     bottom: 5px;
     left: 50%;
     border-radius: 5px;
-
+    
     transform: translate(-50%, 60px);
     transition: 0.4s;
   }
+  .my_absolute  i{font-size: 1em;}
   .box h5 {
     transition: 0.4s;
   }
