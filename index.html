@@ -43,6 +43,7 @@
       href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body class="bg-brown_bg_light font-roboto">
     <header>
@@ -270,7 +271,8 @@
       >
         <ul class="flex justify-between items-center h-full">
           <li
-            class="dropdown_li_lang2 cursor-pointer p-2 lg:p-0 relative uppercase text-base font-normal text-white transition-all duration-300"
+            onclick="openLangMobile()"
+            class="cursor-pointer p-2 lg:p-0 relative uppercase text-base font-normal text-white transition-all duration-300"
           >
             <span id="lang2">az</span>
             <i class="fa-solid fa-angle-up duration-500 pl-1"></i>
@@ -356,14 +358,17 @@
       <!-- category start -->
       <div class="all_category container_my my-20 p-4">
         <h3 class="text-2xl md:text-4xl font-montserrat font-extrabold uppercase text-center text-brown">Məhsullarımız</h3>
-        <div class="categories flex flex-wrap justify-center items-center gap-6 text-lg my-8 font-montserrat"></div>
+        <div
+          data-aos="fade-up"
+          class="categories flex flex-wrap justify-center items-center gap-6 text-lg my-8 font-montserrat"
+        ></div>
 
         <div class="cards grid grid-cols-2 md:grid-cols-4 gap-2"></div>
       </div>
       <!-- category end -->
       <!-- About start -->
       <section class="container_my flex flex-col md:flex-row my-20">
-        <div class="about_section md:w-1/2 h-[50vh] md:h-screen flex items-end gap-5">
+        <div data-aos="fade-right" class="about_section md:w-1/2 h-[50vh] md:h-screen flex items-end gap-5">
           <div
             class="font-montserrat bg-yellow inline-flex flex-col justify-center items-start gap-2 md:w-60 h-[200px] p-5 text-white"
           >
@@ -378,13 +383,15 @@
         </div>
         <div class="md:w-1/2 pl-4 pt-10 font-montserrat text-green md:h-screen flex flex-col justify-between items-center gap-5">
           <div class="flex justify-center flex-col items-center gap-4">
-            <h4 class="uppercase font-extrabold text-2xl mb-10">Haqqimizda BAŞLIQ</h4>
-            <p class="text-xl text-center w-[90%]">Bizim haqqimizda bir cumle qeyd et, ki qisa ve esas olsun.</p>
-            <button class="p-2 btn-more2 text-base uppercase font-semibold font-montserrat">
+            <h4 data-aos="fade-left" class="uppercase font-extrabold text-2xl mb-10">Haqqimizda BAŞLIQ</h4>
+            <p data-aos="fade-left" class="text-xl text-center w-[90%]">
+              Bizim haqqimizda bir cumle qeyd et, ki qisa ve esas olsun.
+            </p>
+            <button data-aos="fade-left" class="p-2 btn-more2 text-base uppercase font-semibold font-montserrat">
               <a href="about.html">ətraflı</a>
             </button>
           </div>
-          <img src="./img/7.jpg" alt="" />
+          <img data-aos="fade-left" src="./img/7.jpg" alt="" />
         </div>
       </section>
       <section class="container_my flex flex-col md:flex-row my-20">
@@ -392,15 +399,17 @@
           class="md:w-1/2 order-2 md:order-1 px-4 pt-10 font-montserrat text-green md:h-screen flex flex-col justify-between items-center gap-5"
         >
           <div class="flex justify-center flex-col items-center gap-4">
-            <h4 class="uppercase font-extrabold text-2xl mb-10">Haqqimizda BAŞLIQ</h4>
-            <p class="text-xl text-center w-[90%]">Bizim haqqimizda bir cumle qeyd et, ki qisa ve esas olsun.</p>
-            <button class="p-2 btn-more2 text-base uppercase font-semibold font-montserrat">
+            <h4 data-aos="fade-right" class="uppercase font-extrabold text-2xl mb-10">Haqqimizda BAŞLIQ</h4>
+            <p data-aos="fade-right" class="text-xl text-center w-[90%]">
+              Bizim haqqimizda bir cumle qeyd et, ki qisa ve esas olsun.
+            </p>
+            <button data-aos="fade-right" class="p-2 btn-more2 text-base uppercase font-semibold font-montserrat">
               <a href="about.html">ətraflı</a>
             </button>
           </div>
-          <img src="./img/9.jpg" alt="" />
+          <img data-aos="fade-right" src="./img/9.jpg" alt="" />
         </div>
-        <div class="about_section2 order-1 md:order-2 md:w-1/2 h-[50vh] md:h-screen flex items-end gap-5">
+        <div data-aos="fade-left" class="about_section2 order-1 md:order-2 md:w-1/2 h-[50vh] md:h-screen flex items-end gap-5">
           <div
             class="font-montserrat bg-yellow inline-flex flex-col justify-center items-start gap-2 md:w-60 h-[200px] p-5 text-white"
           >
@@ -420,7 +429,7 @@
         <h3 class="text-2xl md:text-4xl font-montserrat font-extrabold uppercase text-center text-brown">Ən çox satılanlar</h3>
 
         <div class="my-20 container_my grid justify-center grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-6 bg-white">
-          <div class="bg-img-div md:col-span-2 md:row-span-2 shadow-md">
+          <div data-aos="fade-up" class="bg-img-div md:col-span-2 md:row-span-2 shadow-md">
             <div class="overflow-hidden">
               <img
                 src="img/bg.png"
@@ -433,7 +442,7 @@
               <p class="text-xl font-montserrat border-b border-brown text-green inline-block px-2 mt-3">2 590 ₼</p>
             </div>
           </div>
-          <div class="bg-img-div md:col-span-2 flex flex-col lg:flex-row items-center shadow-md">
+          <div data-aos="fade-up" class="bg-img-div md:col-span-2 flex flex-col lg:flex-row items-center shadow-md">
             <div class="overflow-hidden lg:w-3/5">
               <img
                 src="img/bg.png"
@@ -446,7 +455,7 @@
               <p class="text-xl font-montserrat border-b border-brown text-green inline-block px-2 mt-3">2 590 ₼</p>
             </div>
           </div>
-          <div class="bg-img-div row-span-1 flex flex-col items-center shadow-md">
+          <div data-aos="fade-up" class="bg-img-div row-span-1 flex flex-col items-center shadow-md">
             <div class="overflow-hidden">
               <img
                 src="img/bg.png"
@@ -459,7 +468,7 @@
               <p class="text-xl font-montserrat border-b border-brown text-green inline-block px-2 mt-3">2 590 ₼</p>
             </div>
           </div>
-          <div class="bg-img-div row-span-1 flex flex-col items-center shadow-md">
+          <div data-aos="fade-up" class="bg-img-div row-span-1 flex flex-col items-center shadow-md">
             <div class="overflow-hidden">
               <img
                 src="img/bg.png"
@@ -555,7 +564,7 @@
         </h3>
 
         <div class="slider1 container_my owl-carousel carousel-1 owl-theme">
-          <div class="item grid place-items-center grid1-con">
+          <div data-aos="fade-up" class="item grid place-items-center grid1-con">
             <div class="grid1 grid-slide font-montserrat">
               <span class="bg-green text-white px-4 py-1">20%</span>
               <div class="w-full flex flex-col justify-center items-center">
@@ -564,7 +573,7 @@
               </div>
             </div>
           </div>
-          <div class="item grid place-items-center grid1-con">
+          <div data-aos="fade-up" class="item grid place-items-center grid1-con">
             <div class="grid1 grid-slide font-montserrat">
               <span class="bg-green text-white px-4 py-1">20%</span>
               <div class="w-full flex flex-col justify-center items-center">
@@ -573,7 +582,7 @@
               </div>
             </div>
           </div>
-          <div class="item grid place-items-center grid1-con">
+          <div data-aos="fade-up" class="item grid place-items-center grid1-con">
             <div class="grid1 grid-slide font-montserrat">
               <span class="bg-green text-white px-4 py-1">20%</span>
               <div class="w-full flex flex-col justify-center items-center">
@@ -582,7 +591,7 @@
               </div>
             </div>
           </div>
-          <div class="item grid place-items-center grid1-con">
+          <div data-aos="fade-up" class="item grid place-items-center grid1-con">
             <div class="grid1 grid-slide font-montserrat">
               <span class="bg-green text-white px-4 py-1">20%</span>
               <div class="w-full flex flex-col justify-center items-center">
@@ -724,12 +733,15 @@
       </div>
     </section>
 
-    <!-- <div
+    <div
       class="fixed bottom-10 right-3 z-10 py-1 px-2 rounded-xl"
-      style="background: rgb(46, 183, 46); background: linear-gradient(0deg, rgba(46, 183, 46, 1) 20%, rgba(92, 242, 117, 1) 66%)"
     >
-      <a target="_blank" href="https://wa.me/"> <i class="fa-brands fa-whatsapp text-4xl text-white"></i> </a>
-    </div> -->
+      <!-- <a target="_blank" href="https://wa.me/"> <i class="fa-brands fa-whatsapp text-4xl text-white"></i> </a> -->
+       <div class="w-10 h-10 bg-red-500 flex justify-center items-center text-3xl text-white">
+        *
+       </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
       integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -749,7 +761,6 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- <script src="js/translate.js"></script> -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/owl.js"></script>
@@ -759,6 +770,18 @@
     <script src="js/basket.js"></script>
 
     <script>
+      const menu = document.querySelector(".hidden_dropdown");
+
+      function closeDropdown() {
+        if (window.innerWidth < 992) {
+          menu.classList.toggle("dropdown");
+        }
+      }
+      const drop_div_lang2 = document.querySelector(".drop_div_lang2");
+      function openLangMobile() {
+        console.log("salam");
+        drop_div_lang2.classList.toggle("drop_active2");
+      }
       let lastScrollTop = 0;
       const bottomBar = document.getElementById("bottomBar");
 
@@ -766,16 +789,22 @@
         const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
         if (currentScroll > lastScrollTop) {
-          // Scroll aşağı gidiyorsa göster
           bottomBar.classList.remove("bottom-[-100%]");
           bottomBar.classList.add("bottom-0");
         } else {
-          // Scroll yukarı gidiyorsa gizle
           bottomBar.classList.remove("bottom-0");
           bottomBar.classList.add("bottom-[-100%]");
         }
 
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Negatif değerleri önle
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
+      });
+      AOS.init({
+        offset: 0, 
+        duration: 1000, 
+        easing: "ease-in-out",
+        delay: 500, 
+        once: false,
+        anchorPlacement: "top-bottom",
       });
     </script>
   </body>
