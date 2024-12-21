@@ -33,7 +33,7 @@
  function updateResults(filteredData, resultElement) {
    resultElement.innerHTML = "";
    resultElement.innerHTML = filteredData.length
-     ? filteredData.map((item) => `<li class="border-b-2 border-brown py-1"><a href="#">${item.name}</a></li>`).join("")
+     ? filteredData.map((item) => `<li class="border-b-2 border-brown py-1"><a class="text-white" href="#">${item.name}</a></li>`).join("")
      : writeUnFound();
  }
 

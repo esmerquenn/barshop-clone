@@ -68,14 +68,12 @@
                 <a
                   class="uppercase px-1 xl:px-[10px] text-base lg:text-[14px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
                   href="#"
-                  data-key="about_company"
                   >qəhvə <i class="fa-solid fa-angle-down duration-500 pl-1"></i
-                ></a>
+                    ></a>
                 <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
                   <ul>
                     <li class="pt-1">
                       <a
-                        data-key="info"
                         class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
                         href="about.html?page=melumat"
                         >Məlumat</a
@@ -88,7 +86,6 @@
                 <a
                   class="uppercase px-1 xl:px-[10px] text-base lg:text-[14px] xl:text-[15px] font-extrabold leading-[20px] text-brown transition-all duration-300"
                   href="contact.html"
-                  data-key="contact"
                   >Kofe aparatlari</a
                 >
               </li>
@@ -96,7 +93,7 @@
                 <a
                   class="uppercase px-1 xl:px-[10px] text-base lg:text-[14px] xl:text-[15px] font-extrabold leading-[20px] text-brown transition-all duration-300"
                   href="contact.html"
-                  data-key="contact"
+                  
                   >aksesuarlar</a
                 >
               </li>
@@ -104,14 +101,15 @@
                 <a
                   class="uppercase px-1 xl:px-[10px] text-base lg:text-[14px] xl:text-[15px] font-extrabold leading-[20px] text-brown transition-all duration-300"
                   href="#"
-                  data-key="contact"
-                  >Əlavələr</a
+                
+                  >Əlavələr <i class="fa-solid fa-angle-down duration-500 pl-1"></i> 
+                  </a
                 >
                 <div class="drop_div_elaveler mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
                   <ul>
                     <li class="pt-1">
                       <a
-                        data-key="info"
+                       
                         class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
                         href="about.html?page=melumat"
                         >Məlumat</a
@@ -125,7 +123,7 @@
                 <a
                   class="uppercase px-1 xl:px-[10px] text-base lg:text-[14px] xl:text-[15px] font-extrabold leading-[20px] text-brown transition-all duration-300"
                   href="about.html"
-                  data-key="contact"
+                  
                   >haqqimizda</a
                 >
               </li>
@@ -133,7 +131,7 @@
                 <a
                   class="uppercase px-1 xl:px-[10px] text-base lg:text-[14px] xl:text-[15px] font-extrabold leading-[20px] text-brown transition-all duration-300"
                   href="contact.html"
-                  data-key="contact"
+                  
                   >ƏLAQƏ</a
                 >
               </li>
@@ -167,7 +165,6 @@
                 </div>
               </li>
               <li class="p-2 lg:p-0 mx-2 hidden lg:block">
-                <!-- <i  class="fa-solid fa-magnifying-glass text-brown  !font-extrabold"></i> -->
                 <img onclick="searchBar()" class="w-4 block" src="img/magnifying-glass (1).png" alt="search" />
                 <span
                   class="absolute searchbox rounded-md !overflow-hidden bg-brown_bg top-full right-0 w-[300px] text-center font-montserrat text-sm"
@@ -186,7 +183,7 @@
                 </span>
               </li>
               <li onclick="openBasketSidebar()" class="p-2 lg:p-0 relative hidden lg:block">
-                <a class="uppercase xl:px-2 pb-1 block transition-all duration-300" href="#" data-key="about_company">
+                <a class="uppercase xl:px-2 pb-1 block transition-all duration-300" href="#" ">
                   <span
                     id="basket-quantity"
                     class="absolute text-white bg-green -top-2 right-0 w-4 h-4 text-center rounded-full font-mono text-[10px] hidden"
@@ -199,72 +196,6 @@
           </div>
         </div>
       </nav>
-      <!-- <div class="bg-brown fixed bottom-0 h-[8vh] w-full z-20 px-3 text-xl lg:hidden">
-        <ul class="flex justify-between items-center h-full">
-          <li
-            class="dropdown_li_lang2 cursor-pointer p-2 lg:p-0 relative uppercase text-base font-normal text-white transition-all duration-300"
-          >
-            <span id="lang2">az</span> <i class="fa-solid fa-angle-up duration-500 pl-1"></i>
-            <div
-              class="drop_div_lang2 mt-2 px-3 bg-brown overflow-hidden min-w-full absolute bottom-10 max-h-0 left-1/2 -translate-x-1/2"
-            >
-              <ul class="w-full text-center py-1">
-                <li
-                  onclick="changeLanguage('az')"
-                  class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
-                >
-                  AZ
-                </li>
-                <li
-                  onclick="changeLanguage('en')"
-                  class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
-                >
-                  en
-                </li>
-                <li
-                  onclick="changeLanguage('ru')"
-                  class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
-                >
-                  ru
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="p-2 lg:p-0 relative">
-            <a class="uppercase xl:px-2 pb-1 block text-white transition-all duration-300" href="#">
-              <i class="fa-brands fa-whatsapp text-2xl"></i>
-            </a>
-          </li>
-          <li onclick="openBasketSidebar()" class="p-2 lg:p-0 relative">
-            <a class="uppercase xl:px-2 pb-1 block text-white transition-all duration-300" href="#" data-key="about_company">
-              <span
-                id="basket-quantity-mobile"
-                class="absolute bg-green -top-1 right-0 w-4 h-4 text-center rounded-full font-mono text-[10px] hidden"
-                >1</span
-              >
-              <img class="w-6" src="./img/food-basket.png" alt="basket" />
-            </a>
-          </li>
-          <li class="p-3 lg:p-0 relative">
-            <i onclick="searchBar()" class="fa-solid fa-magnifying-glass text-white block px-2"></i>
-            <span
-              class="rounded-md searchbox2 w-[300px] absolute bottom-[100%] right-0 bg-brown text-center font-montserrat text-sm"
-            >
-              <ul class="text-white text-left p-2 resultList2">
-                <li class="border-b-2 border-brown py-1 text-center">
-                  <i class="fa-regular fa-folder-open text-2xl text-white"></i>
-                </li>
-              </ul>
-              <input
-                oninput="searchData()"
-                class="w-full p-2 outline-none border-b-2 border-brown_bg text-white placeholder:text-white bg-brown"
-                type="text"
-                placeholder="Axtarış..."
-              />
-            </span>
-          </li>
-        </ul>
-      </div> -->
       <div
         id="bottomBar"
         class="bg-brown fixed bottom-[-100%] h-[8vh] w-full z-20 px-3 text-xl lg:hidden transition-all duration-300"
@@ -329,23 +260,17 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide slide-1">
             <div class="text-white font-montserrat title text-left max-w-[700px]">
-              <h1 class="text-3xl md:text-5xl font-light capitalize" data-key="slide3_title">
-                Hər yudumda mükəmməllik, hər fincanda zövq
-              </h1>
+              <h1 class="text-2xl md:text-5xl font-light capitalize">Hər yudumda mükəmməllik, hər fincanda zövq</h1>
             </div>
           </div>
           <div class="swiper-slide slide-2">
             <div class="text-white font-montserrat title text-left max-w-[700px]">
-              <h1 class="text-3xl md:text-5xl font-light capitalize" data-key="slide3_title">
-                Hər yudumda mükəmməllik, hər fincanda zövq
-              </h1>
+              <h1 class="text-2xl md:text-5xl font-light capitalize">Hər yudumda mükəmməllik, hər fincanda zövq</h1>
             </div>
           </div>
           <div class="swiper-slide slide-3">
             <div class="text-white font-montserrat title text-left max-w-[700px]">
-              <h1 class="text-3xl md:text-5xl font-light capitalize" data-key="slide3_title">
-                Hər yudumda mükəmməllik, hər fincanda zövq
-              </h1>
+              <h1 class="text-2xl md:text-5xl font-light capitalize">Hər yudumda mükəmməllik, hər fincanda zövq</h1>
             </div>
           </div>
         </div>
@@ -650,7 +575,7 @@
           </div>
         </div>
         <!-- Çalışma Saatleri -->
-        <div class="mt-6 w-1/3 text-white font-montserrat">
+        <div class="my-6 w-full lg:w-1/3 text-white font-montserrat">
           <h4 class="text-lg font-bold">Çalışma Saatlarimiz</h4>
           <ul class="mt-2 space-y-1">
             <li class="my-2">Bazar ertəsi - Cümə: 09:00 - 18:00</li>
@@ -717,30 +642,23 @@
               <b class="font-semibold">Ümumi :</b> <span id="total-price" class="border-b-2 border-green">0₼</span>
             </span>
             <button
-
               class="bg-slate-50 hover:bg-gray-100 transition duration-300 text-brown border border-green font-montserrat font-medium text-lg p-2"
             >
-             <a href="basket.html">Səbətə keç</a>
+              <a href="basket.html">Səbətə keç</a>
             </button>
             <button
               class="bg-green hover:bg-greenDark transition duration-300 text-white font-montserrat font-medium text-lg p-2"
             >
-            <a href="check.html">Rəsmiləşdir</a>
-
-              
+              <a href="check.html">Rəsmiləşdir</a>
             </button>
           </div>
         </div>
       </div>
     </section>
 
-    <div
-      class="fixed bottom-10 right-3 z-10 py-1 px-2 rounded-xl"
-    >
+    <div class="fixed bottom-10 right-3 z-10 py-1 px-2 rounded-xl">
       <!-- <a target="_blank" href="https://wa.me/"> <i class="fa-brands fa-whatsapp text-4xl text-white"></i> </a> -->
-       <div class="w-10 h-10 bg-red-500 flex justify-center items-center text-3xl text-white">
-        *
-       </div>
+      <div class="w-10 h-10 bg-red-500 flex justify-center items-center text-3xl text-white">*</div>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script
@@ -797,13 +715,13 @@
           bottomBar.classList.add("bottom-[-100%]");
         }
 
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
       });
       AOS.init({
-        offset: 0, 
-        duration: 1000, 
+        offset: 0,
+        duration: 1000,
         easing: "ease-in-out",
-        delay: 500, 
+        delay: 500,
         once: false,
         anchorPlacement: "top-bottom",
       });
