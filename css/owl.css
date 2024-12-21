@@ -8,5 +8,22 @@
 .relative_section {
   position: relative !important;
 }
+.slider1{
+  position: relative;
+}
+.owl-prev{left: 10px;}
+.owl-next{right: 10px;}
+.owl-prev ,.owl-next{
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+font-size: 4rem !important;
+color: white !important;
+}
+.owl-prev:hover,
+.owl-next:hover
+{
+  background: transparent !important;
+}
 
 
