@@ -5,6 +5,7 @@ const basket_quantity_desktop = document.querySelector("#basket-quantity");
 const basket_quantity_mobile = document.querySelector("#basket-quantity-mobile");
 const totalPricea = document.querySelector("#total-price");
 let basket_quantity = isMobileView() ? basket_quantity_mobile : basket_quantity_desktop;
+const sebet = document.querySelector(".sebet-box");
 
 const SidebarManager = {
   open() {
@@ -120,6 +121,8 @@ const BasketManager = {
   },
 
   saveToLocalStorage() {
+    console.log("basket", this.basket);
+    
     localStorage.setItem("basket", JSON.stringify(this.basket));
   },
 
@@ -171,7 +174,6 @@ const BasketManager = {
     }
   },
 };
-const sebet = document.querySelector(".sebet-box");
 
 const BasketUI = {
   update(basket, totalPrice) {
