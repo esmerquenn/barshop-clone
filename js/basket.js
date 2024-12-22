@@ -183,6 +183,28 @@ const BasketUI = {
     allCards.innerHTML = basket.map((item) => createBasketItemHTML(item)).join("");
 
     totalPricea.innerHTML = `${totalPrice.toFixed(2)}₼`;
+    if (window.location.pathname.includes("basket.html")) {
+      // Sadece basket.html sayfası için çalıştır
+      sebet.innerHTML = "";
+      let sebetbox = "";
+      if (BasketManager.basket.length == 0) {
+        sebetbox = `<div class="flex justify-center flex-col items-center">
+        <img class="w-1/2" src="img/empty-cart.png" alt="empty" />
+        <a                     
+        class="inline-flex items-center gap-2 text-sm font-medium text-greenDark underline hover:no-underline"
+        href="mehsullar.html">
+        Səbətiniz boşdur
+        </a>
+        </div>`;
+      } else {
+        sebetbox = BasketManager.basket.map((item) => createBasketBox(item)).join("");
+      }
+
+      sebet.innerHTML = sebetbox;
+      document.querySelector("#product-count").innerText = BasketManager.basket.length;
+      document.querySelector("#total-amount").innerText = `${BasketManager.getTotalPrice().toFixed(2)} ₼`;
+      document.querySelector("#final-amount").innerText = `${BasketManager.getTotalPrice().toFixed(2)} ₼`;
+    }
   },
 };
 
@@ -190,13 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
   BasketManager.init();
 });
 
-
 // /////////////////////////////////////////////////////////////////////////////////
-
-sebet.innerHTML = BasketManager.basket.map((item) => createBasketBox(item)).join("");
-document.querySelector("#product-count").innerText = BasketManager.basket.length;
-document.querySelector("#total-amount").innerText = `${BasketManager.getTotalPrice().toFixed(2)} ₼`;
-document.querySelector("#final-amount").innerText = `${BasketManager.getTotalPrice().toFixed(2)} ₼`;
 
 function createBasketBox(item) {
   return ` <div class="border border-gray-200 bg-white p-4 shadow-sm md:p-6">

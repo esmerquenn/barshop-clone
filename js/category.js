@@ -13,7 +13,7 @@ function fetchData() {
 }
 fetchData();
 
-// //////////////////////////////////////////////////////////////
+// // //////////////////////////////////////////////////////////////
 function showCategories(data) {
   let cat = "";
   data.categories?.forEach((element) => {
@@ -22,33 +22,33 @@ function showCategories(data) {
   categories.innerHTML += cat;
 }
 
-// ///////////////////////////////////////////////////////////////
-function showProduct(id) {
-  cards.innerHTML = "";
+// // ///////////////////////////////////////////////////////////////
+// function showProduct(id) {
+//   cards.innerHTML = "";
 
-  let btn = categories.querySelector(`#a${id}`);
-  categories.querySelector(".btn-active")?.classList.remove("btn-active");
-  btn.classList.add("btn-active");
+//   let btn = categories.querySelector(`#a${id}`);
+//   categories.querySelector(".btn-active")?.classList.remove("btn-active");
+//   btn.classList.add("btn-active");
 
-  let data = allData.products.filter((item) => {
-    return item.category_id == Number(id);
-  });
+//   let data = allData.products.filter((item) => {
+//     return item.category_id == Number(id);
+//   });
 
-  data.forEach((product) => {
-    const price = product.discount
-      ? ` ${(product.price - (product.price / 100) * product.discount).toFixed(2)}₼ <s class="!text-red-600 ml-2 text-sm">${
-          product.price
-        }₼</s>`
-      : `${product.price}₼`;
-    let stock =
-      product.stock != 0
-        ? `<h6 class="font-montserrat text-green capitalize my-2 text-sm">Stokdadır</h6>`
-        : `<h6 class="font-montserrat  text-gray-500 capitalize my-2 text-sm">Anbarda tükənmişdir</h6>`;
-    write_to_card(product, price, stock);
-  });
-  animationProduct();
-}
-// ///////////////////////////////////////////////////////////
+//   data.forEach((product) => {
+//     const price = product.discount
+//       ? ` ${(product.price - (product.price / 100) * product.discount).toFixed(2)}₼ <s class="!text-red-600 ml-2 text-sm">${
+//           product.price
+//         }₼</s>`
+//       : `${product.price}₼`;
+//     let stock =
+//       product.stock != 0
+//         ? `<h6 class="font-montserrat text-green capitalize my-2 text-sm">Stokdadır</h6>`
+//         : `<h6 class="font-montserrat  text-gray-500 capitalize my-2 text-sm">Anbarda tükənmişdir</h6>`;
+//     write_to_card(product, price, stock);
+//   });
+//   animationProduct();
+// }
+// // ///////////////////////////////////////////////////////////
 
 function write_to_card(product, price, stock) {
   cards.innerHTML += `
@@ -86,7 +86,7 @@ function write_to_card(product, price, stock) {
                 </div>`;
 }
 
-// ///////////////////////////////////////////////////////////
+// // ///////////////////////////////////////////////////////////
 
 function animationProduct() {
   const boxes = cards.querySelectorAll(".box");
@@ -98,16 +98,78 @@ function animationProduct() {
   });
 }
 
-// /////////////////////////////////////////////////////////
+// // /////////////////////////////////////////////////////////
 function sendBasket(id) {
   let newObj = allData.products.find((item) => item.id == id);
-  // if (!basket.some((item) => item.id == newObj.id)) {
-  //   basket.push({ ...newObj, quantity: 1 });
-  //   console.log(basket, allData, id);
-  //   newBasketItem();
-  // } else {
-  //   console.log("Bu ürün zaten sepete eklenmiş!");
-  //   toggleSidebar();
-  // }
   BasketManager.addItem(newObj);
+}
+
+let currentPage = 1;
+const itemsPerPage = 4;
+
+function showProduct(id) {
+  cards.innerHTML = "";
+  currentPage = 1
+
+  let btn = categories.querySelector(`#a${id}`);
+  categories.querySelector(".btn-active")?.classList.remove("btn-active");
+  btn.classList.add("btn-active");
+
+  let data = allData.products.filter((item) => {
+    return item.category_id == Number(id);
+  });
+
+  console.log(data, "data");
+
+  const totalItems = data.length;
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const paginatedData = data.slice(startIndex, endIndex);
+
+  paginatedData.forEach((product) => {
+    const price = product.discount
+      ? ` ${(product.price - (product.price / 100) * product.discount).toFixed(2)}₼ <s class="!text-red-600 ml-2 text-sm">${
+          product.price
+        }₼</s>`
+      : `${product.price}₼`;
+    let stock =
+      product.stock != 0
+        ? `<h6 class="font-montserrat text-green capitalize my-2 text-sm">Stokdadır</h6>`
+        : `<h6 class="font-montserrat  text-gray-500 capitalize my-2 text-sm">Anbarda tükənmişdir</h6>`;
+    write_to_card(product, price, stock);
+  });
+
+    renderPagination(totalPages, id);
+  
+
+  animationProduct();
+}
+
+function renderPagination(totalPages, categoryId) {
+  console.log(totalPages, "totalpages");
+
+  const paginationContainer = document.querySelector("#pagination");
+  paginationContainer.innerHTML = "";
+
+  if (totalPages <= 1) return;
+
+  let paginationHTML = "";
+
+  for (let i = 1; i <= totalPages; i++) {
+    paginationHTML += `<button 
+      class="px-4 py-2 mx-1 border rounded ${
+        currentPage === i ? "bg-brown text-white" : "bg-white text-brown"
+      } hover:bg-brown hover:text-white transition"
+      onclick="changePage(${i}, ${categoryId})">
+      ${i}
+    </button>`;
+  }
+
+  paginationContainer.innerHTML = paginationHTML;
+}
+
+function changePage(page, categoryId) {
+  currentPage = page;
+  showProduct(categoryId);
 }
