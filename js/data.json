@@ -60,7 +60,7 @@
       "isnew": true,
       "stock": 300,
       "img": "2.webp",
-      "sumImages": ["111.jpg", "111.jpg"],
+      "sumImages": ["2.webp", "2.webp", "2.webp"],
       "model": "CF012",
       "weight": "200g"
     },
