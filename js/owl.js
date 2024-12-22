@@ -3,7 +3,9 @@ $(".carousel-1").owlCarousel({
   margin: 50,
   dots:false,
   nav: true,
-  autoplay: false, // Enable autoplay
+  autoplay: true, 
+  autoplayTimeout: 4000,
+
   responsive: {
     0: {
       items: 1,
@@ -18,17 +20,17 @@ $(".carousel-1").owlCarousel({
 });
 $(".image-slider").owlCarousel({
   loop: true,
-  margin: 50,
+  margin: 10,
   dots:false,
   nav: true,
-  autoplay: true, // Enable autoplay
-  autoplayTimeout: 2000, // Time in milliseconds (2000ms = 2 seconds)
+  autoplay: true,
+  autoplayTimeout: 2000,
   responsive: {
     0: {
-      items: 1,
+      items: 2,
     },
     600: {
-      items: 2,
+      items: 3,
     },
     900: {
       items: 3,

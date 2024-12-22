@@ -60,7 +60,10 @@
   .box h5 {
     transition: 0.4s;
   }
-  .box:hover {
+  .detail-box{
+    transition: .4s;
+  }
+  .box:hover, .detail-box:hover {
     box-shadow: 0 0 20px #3c211753;
     .box-img {
       scale: 1.1;
