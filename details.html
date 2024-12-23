@@ -319,40 +319,15 @@
         <section id="slider-details" class="flex flex-col md:flex-row w-full lg:w-1/2 gap-4 h-[500px]">
           <div class="swiper mySwiper swiper-thumbs-container order-2 md:order-first">
             <div id="left-slider" class="swiper-wrapper">
-              <!-- <div class="swiper-slide">
-                <img src="./img/111.jpg" />
-              </div> -->
-              <!-- <div class="swiper-slide">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-              </div>
-              <div class="swiper-slide">
-                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-              </div>
-              <div class="swiper-slide">
-                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-              </div>
-              <div class="swiper-slide">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-              </div>
-              <div class="swiper-slide">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-              </div>
-              <div class="swiper-slide">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-              </div> -->
+             
             </div>
           </div>
 
           <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
             <div id="main-slider" class="swiper-wrapper">
-              <!-- <div class="swiper-slide">
-                <img src="./img/111.jpg" />
-              </div> -->
-              <!-- <div class="swiper-slide">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-              </div> -->
+             
             </div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-next !text-brown"></div>
             <div class="swiper-button-prev"></div>
           </div>
         </section>
@@ -478,93 +453,272 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      var swiper = new Swiper(".mySwiper", {
-        direction: window.innerWidth > 768 ? "vertical" : "horizontal",
-        spaceBetween: 10,
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesProgress: true,
-      });
+      // var swiper = new Swiper(".mySwiper", {
+      //   direction: window.innerWidth > 768 ? "vertical" : "horizontal",
+      //   spaceBetween: 20,
+      //   slidesPerView: 4,
+      //   freeMode: true,
+      //   watchSlidesProgress: true,
+      //   // loop: true,
+      // });
 
-      var swiper2 = new Swiper(".mySwiper2", {
-        spaceBetween: 10,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        thumbs: {
-          swiper: swiper,
-        },
-      });
-      window.addEventListener("resize", () => {
-        swiper.params.direction = window.innerWidth > 768 ? "vertical" : "horizontal";
-        swiper.update();
-      });
+      // var swiper2 = new Swiper(".mySwiper2", {
+      //   spaceBetween: 10,
+      //   // loop: true,
+      //   navigation: {
+      //     nextEl: ".swiper-button-next",
+      //     prevEl: ".swiper-button-prev",
+      //   },
+      //   thumbs: {
+      //     swiper: swiper,
+      //   },
+      // });
+      // window.addEventListener("resize", () => {
+      //   swiper.params.direction = window.innerWidth > 768 ? "vertical" : "horizontal";
+      //   swiper.update();
+      // });
 
-      // //////////////////////////////////////////////////////////////////////////////////////
+      // // //////////////////////////////////////////////////////////////////////////////////////
+      // const main_slider = document.getElementById("main-slider");
+      // const left_slider = document.getElementById("left-slider");
+      // const product_detail = document.getElementById("product-details");
+      // let allData = [];
+
+      // function fetchData() {
+      //   fetch("./js/data.json")
+      //     .then((res) => res.json())
+      //     .then((data) => {
+      //       allData = data;
+      //       console.log(data);
+      //       setProductDetails();
+      //     });
+      // }
+
+      // function getQueryParams() {
+      //   const params = new URLSearchParams(window.location.search);
+      //   return params.get("id");
+      // }
+
+      // function setProductDetails() {
+      //   const productId = getQueryParams();
+      //   if (productId) {
+      //     let findItem = allData.products.find((item) => item.id == productId);
+      //     if (findItem) {
+      //       let category = allData.categories.find((item) => item.id == findItem.category_id);
+      //       let allImages = [findItem.img, ...findItem.sumImages];
+      //       allImages?.forEach((img) => {
+             
+      //         left_slider.innerHTML += ` <div class="swiper-slide">
+      //           <img src="./img/${img}" />
+      //         </div>`;
+      //         main_slider.innerHTML += ` <div class="swiper-slide">
+      //           <img src="./img/${img}" />
+      //         </div>`;
+      //       });
+      //       swiper.update();
+      //       product_detail.innerHTML = `
+      //                     <div class="mb-5">
+      //                       <h2 class="text-2xl text-brown  font-bold mb-4">Coffee Name</h2>
+      //                       <button class="text-green text-2xl border-b border-greenDark hover:text-yellow transition duration-300">
+      //                       ${findItem.price} ₼
+      //                       </button>
+      //                       <p class="text-gray-700 my-6">
+      //                       ${findItem.description}
+      //                       </p>
+      //                       <button onclick="sendBasket('${findItem.id}')" class="px-4 py-2 bg-green text-white hover:bg-greenDark transition">Səbətə əlavə et</button>
+      //                   </div>
+      //                   <h4 class="font-bold text-brown text-lg">Kategoriya : ${category.name}</h4>
+      //       `;
+      //     } else {
+      //       console.log("Ürün bulunamadı");
+      //     }
+      //   }
+      // }
+
+      // document.addEventListener("DOMContentLoaded", () => {
+      //   fetchData();
+      // });
+
+      // function sendBasket(id) {
+      //   event.stopPropagation();
+      //   let newObj = allData?.products.find((item) => item.id == id);
+      //   BasketManager?.addItem(newObj);
+      // }
+
+
       const main_slider = document.getElementById("main-slider");
-      const left_slider = document.getElementById("left-slider");
-      const product_detail = document.getElementById("product-details");
-      let allData = [];
+const left_slider = document.getElementById("left-slider");
+const product_detail = document.getElementById("product-details");
+let allData = [];
 
-      function fetchData() {
-        fetch("./js/data.json")
-          .then((res) => res.json())
-          .then((data) => {
-            allData = data;
-            console.log(data);
-            setProductDetails();
-          });
-      }
+// Swiper referanslarını globalde saklıyoruz
+let swiper = null;
+let swiper2 = null;
 
-      function getQueryParams() {
-        const params = new URLSearchParams(window.location.search);
-        return params.get("id");
-      }
+// Fetch verilerini yükleme
+function fetchData() {
+  fetch("./js/data.json")
+    .then((res) => res.json())
+    .then((data) => {
+      allData = data;
+      console.log(data);
+      setProductDetails();
+    });
+}
 
-      function setProductDetails() {
-        const productId = getQueryParams();
-        if (productId) {
-          let findItem = allData.products.find((item) => item.id == productId);
-          if (findItem) {
-            let category = allData.categories.find((item) => item.id == findItem.category_id);
-            let allImages = [findItem.img, ...findItem.sumImages];
-            allImages.forEach((img) => {
-              main_slider.innerHTML += ` <div class="swiper-slide">
-                <img src="./img/${img}" />
-              </div>`;
-              // left_slider.innerHTML += ` <div class="swiper-slide">
-              //   <img src="./img/${img}" />
-              // </div>`;
-            });
-            product_detail.innerHTML = `
-                          <div class="mb-5">
-                            <h2 class="text-2xl text-brown  font-bold mb-4">Coffee Name</h2>
-                            <button class="text-green text-2xl border-b border-greenDark hover:text-yellow transition duration-300">
-                            ${findItem.price} ₼
-                            </button>
-                            <p class="text-gray-700 my-6">
-                            ${findItem.description}
-                            </p>
-                            <button onclick="sendBasket('${findItem.id}')" class="px-4 py-2 bg-green text-white hover:bg-greenDark transition">Səbətə əlavə et</button>
-                        </div>
-                        <h4 class="font-bold text-brown text-lg">Kategoriya : ${category.name}</h4>
-            `;
-          } else {
-            console.log("Ürün bulunamadı");
-          }
-        }
-      }
+// URL parametresinden id'yi alma
+function getQueryParams() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("id");
+}
 
-      document.addEventListener("DOMContentLoaded", () => {
-        fetchData();
+// Ürün detaylarını ve slider'ı doldurma
+function setProductDetails() {
+  const productId = getQueryParams();
+  if (productId) {
+    let findItem = allData.products.find((item) => item.id == productId);
+    if (findItem) {
+      let category = allData.categories.find((item) => item.id == findItem.category_id);
+      let allImages = [findItem.img, ...findItem.sumImages];
+
+      // Slider içeriklerini temizle ve doldur
+      left_slider.innerHTML = "";
+      main_slider.innerHTML = "";
+      allImages?.forEach((img) => {
+        left_slider.innerHTML += `
+          <div class="swiper-slide">
+            <img src="./img/${img}" />
+          </div>`;
+        main_slider.innerHTML += `
+          <div class="swiper-slide">
+            <img src="./img/${img}" />
+          </div>`;
       });
 
-      function sendBasket(id) {
-        event.stopPropagation();
-        let newObj = allData?.products.find((item) => item.id == id);
-        BasketManager?.addItem(newObj);
-      }
+      // Slider'ları başlat veya güncelle
+      initializeSliders();
+
+      // Ürün detaylarını doldur
+      product_detail.innerHTML = `
+        <div class="mb-5">
+          <h2 class="text-2xl text-brown font-bold mb-4">${findItem.name}</h2>
+          <button class="text-green text-2xl border-b border-greenDark hover:text-yellow transition duration-300">
+            ${findItem.price} ₼
+          </button>
+          <p class="text-gray-700 my-6">
+            ${findItem.description}
+          </p>
+          <button onclick="sendBasket('${findItem.id}')" class="px-4 py-2 bg-green text-white hover:bg-greenDark transition">
+            Səbətə əlavə et
+          </button>
+        </div>
+        <h4 class="font-bold text-brown text-lg">Kategoriya: ${category.name}</h4>
+      `;
+    } else {
+      console.log("Ürün bulunamadı");
+    }
+  }
+}
+
+// Swiper'ı başlatma veya güncelleme
+function initializeSliders() {
+  // Eğer swiper'lar zaten başlatıldıysa, onları güncelle
+  if (swiper && swiper2) {
+    swiper.update();
+    swiper2.update();
+    return;
+  }
+
+  // Yeni swiper'ları başlat
+  swiper = new Swiper(".mySwiper", {
+    direction: window.innerWidth > 768 ? "vertical" : "horizontal",
+    spaceBetween: 20,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+
+  swiper2 = new Swiper(".mySwiper2", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  });
+
+  // Ekran boyutu değiştiğinde slider yönünü güncelle
+  window.addEventListener("resize", () => {
+    swiper.params.direction = window.innerWidth > 768 ? "vertical" : "horizontal";
+    swiper.update();
+  });
+}
+
+// Sayfa yüklendiğinde verileri al
+document.addEventListener("DOMContentLoaded", () => {
+  fetchData();
+});
+
+// Sepete ürün ekleme
+function sendBasket(id) {
+  event.stopPropagation();
+  let newObj = allData?.products.find((item) => item.id == id);
+  BasketManager?.addItem(newObj);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      // const mainSlider = document.getElementById("main-slider");
+      // const leftSlider = document.getElementById("left-slider");
+
+      //   var swiperMain = new Swiper("#main-slider", {
+      //     direction: window.innerWidth > 768 ? "vertical" : "horizontal",
+      //     loop: true,
+      //     pagination: {
+      //       el: ".swiper-pagination",
+      //       clickable: true,
+      //     },
+      //     navigation: {
+      //       nextEl: ".swiper-button-next",
+      //       prevEl: ".swiper-button-prev",
+      //     },
+      //   });
+
+      //   var swiperLeft = new Swiper("#left-slider", {
+      //     direction: "vertical",
+      //     slidesPerView: 3,
+      //     spaceBetween: 10,
+      //     loop: true,
+      //     navigation: {
+      //       nextEl: ".swiper-button-next",
+      //       prevEl: ".swiper-button-prev",
+      //     },
+      //   });
+      // } else {
+      //   console.error("Slider elementleri bulunamadı!");
+      // }
 
       // <div class="swiper mySwiper swiper-thumbs-container order-2 md:order-first">
       //       <div class="swiper-wrapper">

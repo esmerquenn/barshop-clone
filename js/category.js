@@ -25,9 +25,9 @@ function showCategories(data) {
 
 function write_to_card(product, price, stock) {
   cards.innerHTML += `
-              <div onclick="goToDetailPage('${product.id}')" class="box  text-center rounded-md overflow-hidden bg-white">
-                  <div class="box-div relative">
-                    <img class="box-img w-full max-h-72 object-cover" src="img/${product.img}" alt="coffee" />
+              <div onclick="goToDetailPage('${product.id}')" class="box  text-center rounded-md overflow-hidden bg-white ">
+                  <div class="box-div relative h-[60%] md:h-[65%]">
+                    <img class="box-img w-full  h-full object-cover" src="img/${product.img}" alt="coffee" />
                     ${
                       product.isnew
                         ? ` <div 
@@ -51,19 +51,16 @@ function write_to_card(product, price, stock) {
                       <i class="fa-solid fa-cart-shopping text-brown"></i>
                     </div>
                   </div>
-                  <div class="p-4">
-                    <h5 class="mt-2 font-montserrat font-semibold capitalize text-brown">${product.name}</h5>
-                    <h6 class="font-montserrat capitalize my-2 text-sm text-brown">category</h6>
+                  <div class=" p-2 lg:p-4 h-[40%] md:h-[35%] flex flex-col justify-between">
+                    <h5 class="lg:mt-2 text-sm sm:text-lg font-montserrat font-semibold capitalize text-brown">${product.name}</h5>
+                    <h6 class="font-montserrat capitalize lg:my-2 text-sm text-brown">category</h6>
                     ${stock}
-                    <span class="font-bold font-montserrat text-lg text-brown">${price ? price : ""}</span>
+                    <span class="font-bold font-montserrat text-xs sm:text-sm md:text-lg text-brown">${price ? price : ""}</span>
                   </div>
               </div>`;
 }
 
-function goToDetailPage(id){
-  window.location.href = `details.html?id=${id}`;
-  
-}
+
 
 // // ///////////////////////////////////////////////////////////
 
@@ -115,8 +112,8 @@ function showProduct(id) {
       : `${product.price}₼`;
     let stock =
       product.stock != 0
-        ? `<h6 class="font-montserrat text-green capitalize my-2 text-sm">Stokdadır</h6>`
-        : `<h6 class="font-montserrat  text-gray-500 capitalize my-2 text-sm">Anbarda tükənmişdir</h6>`;
+        ? `<h6 class="font-montserrat text-green capitalize lg:my-2 text-sm">Stokdadır</h6>`
+        : `<h6 class="font-montserrat  text-gray-500 capitalize lg:my-2 text-sm">Anbarda tükənmişdir</h6>`;
     write_to_card(product, price, stock);
   });
 
