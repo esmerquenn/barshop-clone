@@ -55,6 +55,20 @@
   padding-left: 2px;
 }
 
+.fa-message{
+  transform: rotateY(180deg);
+}
+
+#icon-container {
+  transform: translateY(50px); /* Başlangıçta aşağıda */
+  opacity: 0; /* Başlangıçta görünmez */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+#icon-container.active {
+  transform: translateY(0); /* Yükselir */
+  opacity: 1; /* Görünür olur */
+}
 .searchbox,
 .searchbox2 {
   max-height: 0;

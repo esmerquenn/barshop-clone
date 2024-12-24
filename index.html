@@ -292,10 +292,10 @@
       </div>
       <!-- category end -->
       <!-- About start -->
-      <section class="container_my flex flex-col md:flex-row my-20">
-        <div data-aos="fade-up" class="about_section md:w-1/2 h-[50vh] md:h-screen flex items-end gap-5">
+      <section class="container_my flex flex-col md:flex-row my-20 md:h-[70vh]">
+        <div data-aos="fade-up" class="about_section w-full h-[50vh] md:h-full md:w-1/2 flex items-end gap-5">
           <div
-            class="font-montserrat bg-yellow inline-flex flex-col justify-center items-start gap-2 md:w-60 h-[200px] p-5 text-white"
+            class="font-montserrat bg-yellow inline-flex flex-col justify-center items-start gap-2 md:w-60 h-1/2 md:h-[200px] p-3 text-white"
           >
             <h4 class="uppercase font-semibold">Lorem, ipsum dolor.</h4>
             <p>Lorem ipsum dolor sit.</p>
@@ -306,37 +306,37 @@
             </button>
           </div>
         </div>
-        <div class="md:w-1/2 pl-4 pt-10 font-montserrat text-green md:h-screen flex flex-col justify-between items-center gap-5">
-          <div class="flex justify-center flex-col items-center gap-4">
-            <h4 data-aos="fade-up" class="uppercase font-extrabold text-2xl mb-10">Haqqimizda BAŞLIQ</h4>
-            <p data-aos="fade-up" class="text-xl text-center w-[90%]">
-              Bizim haqqimizda bir cumle qeyd et, ki qisa ve esas olsun.
-            </p>
-            <button data-aos="fade-up" class="p-2 btn-more2 text-base uppercase font-semibold font-montserrat">
-              <a href="about.html">ətraflı</a>
-            </button>
-          </div>
-          <img data-aos="fade-up" src="./img/7.jpg" alt="" />
-        </div>
-      </section>
-      <section class="container_my flex flex-col md:flex-row my-20">
         <div
-          class="md:w-1/2 order-2 md:order-1 px-4 pt-10 font-montserrat text-green md:h-screen flex flex-col justify-between items-center gap-5"
+          data-aos="fade-up"
+          class="md:w-1/2 md:h-full pl-4 pt-10 font-montserrat text-green flex flex-col justify-between items-center gap-5"
         >
-          <div class="flex justify-center flex-col items-center gap-4">
-            <h4 data-aos="fade-up" class="uppercase font-extrabold text-2xl mb-10">Haqqimizda BAŞLIQ</h4>
-            <p data-aos="fade-up" class="text-xl text-center w-[90%]">
-              Bizim haqqimizda bir cumle qeyd et, ki qisa ve esas olsun.
-            </p>
-            <button data-aos="fade-up" class="p-2 btn-more2 text-base uppercase font-semibold font-montserrat">
+          <div class="h-1/2 flex justify-center flex-col items-center gap-1">
+            <h4 class="uppercase font-extrabold text-2xl mb-10">Yeni mehsul</h4>
+            <p class="text-xl text-center w-[90%]">Mehsul haqqinda bir cumle qeyd et, ki qisa ve esas olsun.</p>
+            <button class="p-2 btn-more2 text-base uppercase font-semibold font-montserrat">
               <a href="about.html">ətraflı</a>
             </button>
           </div>
-          <img data-aos="fade-up" src="./img/9.jpg" alt="" />
+          <img class="w-full h-1/3 md:h-1/2 object-cover" src="./img/7.jpg" alt="" />
         </div>
-        <div data-aos="fade-up" class="about_section2 order-1 md:order-2 md:w-1/2 h-[50vh] md:h-screen flex items-end gap-5">
+      </section>
+      <section class="container_my flex flex-col md:flex-row my-20 md:h-[70vh]">
+        <div
+          data-aos="fade-up"
+          class="md:w-1/2 md:h-full order-2 md:order-1 px-4 pt-10 font-montserrat text-green flex flex-col justify-between items-center gap-5"
+        >
+          <div class="h-1/2 flex justify-center flex-col items-center gap-1">
+            <h4 class="uppercase font-extrabold text-2xl mb-10">Yeni mehsul</h4>
+            <p class="text-xl text-center w-[90%]">Mehsul haqqinda bir cumle qeyd et, ki qisa ve esas olsun.</p>
+            <button class="p-2 btn-more2 text-base uppercase font-semibold font-montserrat">
+              <a href="about.html">ətraflı</a>
+            </button>
+          </div>
+          <img class="w-full h-1/3 md:h-1/2 object-cover" src="./img/9.jpg" alt="" />
+        </div>
+        <div data-aos="fade-up" class="about_section2 order-1 md:order-2 w-full h-[50vh] md:h-full md:w-1/2 flex items-end gap-5">
           <div
-            class="font-montserrat bg-yellow inline-flex flex-col justify-center items-start gap-2 md:w-60 h-[200px] p-5 text-white"
+            class="font-montserrat bg-yellow inline-flex flex-col justify-center items-start gap-2 md:w-60 h-1/2 md:h-[200px] p-3 text-white"
           >
             <h4 class="uppercase font-semibold">Lorem, ipsum dolor.</h4>
             <p>Lorem ipsum dolor sit.</p>
@@ -348,12 +348,13 @@
           </div>
         </div>
       </section>
+
       <!-- About end -->
 
       <section>
         <h3 class="text-2xl md:text-4xl font-montserrat font-extrabold uppercase text-center text-brown">Çox satılanlar</h3>
 
-        <div class="my-20 container_my grid justify-center grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-6 bg-white">
+        <div class="my-20 md:h-[95vh] container_my grid justify-center grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-6 bg-white">
           <div data-aos="fade-up" class="bg-img-div md:col-span-2 md:row-span-2 shadow-md">
             <div class="overflow-hidden">
               <img
@@ -363,7 +364,9 @@
               />
             </div>
             <div class="p-4 text-center">
-              <h3 class="text-lg font-montserrat text-gray-800">Eletta Explore Qəhvəbişirən DeLonghi ECAM450.65 S</h3>
+              <h3 class="text-base sm:text-lg font-montserrat text-gray-800">
+                Eletta Explore Qəhvəbişirən DeLonghi ECAM450.65 S
+              </h3>
               <p class="text-xl font-montserrat border-b border-brown text-green inline-block px-2 mt-3">2 590 ₼</p>
             </div>
           </div>
@@ -376,7 +379,9 @@
               />
             </div>
             <div class="p-4 text-center lg:w-2/5">
-              <h3 class="text-lg font-montserrat text-gray-800">Eletta Explore Qəhvəbişirən DeLonghi ECAM450.65 S</h3>
+              <h3 class="text-base sm:text-lg font-montserrat text-gray-800">
+                Eletta Explore Qəhvəbişirən DeLonghi ECAM450.65 S
+              </h3>
               <p class="text-xl font-montserrat border-b border-brown text-green inline-block px-2 mt-3">2 590 ₼</p>
             </div>
           </div>
@@ -389,7 +394,9 @@
               />
             </div>
             <div class="p-4 text-center">
-              <h3 class="text-lg font-montserrat text-gray-800">Eletta Explore Qəhvəbişirən DeLonghi ECAM450.65 S</h3>
+              <h3 class="text-base sm:text-lg font-montserrat text-gray-800">
+                Eletta Explore Qəhvəbişirən DeLonghi ECAM450.65 S
+              </h3>
               <p class="text-xl font-montserrat border-b border-brown text-green inline-block px-2 mt-3">2 590 ₼</p>
             </div>
           </div>
@@ -402,85 +409,14 @@
               />
             </div>
             <div class="p-4 text-center">
-              <h3 class="text-lg font-montserrat text-gray-800">Eletta Explore Qəhvəbişirən DeLonghi ECAM450.65 S</h3>
+              <h3 class="text-base sm:text-lg font-montserrat text-gray-800">
+                Eletta Explore Qəhvəbişirən DeLonghi ECAM450.65 S
+              </h3>
               <p class="text-xl font-montserrat border-b border-brown text-green inline-block px-2 mt-3">2 590 ₼</p>
             </div>
           </div>
         </div>
       </section>
-      <!-- <div class="container_my h-screen grid grid-cols-4 grid-rows-2 gap-2 p-4 bg-white">
-        <div class="bg-img-div col-span-2 row-span-2  shadow-md h-full flex flex-col">
-          <div class="overflow-hidden">
-            <img
-              src="img/bg.png"
-              alt="Eletta Explore Qəhvəbişirən"
-              class="w-full h-full object-cover transition-all duration-1000 scale-75"
-            />
-          </div>
-          <div class="p-4 text-center flex-shrink-0">
-            <h3 class="text-lg font-montserrat text-gray-800 truncate">
-              Eletta Explore Qəhvəbişirən DeLonghi ECAM450.65 S
-            </h3>
-            <p class="text-xl font-montserrat border-b border-brown text-green inline-block px-2 mt-3">
-              2 590 ₼
-            </p>
-          </div>
-        </div>
-      
-        <div class="bg-img-div col-span-2 shadow-md flex flex-col">
-          <div class="overflow-hidden">
-            <img
-              src="img/bg.png"
-              alt="Eletta Explore Qəhvəbişirən"
-              class="w-full h-full object-cover transition-all duration-1000 scale-75"
-            />
-          </div>
-          <div class="p-4 text-center flex-shrink-0">
-            <h3 class="text-lg font-montserrat text-gray-800 truncate">
-              Eletta Explore Qəhvəbişirən DeLonghi ECAM450.65 S
-            </h3>
-            <p class="text-xl font-montserrat border-b border-brown text-green inline-block px-2 mt-3">
-              2 590 ₼
-            </p>
-          </div>
-        </div>
-      
-        <div class="bg-img-div row-span-1 shadow-md h-full flex flex-col">
-          <div class="overflow-hidden">
-            <img
-              src="img/bg.png"
-              alt="Eletta Explore Qəhvəbişirən"
-              class="w-full h-full object-cover transition-all duration-1000 scale-75"
-            />
-          </div>
-          <div class="p-4 text-center flex-shrink-0">
-            <h3 class="text-lg font-montserrat text-gray-800 truncate">
-              Eletta Explore Qəhvəbişirən DeLonghi ECAM450.65 S
-            </h3>
-            <p class="text-xl font-montserrat border-b border-brown text-green inline-block px-2 mt-3">
-              2 590 ₼
-            </p>
-          </div>
-        </div>
-      
-        <div class="bg-img-div row-span-1 shadow-md h-full flex flex-col">
-          <div class="overflow-hidden">
-            <img
-              src="img/bg.png"
-              alt="Eletta Explore Qəhvəbişirən"
-              class="w-full h-full object-cover transition-all duration-1000 scale-75"
-            />
-          </div>
-          <div class="p-4 text-center flex-shrink-0">
-            <h3 class="text-lg font-montserrat text-gray-800 truncate">
-              Eletta Explore Qəhvəbişirən DeLonghi ECAM450.65 S
-            </h3>
-            <p class="text-xl font-montserrat border-b border-brown text-green inline-block px-2 mt-3">
-              2 590 ₼
-            </p>
-          </div>
-        </div>
-      </div> -->
 
       <!-- OWL FIRST START -->
       <section class="my-20">
@@ -488,62 +424,7 @@
           EndİRİMLİ məhsullar
         </h3>
 
-        <div class="slider1 container_my owl-carousel carousel-1 owl-theme">
-          <div data-aos="fade-up" class="item grid place-items-center grid1-con">
-            <div class="grid1 grid-slide font-montserrat">
-              <span class="bg-green text-white px-4 py-1">20%</span>
-              <div class="w-full flex flex-col justify-center items-center">
-                <h4 class="bg-brown text-white text-xl mb-2 py-1 px-3">Yeni mehsul adi</h4>
-                <p class="text-white text-lg">Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-          </div>
-          <div data-aos="fade-up" class="item grid place-items-center grid1-con">
-            <div class="grid1 grid-slide font-montserrat">
-              <span class="bg-green text-white px-4 py-1">20%</span>
-              <div class="w-full flex flex-col justify-center items-center">
-                <h4 class="bg-brown text-white text-xl mb-2 py-1 px-3">Yeni mehsul adi</h4>
-                <p class="text-white text-lg">Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-          </div>
-          <div data-aos="fade-up" class="item grid place-items-center grid1-con">
-            <div class="grid1 grid-slide font-montserrat">
-              <span class="bg-green text-white px-4 py-1">20%</span>
-              <div class="w-full flex flex-col justify-center items-center">
-                <h4 class="bg-brown text-white text-xl mb-2 py-1 px-3">Yeni mehsul adi</h4>
-                <p class="text-white text-lg">Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-          </div>
-          <div data-aos="fade-up" class="item grid place-items-center grid1-con">
-            <div class="grid1 grid-slide font-montserrat">
-              <span class="bg-green text-white px-4 py-1">20%</span>
-              <div class="w-full flex flex-col justify-center items-center">
-                <h4 class="bg-brown text-white text-xl mb-2 py-1 px-3">Yeni mehsul adi</h4>
-                <p class="text-white text-lg">Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-          </div>
-          <div class="item grid place-items-center grid1-con">
-            <div class="grid1 grid-slide font-montserrat">
-              <span class="bg-green text-white px-4 py-1">20%</span>
-              <div class="w-full flex flex-col justify-center items-center">
-                <h4 class="bg-brown text-white text-xl mb-2 py-1 px-3">Yeni mehsul adi</h4>
-                <p class="text-white text-lg">Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-          </div>
-          <div class="item grid place-items-center grid1-con">
-            <div class="grid2 grid-slide font-montserrat">
-              <span class="bg-green text-white px-4 py-1">20%</span>
-              <div class="w-full flex flex-col justify-center items-center">
-                <h4 class="bg-brown text-white text-xl mb-2 py-1 px-3">Yeni mehsul adi</h4>
-                <p class="text-white text-lg">Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div id="carousel_discount" class="slider1 container_my owl-carousel owl-theme"></div>
       </section>
       <!-- OWL FIRST END -->
     </main>
@@ -578,9 +459,8 @@
         <div class="mt-6 lg:mt-0 mb-6 w-full lg:w-1/3 text-white font-montserrat">
           <h4 class="text-lg font-bold">Çalışma Saatlarimiz</h4>
           <ul class="mt-2 space-y-1">
-            <li class="my-2">Bazar ertəsi - Cümə: 09:00 - 18:00</li>
-            <li class="my-2">Şənbə: 10:00 - 16:00</li>
-            <li class="my-2">Bazar: Bağlıdır</li>
+            <li class="my-2">Bazar ertəsi - Cümə: 09:00 - 22:00</li>
+            <li class="my-2">Şənbə-Bazar: 10:00 - 18:00</li>
           </ul>
         </div>
 
@@ -656,10 +536,36 @@
       </div>
     </section>
 
-    <div class="fixed bottom-10 right-3 z-10 py-1 px-2 rounded-xl">
-      <!-- <a target="_blank" href="https://wa.me/"> <i class="fa-brands fa-whatsapp text-4xl text-white"></i> </a> -->
-      <div class="w-10 h-10 bg-red-500 flex justify-center items-center text-3xl text-white">*</div>
+    <div class="fixed bottom-11 right-3 z-10 p-2">
+      <div
+        id="icon-container"
+        class="flex flex-col items-center gap-1 transform translate-y-full opacity-0 transition-all duration-500"
+      >
+        <a target="_blank" href="https://wa.me/">
+          <i class="fa-brands fa-whatsapp text-2xl text-green"></i>
+        </a>
+        <a target="_blank" href="">
+          <i class="fa-brands fa-instagram text-2xl text-pink-600"></i>
+        </a>
+        <a target="_blank" href="">
+          <i class="fa-brands fa-facebook-f text-2xl text-blue-700"></i>
+        </a>
+      </div>
+      <div id="message-icon" class="w-10 h-10 flex justify-center items-center text-3xl text-brown cursor-pointer">
+        <i class="fa-solid fa-message"></i>
+      </div>
     </div>
+
+    <!-- <div class="fixed bottom-10 right-3 z-10 p-2 ">
+      <div class="flex flex-col items-center gap-1">
+        <a target="_blank" href="https://wa.me/"> <i class="fa-brands fa-whatsapp text-xl text-green"></i> </a>
+        <a target="_blank" href=""> <i class="fa-brands fa-instagram text-xl text-pink-600"></i> </a>
+        <a target="_blank" href=""> <i class="fa-brands fa-facebook-f text-xl text-blue-700"></i> </a>
+      </div>
+      <div class="w-10 h-10 flex justify-center items-center text-3xl text-brown">
+        <i class="fa-solid fa-message "></i>
+      </div>
+    </div> -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -685,6 +591,12 @@
     <script src="js/sendToDetails.js"></script>
 
     <script>
+      const messageIcon = document.getElementById("message-icon");
+      const iconContainer = document.getElementById("icon-container");
+
+      messageIcon.addEventListener("click", () => {
+        iconContainer.classList.toggle("active");
+      });
       const menu = document.querySelector(".hidden_dropdown");
 
       function closeDropdown() {
