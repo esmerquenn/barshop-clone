@@ -1,7 +1,30 @@
+const menu = document.querySelector(".hidden_dropdown");
 
+function closeDropdown() {
+  if (window.innerWidth < 992) {
+    menu.classList.toggle("dropdown");
+  }
+}
+const drop_div_lang2 = document.querySelector(".drop_div_lang2");
+function openLangMobile() {
+  console.log("salam");
+  drop_div_lang2.classList.toggle("drop_active2");
+}
+let lastScrollTop = 0;
+const bottomBar = document.getElementById("bottomBar");
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
+  if (currentScroll > window.innerHeight/2) {
+    bottomBar.classList.remove("bottom-[-100%]");
+    bottomBar.classList.add("bottom-0");
+  } else {
+    bottomBar.classList.remove("bottom-0");
+    bottomBar.classList.add("bottom-[-100%]");
+  }
 
-
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
 
 function isMobileView() {
   return window.innerWidth < 992;
@@ -36,15 +59,8 @@ function initializeDropdowns() {
   });
 }
 
-
-// dropdown_li_lang2.addEventListener("click", () => {
-  
-// });
-
-// Sayfa yüklendiğinde dropdown'ları başlat
 document.addEventListener("DOMContentLoaded", initializeDropdowns);
 
-// Ekran boyutu değiştiğinde dropdown'ları yeniden başlat
 window.addEventListener("resize", () => {
   initializeDropdowns();
 });
@@ -59,15 +75,4 @@ function changeLanguage(val) {
   lang.innerHTML = val;
 }
 
-// import 'aos/dist/aos.css';
 
-// // AOS JS
-// import AOS from 'aos';
-
-// // Başlatma
-// AOS.init();
-
-// AOS.init({
-//   duration: 1000, // Animasyon süresi (ms cinsinden)
-//   once: true, // Animasyon bir kez mi çalışacak?
-// });

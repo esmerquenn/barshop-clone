@@ -556,16 +556,6 @@
       </div>
     </div>
 
-    <!-- <div class="fixed bottom-10 right-3 z-10 p-2 ">
-      <div class="flex flex-col items-center gap-1">
-        <a target="_blank" href="https://wa.me/"> <i class="fa-brands fa-whatsapp text-xl text-green"></i> </a>
-        <a target="_blank" href=""> <i class="fa-brands fa-instagram text-xl text-pink-600"></i> </a>
-        <a target="_blank" href=""> <i class="fa-brands fa-facebook-f text-xl text-blue-700"></i> </a>
-      </div>
-      <div class="w-10 h-10 flex justify-center items-center text-3xl text-brown">
-        <i class="fa-solid fa-message "></i>
-      </div>
-    </div> -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -597,33 +587,33 @@
       messageIcon.addEventListener("click", () => {
         iconContainer.classList.toggle("active");
       });
-      const menu = document.querySelector(".hidden_dropdown");
+      // const menu = document.querySelector(".hidden_dropdown");
 
-      function closeDropdown() {
-        if (window.innerWidth < 992) {
-          menu.classList.toggle("dropdown");
-        }
-      }
-      const drop_div_lang2 = document.querySelector(".drop_div_lang2");
-      function openLangMobile() {
-        drop_div_lang2.classList.toggle("drop_active2");
-      }
-      let lastScrollTop = 0;
-      const bottomBar = document.getElementById("bottomBar");
+      // function closeDropdown() {
+      //   if (window.innerWidth < 992) {
+      //     menu.classList.toggle("dropdown");
+      //   }
+      // }
+      // const drop_div_lang2 = document.querySelector(".drop_div_lang2");
+      // function openLangMobile() {
+      //   drop_div_lang2.classList.toggle("drop_active2");
+      // }
+      // let lastScrollTop = 0;
+      // const bottomBar = document.getElementById("bottomBar");
 
-      window.addEventListener("scroll", () => {
-        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      // window.addEventListener("scroll", () => {
+      //   const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-        if (currentScroll > lastScrollTop) {
-          bottomBar.classList.remove("bottom-[-100%]");
-          bottomBar.classList.add("bottom-0");
-        } else {
-          bottomBar.classList.remove("bottom-0");
-          bottomBar.classList.add("bottom-[-100%]");
-        }
+      //   if (currentScroll > lastScrollTop) {
+      //     bottomBar.classList.remove("bottom-[-100%]");
+      //     bottomBar.classList.add("bottom-0");
+      //   } else {
+      //     bottomBar.classList.remove("bottom-0");
+      //     bottomBar.classList.add("bottom-[-100%]");
+      //   }
 
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-      });
+      //   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+      // });
       AOS.init({
         offset: 0,
         duration: 800,

@@ -7,8 +7,6 @@
     <link rel="shortcut icon" href="logo2.png" type="image/x-icon" />
     <link href="./css/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="css/slider.css" />
-    <link rel="stylesheet" href="css/owl.css" />
     <link rel="stylesheet" href="css/category.css" />
     <link rel="stylesheet" href="css/basket.css" />
     <link rel="stylesheet" href="css/about.css" />
@@ -19,16 +17,6 @@
       href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -36,7 +24,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -282,7 +269,7 @@
         <!-- Başlık -->
         <h1 class="text-2xl font-bold mb-4">Kategoriler</h1>
 
-        <div class="flex gap-4">
+        <div class="flex items-start gap-4">
           <!-- Filtreler -->
           <div class="w-1/4 bg-white shadow-md p-4 rounded">
             <h2 class="text-xl font-semibold mb-4">Filtreler</h2>
@@ -333,7 +320,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               <!-- Ürün Kartı -->
               <div
-                class=" detail-box relative text-center  shadow-md overflow-hidden transition-transform transform hover:scale-105"
+                class="detail-box relative text-center shadow-md overflow-hidden transition-transform transform hover:scale-105"
                 style="max-height: 380px; min-height: 340px"
               >
                 <div class="box-div h-2/3 w-full bg-red-400 overflow-hidden relative">
@@ -346,7 +333,7 @@
                   <div
                     class="bg-red-600 text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute left-2 top-[70px] lg:top-14"
                   >
-                  20
+                    20
                     <i class="fa-solid fa-percent"></i>
                   </div>
                   <div onclick="sendBasket()" class="bg-white my_absolute">
@@ -360,20 +347,259 @@
                   <span class="font-bold font-montserrat text-base text-brown"> 19.60 </span>
                 </div>
               </div>
-              <!-- Ürün Kartı Tekrar -->
-              <div class="border rounded shadow-sm p-4">
-                <img src="https://via.placeholder.com/150" alt="Ürün" class="w-full h-48 object-cover mb-4" />
-                <h3 class="text-lg font-semibold mb-2">Ürün Adı</h3>
-                <p class="text-gray-600 mb-2">₺150.00</p>
-                <button class="bg-blue-600 text-white py-1 px-4 rounded">Sepete Ekle</button>
+              <div
+                class="detail-box relative text-center shadow-md overflow-hidden transition-transform transform hover:scale-105"
+                style="max-height: 380px; min-height: 340px"
+              >
+                <div class="box-div h-2/3 w-full bg-red-400 overflow-hidden relative">
+                  <img class="box-img w-full h-full object-cover" src="img/1.jpeg" alt="product" />
+                  <div
+                    class="bg-green text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute top-10 lg:top-2 left-2"
+                  >
+                    new
+                  </div>
+                  <div
+                    class="bg-red-600 text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute left-2 top-[70px] lg:top-14"
+                  >
+                    20
+                    <i class="fa-solid fa-percent"></i>
+                  </div>
+                  <div onclick="sendBasket()" class="bg-white my_absolute">
+                    <i class="fa-solid fa-cart-shopping text-brown"></i>
+                  </div>
+                </div>
+                <div class="p-1 sm:p-4 h-1/3 flex flex-col justify-between">
+                  <h5 class="text-base font-montserrat font-semibold text-brown capitalize truncate">name</h5>
+                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">category</h6>
+                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">stock</h6>
+                  <span class="font-bold font-montserrat text-base text-brown"> 19.60 </span>
+                </div>
               </div>
-              <!-- Ürün Kartı Tekrar -->
-              <div class="border rounded shadow-sm p-4">
-                <img src="https://via.placeholder.com/150" alt="Ürün" class="w-full h-48 object-cover mb-4" />
-                <h3 class="text-lg font-semibold mb-2">Ürün Adı</h3>
-                <p class="text-gray-600 mb-2">₺150.00</p>
-                <button class="bg-blue-600 text-white py-1 px-4 rounded">Sepete Ekle</button>
+              <div
+                class="detail-box relative text-center shadow-md overflow-hidden transition-transform transform hover:scale-105"
+                style="max-height: 380px; min-height: 340px"
+              >
+                <div class="box-div h-2/3 w-full bg-red-400 overflow-hidden relative">
+                  <img class="box-img w-full h-full object-cover" src="img/1.jpeg" alt="product" />
+                  <div
+                    class="bg-green text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute top-10 lg:top-2 left-2"
+                  >
+                    new
+                  </div>
+                  <div
+                    class="bg-red-600 text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute left-2 top-[70px] lg:top-14"
+                  >
+                    20
+                    <i class="fa-solid fa-percent"></i>
+                  </div>
+                  <div onclick="sendBasket()" class="bg-white my_absolute">
+                    <i class="fa-solid fa-cart-shopping text-brown"></i>
+                  </div>
+                </div>
+                <div class="p-1 sm:p-4 h-1/3 flex flex-col justify-between">
+                  <h5 class="text-base font-montserrat font-semibold text-brown capitalize truncate">name</h5>
+                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">category</h6>
+                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">stock</h6>
+                  <span class="font-bold font-montserrat text-base text-brown"> 19.60 </span>
+                </div>
               </div>
+              <div
+                class="detail-box relative text-center shadow-md overflow-hidden transition-transform transform hover:scale-105"
+                style="max-height: 380px; min-height: 340px"
+              >
+                <div class="box-div h-2/3 w-full bg-red-400 overflow-hidden relative">
+                  <img class="box-img w-full h-full object-cover" src="img/1.jpeg" alt="product" />
+                  <div
+                    class="bg-green text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute top-10 lg:top-2 left-2"
+                  >
+                    new
+                  </div>
+                  <div
+                    class="bg-red-600 text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute left-2 top-[70px] lg:top-14"
+                  >
+                    20
+                    <i class="fa-solid fa-percent"></i>
+                  </div>
+                  <div onclick="sendBasket()" class="bg-white my_absolute">
+                    <i class="fa-solid fa-cart-shopping text-brown"></i>
+                  </div>
+                </div>
+                <div class="p-1 sm:p-4 h-1/3 flex flex-col justify-between">
+                  <h5 class="text-base font-montserrat font-semibold text-brown capitalize truncate">name</h5>
+                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">category</h6>
+                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">stock</h6>
+                  <span class="font-bold font-montserrat text-base text-brown"> 19.60 </span>
+                </div>
+              </div>
+              <div
+                class="detail-box relative text-center shadow-md overflow-hidden transition-transform transform hover:scale-105"
+                style="max-height: 380px; min-height: 340px"
+              >
+                <div class="box-div h-2/3 w-full bg-red-400 overflow-hidden relative">
+                  <img class="box-img w-full h-full object-cover" src="img/1.jpeg" alt="product" />
+                  <div
+                    class="bg-green text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute top-10 lg:top-2 left-2"
+                  >
+                    new
+                  </div>
+                  <div
+                    class="bg-red-600 text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute left-2 top-[70px] lg:top-14"
+                  >
+                    20
+                    <i class="fa-solid fa-percent"></i>
+                  </div>
+                  <div onclick="sendBasket()" class="bg-white my_absolute">
+                    <i class="fa-solid fa-cart-shopping text-brown"></i>
+                  </div>
+                </div>
+                <div class="p-1 sm:p-4 h-1/3 flex flex-col justify-between">
+                  <h5 class="text-base font-montserrat font-semibold text-brown capitalize truncate">name</h5>
+                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">category</h6>
+                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">stock</h6>
+                  <span class="font-bold font-montserrat text-base text-brown"> 19.60 </span>
+                </div>
+              </div>
+              <div
+                class="detail-box relative text-center shadow-md overflow-hidden transition-transform transform hover:scale-105"
+                style="max-height: 380px; min-height: 340px"
+              >
+                <div class="box-div h-2/3 w-full bg-red-400 overflow-hidden relative">
+                  <img class="box-img w-full h-full object-cover" src="img/1.jpeg" alt="product" />
+                  <div
+                    class="bg-green text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute top-10 lg:top-2 left-2"
+                  >
+                    new
+                  </div>
+                  <div
+                    class="bg-red-600 text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute left-2 top-[70px] lg:top-14"
+                  >
+                    20
+                    <i class="fa-solid fa-percent"></i>
+                  </div>
+                  <div onclick="sendBasket()" class="bg-white my_absolute">
+                    <i class="fa-solid fa-cart-shopping text-brown"></i>
+                  </div>
+                </div>
+                <div class="p-1 sm:p-4 h-1/3 flex flex-col justify-between">
+                  <h5 class="text-base font-montserrat font-semibold text-brown capitalize truncate">name</h5>
+                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">category</h6>
+                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">stock</h6>
+                  <span class="font-bold font-montserrat text-base text-brown"> 19.60 </span>
+                </div>
+              </div>
+              <div
+                class="detail-box relative text-center shadow-md overflow-hidden transition-transform transform hover:scale-105"
+                style="max-height: 380px; min-height: 340px"
+              >
+                <div class="box-div h-2/3 w-full bg-red-400 overflow-hidden relative">
+                  <img class="box-img w-full h-full object-cover" src="img/1.jpeg" alt="product" />
+                  <div
+                    class="bg-green text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute top-10 lg:top-2 left-2"
+                  >
+                    new
+                  </div>
+                  <div
+                    class="bg-red-600 text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute left-2 top-[70px] lg:top-14"
+                  >
+                    20
+                    <i class="fa-solid fa-percent"></i>
+                  </div>
+                  <div onclick="sendBasket()" class="bg-white my_absolute">
+                    <i class="fa-solid fa-cart-shopping text-brown"></i>
+                  </div>
+                </div>
+                <div class="p-1 sm:p-4 h-1/3 flex flex-col justify-between">
+                  <h5 class="text-base font-montserrat font-semibold text-brown capitalize truncate">name</h5>
+                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">category</h6>
+                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">stock</h6>
+                  <span class="font-bold font-montserrat text-base text-brown"> 19.60 </span>
+                </div>
+              </div>
+              <div
+                class="detail-box relative text-center shadow-md overflow-hidden transition-transform transform hover:scale-105"
+                style="max-height: 380px; min-height: 340px"
+              >
+                <div class="box-div h-2/3 w-full bg-red-400 overflow-hidden relative">
+                  <img class="box-img w-full h-full object-cover" src="img/1.jpeg" alt="product" />
+                  <div
+                    class="bg-green text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute top-10 lg:top-2 left-2"
+                  >
+                    new
+                  </div>
+                  <div
+                    class="bg-red-600 text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute left-2 top-[70px] lg:top-14"
+                  >
+                    20
+                    <i class="fa-solid fa-percent"></i>
+                  </div>
+                  <div onclick="sendBasket()" class="bg-white my_absolute">
+                    <i class="fa-solid fa-cart-shopping text-brown"></i>
+                  </div>
+                </div>
+                <div class="p-1 sm:p-4 h-1/3 flex flex-col justify-between">
+                  <h5 class="text-base font-montserrat font-semibold text-brown capitalize truncate">name</h5>
+                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">category</h6>
+                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">stock</h6>
+                  <span class="font-bold font-montserrat text-base text-brown"> 19.60 </span>
+                </div>
+              </div>
+              <div
+                class="detail-box relative text-center shadow-md overflow-hidden transition-transform transform hover:scale-105"
+                style="max-height: 380px; min-height: 340px"
+              >
+                <div class="box-div h-2/3 w-full bg-red-400 overflow-hidden relative">
+                  <img class="box-img w-full h-full object-cover" src="img/1.jpeg" alt="product" />
+                  <div
+                    class="bg-green text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute top-10 lg:top-2 left-2"
+                  >
+                    new
+                  </div>
+                  <div
+                    class="bg-red-600 text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute left-2 top-[70px] lg:top-14"
+                  >
+                    20
+                    <i class="fa-solid fa-percent"></i>
+                  </div>
+                  <div onclick="sendBasket()" class="bg-white my_absolute">
+                    <i class="fa-solid fa-cart-shopping text-brown"></i>
+                  </div>
+                </div>
+                <div class="p-1 sm:p-4 h-1/3 flex flex-col justify-between">
+                  <h5 class="text-base font-montserrat font-semibold text-brown capitalize truncate">name</h5>
+                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">category</h6>
+                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">stock</h6>
+                  <span class="font-bold font-montserrat text-base text-brown"> 19.60 </span>
+                </div>
+              </div>
+              <div
+                class="detail-box relative text-center shadow-md overflow-hidden transition-transform transform hover:scale-105"
+                style="max-height: 380px; min-height: 340px"
+              >
+                <div class="box-div h-2/3 w-full bg-red-400 overflow-hidden relative">
+                  <img class="box-img w-full h-full object-cover" src="img/1.jpeg" alt="product" />
+                  <div
+                    class="bg-green text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute top-10 lg:top-2 left-2"
+                  >
+                    new
+                  </div>
+                  <div
+                    class="bg-red-600 text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute left-2 top-[70px] lg:top-14"
+                  >
+                    20
+                    <i class="fa-solid fa-percent"></i>
+                  </div>
+                  <div onclick="sendBasket()" class="bg-white my_absolute">
+                    <i class="fa-solid fa-cart-shopping text-brown"></i>
+                  </div>
+                </div>
+                <div class="p-1 sm:p-4 h-1/3 flex flex-col justify-between">
+                  <h5 class="text-base font-montserrat font-semibold text-brown capitalize truncate">name</h5>
+                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">category</h6>
+                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">stock</h6>
+                  <span class="font-bold font-montserrat text-base text-brown"> 19.60 </span>
+                </div>
+              </div>
+              <!-- Ürün Kartı sonu -->
             </div>
           </div>
         </div>
@@ -465,34 +691,7 @@
     <script src="js/basket.js"></script>
 
     <script>
-      const menu = document.querySelector(".hidden_dropdown");
-
-      function closeDropdown() {
-        if (window.innerWidth < 992) {
-          menu.classList.toggle("dropdown");
-        }
-      }
-      const drop_div_lang2 = document.querySelector(".drop_div_lang2");
-      function openLangMobile() {
-        console.log("salam");
-        drop_div_lang2.classList.toggle("drop_active2");
-      }
-      let lastScrollTop = 0;
-      const bottomBar = document.getElementById("bottomBar");
-
-      window.addEventListener("scroll", () => {
-        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (currentScroll > lastScrollTop) {
-          bottomBar.classList.remove("bottom-[-100%]");
-          bottomBar.classList.add("bottom-0");
-        } else {
-          bottomBar.classList.remove("bottom-0");
-          bottomBar.classList.add("bottom-[-100%]");
-        }
-
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-      });
+      
     </script>
   </body>
 </html>
