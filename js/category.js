@@ -73,7 +73,7 @@ function showCategories(data) {
 function write_to_card(product, price, stock) {
   cards.innerHTML += `<div
   onclick="goToDetailPage('${product.id}')"
-  class="box relative text-center  rounded-md shadow-md overflow-hidden transition-transform transform hover:scale-105"
+  class="box relative text-center   shadow-md overflow-hidden transition-transform transform hover:scale-105"
   style="max-height: 380px; min-height: 340px;"
 >
   <div class="box-div h-2/3 w-full bg-red-400 overflow-hidden relative">
