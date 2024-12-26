@@ -283,25 +283,14 @@
 
     <main>
       <!-- category start -->
-      <div class="all_category container_my my-20 p-4">
+      <div class="all_category container_my my-10 md:my-20 p-4">
         <h3 class="text-2xl md:text-4xl font-montserrat font-extrabold uppercase text-center text-brown">Məhsullarımız</h3>
-        <!-- <div class="categories flex overflow-x-auto selection:none justify-center items-center gap-6 text-lg my-8 font-montserrat">
-          <button >element.name</button>
-          <button >element.name</button>
-          <button >element.name</button>
-          <button >element.name</button>
-          <button >element.name</button>
-          <button >element.name</button>
-        </div> -->
-        <div class="swiper mySwiper_scrollbar my-8">
-          <div class="swiper-wrapper categories text-lg font-montserrat p-4">
-            <!-- <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 15</div>
-            <div class="swiper-slide">Slide 6</div>
-            <div class="swiper-slide">Slide 7</div> -->
+       
+        <div class=" max-w-[670px] mx-auto">
+          <div class="swiper mySwiper_scrollbar my-4 md:my-8">
+            <div class="swiper-wrapper categories text-lg font-montserrat p-4 "></div>
+            <div class="swiper-scrollbar"></div>
           </div>
-          <div class="swiper-scrollbar"></div>
         </div>
 
         <div class="cards grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2"></div>
@@ -596,36 +585,16 @@
     <script src="js/search.js"></script>
     <script src="js/basket.js"></script>
     <script src="js/sendToDetails.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-      //  var swiper = new Swiper(".mySwiper_scrollbar", {
-      //   scrollbar: {
-      //     el: ".swiper-scrollbar",
-      //     hide: true,
-      //     slidesPerView:5,
-      //     spaceBetween:10,
-      //     breakpoints:{
-      //       640: {
-      //         slidesPerView: 2,
-      //         spaceBetween: 20,
-      //       },
-      //       768: {
-      //         slidesPerView: 3,
-      //       },
-      //       1024: {
-      //         slidesPerView: 5,
-      //       },}
-      //     }
-      // });
       var swiper = new Swiper(".mySwiper_scrollbar", {
-        slidesPerView: 1, 
-        spaceBetween: 10, 
+        slidesPerView: 1,
+        spaceBetween: 10,
         freeMode: false,
         grabCursor: true,
         scrollbar: {
-          el: ".swiper-scrollbar", 
-          hide: true, 
+          el: ".swiper-scrollbar",
+          hide: true,
         },
         breakpoints: {
           400: {
@@ -640,10 +609,7 @@
             slidesPerView: 4,
             spaceBetween: 15,
           },
-          1024: {
-            slidesPerView: 5,
-            spaceBetween: 10,
-          },
+         
         },
       });
 
@@ -653,33 +619,6 @@
       messageIcon.addEventListener("click", () => {
         iconContainer.classList.toggle("active");
       });
-      // const menu = document.querySelector(".hidden_dropdown");
-
-      // function closeDropdown() {
-      //   if (window.innerWidth < 992) {
-      //     menu.classList.toggle("dropdown");
-      //   }
-      // }
-      // const drop_div_lang2 = document.querySelector(".drop_div_lang2");
-      // function openLangMobile() {
-      //   drop_div_lang2.classList.toggle("drop_active2");
-      // }
-      // let lastScrollTop = 0;
-      // const bottomBar = document.getElementById("bottomBar");
-
-      // window.addEventListener("scroll", () => {
-      //   const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-      //   if (currentScroll > lastScrollTop) {
-      //     bottomBar.classList.remove("bottom-[-100%]");
-      //     bottomBar.classList.add("bottom-0");
-      //   } else {
-      //     bottomBar.classList.remove("bottom-0");
-      //     bottomBar.classList.add("bottom-[-100%]");
-      //   }
-
-      //   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-      // });
       AOS.init({
         offset: 0,
         duration: 800,

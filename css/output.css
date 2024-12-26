@@ -758,6 +758,11 @@ video {
   margin-bottom: 2rem;
 }
 
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -999,6 +1004,10 @@ video {
   width: 100%;
 }
 
+.w-\[500px\] {
+  width: 500px;
+}
+
 .min-w-0 {
   min-width: 0px;
 }
@@ -1037,6 +1046,34 @@ video {
 
 .max-w-screen-xl {
   max-width: 1280px;
+}
+
+.max-w-\[\] {
+  max-width: ;
+}
+
+.max-w-\[60\] {
+  max-width: 60;
+}
+
+.max-w-\[60\%\] {
+  max-width: 60%;
+}
+
+.max-w-\[10\%\] {
+  max-width: 10%;
+}
+
+.max-w-\[500px\] {
+  max-width: 500px;
+}
+
+.max-w-\[600px\] {
+  max-width: 600px;
+}
+
+.max-w-\[670px\] {
+  max-width: 670px;
 }
 
 .flex-1 {
@@ -1380,6 +1417,11 @@ video {
 .bg-yellow {
   --tw-bg-opacity: 1;
   background-color: rgb(190 138 77 / var(--tw-bg-opacity, 1));
+}
+
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
 }
 
 .bg-gradient-to-tr {
@@ -2184,6 +2226,16 @@ video {
 
   .md\:row-span-2 {
     grid-row: span 2 / span 2;
+  }
+
+  .md\:my-20 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .md\:my-8 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   .md\:block {
