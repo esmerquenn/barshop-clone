@@ -8,7 +8,7 @@ body {
   height: 100%;
 }
 
-.swiper-slide {
+.mySwiper_slide {
   text-align: center;
   font-size: 18px;
   height: 95vh !important;
@@ -26,7 +26,7 @@ body {
   background: linear-gradient(#00000077, #00000077), url(./../img/8.jpg) 66% / cover;
 }
 
-.swiper-slide img {
+.mySwiper_slide img {
   display: block;
   width: 100%;
   height: 100%;
@@ -51,7 +51,7 @@ body {
   }
 }
 
-.swiper-slide .title {
+.mySwiper_slide .title {
   bottom: 10px;
   left: 10%;
   z-index: 10000;
@@ -74,13 +74,15 @@ body {
   }
 }
 
+
+
 @media only screen and (max-width: 1140px) {
-  .swiper-slide {
+  .mySwiper_slide {
     height: 75vh !important;
   }
 }
 @media only screen and (max-width: 768px) {
-  .swiper-slide {
+  .mySwiper_slide {
     height: 50vh !important;
   }
 }

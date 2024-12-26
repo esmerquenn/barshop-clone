@@ -14,9 +14,13 @@ module.exports = {
       },
       fontFamily: {
         roboto: "Roboto, sans-serif",
+        poppins: "Poppins, sans-serif",
         montserrat: "Montserrat, sans-serif",
         art: "Edu AU VIC WA NT Arrows, cursive",
       },
+      screens: {
+        'xs': '470px', 
+        }
     },
   },
   plugins: [],

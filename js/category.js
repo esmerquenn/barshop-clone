@@ -65,7 +65,7 @@ function initializeCarousel() {
 function showCategories(data) {
   let cat = "";
   data.categories?.forEach((element) => {
-    cat += `<button id="a${element.id}" onclick="showProduct('${element.id}')">${element.name}</button>`;
+    cat += `<div class="swiper-slide text-center" id="a${element.id}" onclick="showProduct('${element.id}')">${element.name}</div>`;
   });
   categories.innerHTML += cat;
 }

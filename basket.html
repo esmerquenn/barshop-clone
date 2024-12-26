@@ -396,11 +396,12 @@
                     Kodu əlavə et
                   </button>
                 </form>
-                <a
-                  href="#"
+                <button
+                onclick="resetBasket()"
                   class="flex w-full items-center justify-center bg-red-600 text-white px-5 py-2.5 text-sm font-montserrat font-medium focus:outline-none"
-                  >Səbəti sıfırla</a
                 >
+                  Səbəti sıfırla
+                </button>
               </div>
             </div>
           </div>
@@ -485,52 +486,11 @@
       </div>
     </section>
 
-    <div class="fixed bottom-10 right-3 z-10 py-1 px-2 rounded-xl">
-      <div class="w-10 h-10 bg-red-500 flex justify-center items-center text-3xl text-white">*</div>
-    </div>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <script src="js/nav.js"></script>
     <script src="js/search.js"></script>
     <script src="js/basket.js"></script>
 
     <script>
-      const menu = document.querySelector(".hidden_dropdown");
-
-      function closeDropdown() {
-        if (window.innerWidth < 992) {
-          menu.classList.toggle("dropdown");
-        }
-      }
-      const drop_div_lang2 = document.querySelector(".drop_div_lang2");
-      function openLangMobile() {
-        console.log("salam");
-        drop_div_lang2.classList.toggle("drop_active2");
-      }
-      let lastScrollTop = 0;
-      const bottomBar = document.getElementById("bottomBar");
-
-      window.addEventListener("scroll", () => {
-        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (currentScroll > lastScrollTop) {
-          bottomBar.classList.remove("bottom-[-100%]");
-          bottomBar.classList.add("bottom-0");
-        } else {
-          bottomBar.classList.remove("bottom-0");
-          bottomBar.classList.add("bottom-[-100%]");
-        }
-
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-      });
-      AOS.init({
-        offset: 0,
-        duration: 1000,
-        easing: "ease-in-out",
-        delay: 500,
-        once: false,
-        anchorPlacement: "top-bottom",
-      });
-    </script>
+  </script>
   </body>
 </html>

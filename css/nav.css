@@ -2,6 +2,9 @@
 * {
   line-height: 1.5 !important;
 }
+::selection{
+  background: none;
+}
 .container_my {
   max-width: 1100px;
   margin-inline: auto;
