@@ -65,14 +65,7 @@ window.addEventListener("resize", () => {
   initializeDropdowns();
 });
 
-const lang1 = document.querySelector("#lang");
-const lang2 = document.querySelector("#lang2");
-function changeLanguage(val) {
-  const lang = isMobileView() ? lang2 : lang1;
 
-  console.log("beli bu valdi", val);
 
-  lang.innerHTML = val;
-}
 
 

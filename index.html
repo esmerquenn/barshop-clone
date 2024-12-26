@@ -55,7 +55,7 @@
   </head>
   <body class="bg-brown_bg_light font-roboto">
     <header>
-      <nav class="py-2 bg-white fixed top-0 left-0 z-20 w-full">
+      <!-- <nav class="py-2 bg-white fixed top-0 left-0 z-20 w-full">
         <div class="container_my flex items-center justify-between">
           <i onclick="closeDropdown()" class="fa-solid fa-bars text-[2rem] text-brown lg:hidden"></i>
 
@@ -144,40 +144,6 @@
                   </ul>
                 </div>
               </li>
-              <!-- <li class="mx-4 lg:m-0 border-b lg:border-0 py-2 lg:py-0">
-                <a
-                  class="uppercase px-1  text-base lg:text-[14px] xl:text-[15px] font-extrabold leading-[20px] text-brown transition-all duration-300"
-                  href="contact.html"
-                  >Kofe aparatlari <i class="fa-solid fa-angle-down duration-500 pl-[2px]"></i
-                ></a>
-              </li>
-              <li class="mx-4 lg:m-0 border-b lg:border-0 py-2 lg:py-0">
-                <a
-                  class="uppercase px-1  text-base lg:text-[14px] xl:text-[15px] font-extrabold leading-[20px] text-brown transition-all duration-300"
-                  href="contact.html"
-                  >aksesuarlar <i class="fa-solid fa-angle-down duration-500 pl-[2px]"></i
-                    ></a
-                >
-              </li>
-              <li class="mx-4 lg:m-0 border-b lg:border-0 py-2 lg:py-0 relative dropdown_li_elaveler">
-                <a
-                  class="uppercase px-1  text-base lg:text-[14px] xl:text-[15px] font-extrabold leading-[20px] text-brown transition-all duration-300"
-                  href="#"
-                  >Əlavələr <i class="fa-solid fa-angle-down duration-500 pl-[2px]"></i>
-                </a>
-                <div class="drop_div_elaveler mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
-                  <ul>
-                    <li class="pt-1">
-                      <a
-                        class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
-                        href="about.html?page=melumat"
-                        >Məlumat</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </li> -->
-
               <li class="mx-4 lg:m-0 border-b lg:border-0 py-2 lg:py-0">
                 <a
                   class="uppercase px-1  text-base lg:text-[13px] xl:text-[15px] font-extrabold leading-[20px] text-brown transition-all duration-300"
@@ -217,6 +183,186 @@
                       class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
                     >
                       ru
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="p-2 lg:p-0 mx-2 hidden lg:block">
+                <img onclick="searchBar()" class="w-4 block" src="img/magnifying-glass (1).png" alt="search" />
+                <span
+                  class="absolute searchbox rounded-md !overflow-hidden bg-brown_bg top-full right-0 w-[300px] text-center font-montserrat text-sm"
+                >
+                  <input
+                    oninput="searchData()"
+                    class="w-full p-2 outline-none border-b-2 border-brown_bg text-white placeholder:text-white bg-brown"
+                    type="text"
+                    placeholder="Axtarış..."
+                  />
+                  <ul class="text-brown text-left p-2 resultList">
+                    <li class="border-b-2 border-brown py-1 text-center">
+                      <i class="fa-regular fa-folder-open text-2xl text-white"></i>
+                    </li>
+                  </ul>
+                </span>
+              </li>
+              <li onclick="openBasketSidebar()" class="p-2 lg:p-0 relative hidden lg:block">
+                <a class="uppercase xl:px-2 pb-1 block transition-all duration-300" href="#">
+                  <span
+                    id="basket-quantity"
+                    class="absolute text-white bg-green -top-2 right-0 w-4 h-4 text-center rounded-full font-mono text-[10px] hidden"
+                    >1</span
+                  >
+                  <img class="w-6" src="./img/food-basket2.png" alt="basket" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      -->
+      <nav class="py-2 bg-white fixed top-0 left-0 z-20 w-full">
+        <div class="container_my flex items-center justify-between">
+          <i onclick="closeDropdown()" class="fa-solid fa-bars text-[2rem] text-brown lg:hidden"></i>
+
+          <div class="text-center">
+            <a href="/"><img class="block w-full" src="./img/logo.png" alt="birS" /></a>
+          </div>
+
+          <div class="flex justify-center items-center">
+            <ul class="hidden_dropdown md:py-4 lg:flex">
+              <li class="mx-4 lg:m-0 border-b lg:border-0 py-2 lg:py-0">
+                <a
+                  class="uppercase px-1 lg:text-[13px] xl:text-[15px] font-extrabold font-roboto text-brown transition-all duration-300"
+                  href="/"
+                  data-key="home"
+                  >ANA SƏHİFƏ</a
+                >
+              </li>
+              <li class="mx-4 mt-2 lg:m-0 border-b lg:border-0 relative dropdown_li">
+                <a
+                  class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
+                  href="#"
+                  data-key="coffee"
+                  >qəhvə <i class="fa-solid fa-angle-down duration-500 pl-[2px]"></i
+                ></a>
+                <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
+                  <ul>
+                    <li class="pt-1">
+                      <a
+                        class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
+                        href="about.html?page=melumat"
+                        data-key="info"
+                        >Məlumat</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mx-4 mt-2 lg:m-0 border-b lg:border-0 relative dropdown_li">
+                <a
+                  class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
+                  href="#"
+                  data-key="coffee-machines"
+                  >qəhvə maşınları <i class="fa-solid fa-angle-down duration-500 pl-[2px]"></i
+                ></a>
+                <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
+                  <ul>
+                    <li class="pt-1">
+                      <a
+                        class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
+                        href="about.html?page=melumat"
+                        data-key="info"
+                        >Məlumat</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mx-4 mt-2 lg:m-0 border-b lg:border-0 relative dropdown_li">
+                <a
+                  class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
+                  href="#"
+                  data-key="accessories"
+                  >aksesuarlar <i class="fa-solid fa-angle-down duration-500 pl-[2px]"></i
+                ></a>
+                <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
+                  <ul>
+                    <li class="pt-1">
+                      <a
+                        class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
+                        href="about.html?page=melumat"
+                        data-key="info"
+                        >Məlumat</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mx-4 mt-2 lg:m-0 border-b lg:border-0 relative dropdown_li">
+                <a
+                  class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
+                  href="#"
+                  data-key="addons"
+                  >əlavələr <i class="fa-solid fa-angle-down duration-500 pl-[2px]"></i
+                ></a>
+                <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
+                  <ul>
+                    <li class="pt-1">
+                      <a
+                        class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
+                        href="about.html?page=melumat"
+                        data-key="info"
+                        >Məlumat</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mx-4 lg:m-0 border-b lg:border-0 py-2 lg:py-0">
+                <a
+                  class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold leading-[20px] text-brown transition-all duration-300"
+                  href="about.html"
+                  data-key="about"
+                  >haqqimizda</a
+                >
+              </li>
+              <li class="mx-4 lg:m-0 border-b lg:border-0 py-2 lg:py-0">
+                <a
+                  class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold leading-[20px] text-brown transition-all duration-300"
+                  href="contact.html"
+                  data-key="contact"
+                  >ƏLAQƏ</a
+                >
+              </li>
+              <li
+                class="hidden lg:block dropdown_li_lang cursor-pointer p-2 lg:p-0 relative uppercase text-base font-extrabold text-brown transition-all duration-300"
+              >
+                <span id="lang" data-key="language">az</span
+                ><i class="fa-solid fa-angle-down !font-bold duration-500 pl-[2px]"></i>
+                <div
+                  class="drop_div_lang mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[40px] md:absolute md:left-1/2 md:-translate-x-1/2"
+                >
+                  <ul>
+                    <li
+                      onclick="changeLanguage('az')"
+                      class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
+                      
+                    >
+                      AZ
+                    </li>
+                    <li
+                      onclick="changeLanguage('en')"
+                      class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
+                      
+                    >
+                      EN
+                    </li>
+                    <li
+                      onclick="changeLanguage('ru')"
+                      class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
+                      
+                    >
+                      RU
                     </li>
                   </ul>
                 </div>
@@ -535,38 +681,6 @@
       </div>
     </footer>
 
-    <!-- <footer class="py-10 bg-brown">
-      <div class="container_my flex flex-col md:flex-row items-start justify-between">
-        <div class="md:w-1/2 flex flex-col items-start">
-          <a href="#" class="footer-span font-montserrat text-white flex w-[140px] py-2 gap-3 items-center">
-            <div class="footer-hover-div duration-500 transition-all !w-8 !h-8 flex justify-center items-center rounded-md">
-              <i class="fa-brands fa-instagram"></i>
-            </div>
-            Instagram
-          </a>
-          <a href="#" class="footer-span font-montserrat text-white flex w-[140px] py-2 gap-3 items-center">
-            <div class="footer-hover-div duration-500 transition-all !w-8 !h-8 flex justify-center items-center rounded-md">
-              <i class="fa-brands fa-whatsapp"></i>
-            </div>
-            Whatsapp
-          </a>
-          <a href="#" class="footer-span font-montserrat text-white flex w-[140px] py-2 gap-3 items-center">
-            <div class="footer-hover-div duration-500 transition-all !w-8 !h-8 flex justify-center items-center rounded-md">
-              <i class="fa-brands fa-facebook-f"></i>
-            </div>
-            Facebook
-          </a>
-        </div>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.3344996875057!2d49.83885647552581!3d40.37927845791869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d00673abcab%3A0xe1bca78e66178e5e!2sBARSHOP-%20MMC!5e0!3m2!1str!2saz!4v1733941021601!5m2!1str!2saz"
-          class="w-full md:w-1/3 min-h-[200px]"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-    </footer> -->
     <section>
       <div class="sebet-sidebar-bg z-20 bg-[#00000085] fixed w-full bottom-0 top-0 left-0 right-0"></div>
       <div class="bg-white fixed sebet-sidebar h-screen w-full top-0 bottom-0 z-20">
@@ -634,6 +748,7 @@
     <script src="js/swiper.js"></script>
     <script src="js/owl.js"></script>
     <script src="js/nav.js"></script>
+    <script src="js/translate.js"></script>
     <script src="js/category.js"></script>
     <script src="js/search.js"></script>
     <script src="js/basket.js"></script>
@@ -641,7 +756,7 @@
 
     <script>
       var swiper = new Swiper(".mySwiper_scrollbar", {
-        slidesPerView: 1,
+        slidesPerView: 2,
         spaceBetween: 10,
         freeMode: false,
         grabCursor: true,
