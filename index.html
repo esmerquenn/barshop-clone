@@ -242,8 +242,7 @@
                 <a
                   class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
                   href="#"
-                  data-key="coffee"
-                  >qəhvə <i class="fa-solid fa-angle-down duration-500 pl-[2px]"></i
+                  ><span data-key="coffee">qəhvə </span><i class="fa-solid fa-angle-down duration-500 pl-[2px]"></i
                 ></a>
                 <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
                   <ul>
@@ -262,8 +261,8 @@
                 <a
                   class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
                   href="#"
-                  data-key="coffee-machines"
-                  >qəhvə maşınları <i class="fa-solid fa-angle-down duration-500 pl-[2px]"></i
+                  ><span data-key="coffee-machines">qəhvə maşınları </span
+                  ><i class="fa-solid fa-angle-down duration-500 pl-[2px]"></i
                 ></a>
                 <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
                   <ul>
@@ -346,21 +345,18 @@
                     <li
                       onclick="changeLanguage('az')"
                       class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
-                      
                     >
                       AZ
                     </li>
                     <li
                       onclick="changeLanguage('en')"
                       class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
-                      
                     >
                       EN
                     </li>
                     <li
                       onclick="changeLanguage('ru')"
                       class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
-                      
                     >
                       RU
                     </li>
@@ -487,7 +483,7 @@
 
         <div class="max-w-[670px] mx-auto">
           <div class="swiper mySwiper_scrollbar my-4 md:my-8">
-            <div class="swiper-wrapper categories text-lg font-montserrat p-4"></div>
+            <div class="swiper-wrapper categories text-lg font-montserrat py-4"></div>
             <div class="swiper-scrollbar"></div>
           </div>
         </div>
@@ -756,19 +752,16 @@
 
     <script>
       var swiper = new Swiper(".mySwiper_scrollbar", {
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 10,
         freeMode: false,
         grabCursor: true,
+        centeredSlides: false,
         scrollbar: {
           el: ".swiper-scrollbar",
           hide: true,
         },
         breakpoints: {
-          400: {
-            slidesPerView: 2,
-            spaceBetween: 10,
-          },
           640: {
             slidesPerView: 3,
             spaceBetween: 20,

@@ -64,8 +64,8 @@ function initializeCarousel() {
 // // //////////////////////////////////////////////////////////////
 function showCategories(data) {
   let cat = "";
-  data.categories?.forEach((element) => {
-    cat += `<div class="swiper-slide text-center" id="a${element.id}" onclick="showProduct('${element.id}')">
+  data.categories?.forEach((element, i) => {
+    cat += `<div class="swiper-slide text-sm md:text-base text-center" id="a${element.id}" onclick="showProduct('${element.id}', '${i}')">
     <button>${element.name}</button>
     </div>`;
   });
@@ -78,7 +78,7 @@ function write_to_card(product, price, stock) {
                       class="box relative text-center   shadow-md overflow-hidden transition-transform transform hover:scale-105"
                       style="max-height: 380px; min-height: 340px;"
                     >
-                      <div class="box-div h-2/3 w-full bg-red-400 overflow-hidden relative">
+                      <div class="box-div h-2/3 w-full overflow-hidden relative">
                         <img
                           class="box-img w-full h-full object-cover"
                           src="img/${product.img}"
@@ -186,7 +186,25 @@ function sendBasket(id) {
 let currentPage = 1;
 const itemsPerPage = 4;
 
-function showProduct(id) {
+function showProduct(id, slideIndex) {
+  // const slidesPerView = swiper.params.slidesPerView;
+
+  // const targetIndex = Math.max(0, slideIndex + Math.ceil(slidesPerView / 2));
+  // swiper.slideTo(targetIndex);
+  const slidesPerView = swiper.params.slidesPerView; // Mevcut ekran için "slidesPerView" değeri
+  const totalSlides = swiper.slides.length; // Toplam slide sayısı
+
+  // Eğer ilk slide veya son slide ise herhangi bir kaydırma yapma
+  if (slideIndex === 0 || slideIndex === totalSlides - 1) {
+    swiper.slideTo(slideIndex);
+    return;
+  }
+
+  // Tıklanan slide'ı ortalamaya çalış
+  const targetIndex = Math.max(0, Math.min(slideIndex - Math.floor(slidesPerView / 2), totalSlides - slidesPerView));
+
+  swiper.slideTo(targetIndex);
+  // //////////////////////////////////
   cards.innerHTML = "";
   currentPage = 1;
 

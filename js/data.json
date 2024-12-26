@@ -180,19 +180,19 @@
   "categories": [
     {
       "id": 1,
-      "name": "Coffee"
+      "name": "Qəhvə"
     },
     {
       "id": 2,
-      "name": "Coffee Machines"
+      "name": "Qəhvə maşınları"
     },
     {
       "id": 3,
-      "name": "Accessories"
+      "name": "Aksesuarlar"
     },
     {
       "id": 4,
-      "name": "Others"
+      "name": "Əlavələr"
     }
   ],
   "brands": [
