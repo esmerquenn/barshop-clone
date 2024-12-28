@@ -2547,6 +2547,10 @@ video {
 }
 
 @media (min-width: 1280px) {
+  .xl\:m-1 {
+    margin: 0.25rem;
+  }
+
   .xl\:ml-0 {
     margin-left: 0px;
   }
