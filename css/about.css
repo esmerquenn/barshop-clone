@@ -84,7 +84,7 @@
   padding: 20px;
   position: relative;
   overflow: hidden;
-  transition: all .4s transform 0.4s;
+  transition:  .4s ;
 }
 
 .grid-slide::before {
@@ -108,12 +108,17 @@
 .grid-slide:hover {
   scale: 1.05;
 }
+.grid-slide span{transition: .4s;}
+  .grid-slide:hover span{
+  background: #DC2626;
+}
 .grid-slide h4{transition: .4s;}
 .grid-slide:hover h4{
  background: #3d8c30;
 }
 
 .grid-slide * {
+  transition: .4s;
   position: relative;
   z-index: 2;
 }

@@ -220,7 +220,7 @@
         </div>
       </nav>
       -->
-      <nav class="py-2 bg-white fixed top-0 left-0 z-20 w-full">
+      <nav class="py-2 bg-white  shadow-lg fixed top-0 left-0 z-20 w-full">
         <div class="container_my flex items-center justify-between">
           <i onclick="closeDropdown()" class="fa-solid fa-bars text-[2rem] text-brown lg:hidden"></i>
 
@@ -230,7 +230,7 @@
 
           <div class="flex justify-center items-center">
             <ul class="hidden_dropdown md:py-4 lg:flex">
-              <li class="mx-4 lg:m-0 border-b lg:border-0 py-2 lg:py-0">
+              <li class="mx-4 lg:m-1 border-b lg:border-0 py-2 lg:py-0">
                 <a
                   class="uppercase px-1 lg:text-[13px] xl:text-[15px] font-extrabold font-roboto text-brown transition-all duration-300"
                   href="/"
@@ -238,12 +238,13 @@
                   >ANA SƏHİFƏ</a
                 >
               </li>
-              <li class="mx-4 mt-2 lg:m-0 border-b lg:border-0 relative dropdown_li">
+              <li class="mx-4 mt-2 lg:m-1 border-b lg:border-0 relative dropdown_li">
                 <a
                   class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
-                  href="#"
-                  ><span data-key="coffee">qəhvə </span><i class="fa-solid fa-angle-down duration-500 pl-[2px]"></i
-                ></a>
+                  href="/"
+                  data-key="coffee"
+                  >qəhvə
+                </a>
                 <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
                   <ul>
                     <li class="pt-1">
@@ -257,13 +258,12 @@
                   </ul>
                 </div>
               </li>
-              <li class="mx-4 mt-2 lg:m-0 border-b lg:border-0 relative dropdown_li">
+              <li class="mx-4 mt-2 lg:m-1 border-b lg:border-0 relative dropdown_li">
                 <a
                   class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
                   href="#"
-                  ><span data-key="coffee-machines">qəhvə maşınları </span
-                  ><i class="fa-solid fa-angle-down duration-500 pl-[2px]"></i
-                ></a>
+                  ><span data-key="coffee-machines">qəhvə maşınları </span></a
+                >
                 <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
                   <ul>
                     <li class="pt-1">
@@ -277,13 +277,13 @@
                   </ul>
                 </div>
               </li>
-              <li class="mx-4 mt-2 lg:m-0 border-b lg:border-0 relative dropdown_li">
+              <li class="mx-4 mt-2 lg:m-1 border-b lg:border-0 relative dropdown_li">
                 <a
                   class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
                   href="#"
                   data-key="accessories"
-                  >aksesuarlar <i class="fa-solid fa-angle-down duration-500 pl-[2px]"></i
-                ></a>
+                  >aksesuarlar
+                </a>
                 <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
                   <ul>
                     <li class="pt-1">
@@ -297,13 +297,13 @@
                   </ul>
                 </div>
               </li>
-              <li class="mx-4 mt-2 lg:m-0 border-b lg:border-0 relative dropdown_li">
+              <li class="mx-4 mt-2 lg:m-1 border-b lg:border-0 relative dropdown_li">
                 <a
                   class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
                   href="#"
                   data-key="addons"
-                  >əlavələr <i class="fa-solid fa-angle-down duration-500 pl-[2px]"></i
-                ></a>
+                  >əlavələr
+                </a>
                 <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
                   <ul>
                     <li class="pt-1">
@@ -317,7 +317,7 @@
                   </ul>
                 </div>
               </li>
-              <li class="mx-4 lg:m-0 border-b lg:border-0 py-2 lg:py-0">
+              <li class="mx-4 lg:m-1 border-b lg:border-0 py-2 lg:py-0">
                 <a
                   class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold leading-[20px] text-brown transition-all duration-300"
                   href="about.html"
@@ -325,7 +325,7 @@
                   >haqqimizda</a
                 >
               </li>
-              <li class="mx-4 lg:m-0 border-b lg:border-0 py-2 lg:py-0">
+              <li class="mx-4 lg:m-1 border-b lg:border-0 py-2 lg:py-0">
                 <a
                   class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold leading-[20px] text-brown transition-all duration-300"
                   href="contact.html"
@@ -334,10 +334,9 @@
                 >
               </li>
               <li
-                class="hidden lg:block dropdown_li_lang cursor-pointer p-2 lg:p-0 relative uppercase text-base font-extrabold text-brown transition-all duration-300"
+                class=" mx-1 hidden lg:block dropdown_li_lang cursor-pointer p-2 lg:p-0 relative uppercase text-base font-extrabold text-brown transition-all duration-300"
               >
-                <span id="lang" data-key="language">az</span
-                ><i class="fa-solid fa-angle-down !font-bold duration-500 pl-[2px]"></i>
+                <span id="lang" data-key="language">az</span>
                 <div
                   class="drop_div_lang mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[40px] md:absolute md:left-1/2 md:-translate-x-1/2"
                 >
@@ -389,6 +388,11 @@
                     >1</span
                   >
                   <img class="w-6" src="./img/food-basket2.png" alt="basket" />
+                </a>
+              </li>
+              <li  class="p-2 lg:p-0 ml-3 xl:ml-0 relative hidden lg:block">
+                <a class="uppercase   transition-all duration-300" href="#">
+                  <i class="fa-regular fa-user text-xl"></i>
                 </a>
               </li>
             </ul>

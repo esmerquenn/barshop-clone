@@ -3,9 +3,9 @@
     background: #3c2117
 }
 .footer-span:hover  .footer-hover-div{
-    background: white;
-    color: #3c2117
+    background: #4eb23e;
+    color: #fff
 }
 .footer-span:hover{
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #4eb23e;
 }
