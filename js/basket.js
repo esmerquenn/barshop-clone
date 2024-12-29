@@ -290,6 +290,10 @@ const BasketManager = {
   },
 };
 
+function resetBasket(){
+  BasketManager.resetBasket()
+}
+
 const BasketUI = {
   update(basket, totalPrice) {
     basket_quantity.style.display = basket.length ? "block" : "none";

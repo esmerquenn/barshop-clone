@@ -41,114 +41,150 @@
   </head>
   <body class="bg-brown_bg_light font-roboto">
     <header>
-      <nav class="py-6 bg-brown_bg fixed top-0 left-0 z-20 w-full">
+      <nav class="py-2 bg-white shadow-lg fixed top-0 left-0 z-20 w-full">
         <div class="container_my flex items-center justify-between">
+          <i onclick="closeDropdown()" class="fa-solid fa-bars text-[2rem] text-brown lg:hidden"></i>
+
           <div class="text-center">
             <a href="/"><img class="block w-full" src="./img/logo.png" alt="birS" /></a>
           </div>
 
           <div class="flex justify-center items-center">
             <ul class="hidden_dropdown md:py-4 lg:flex">
-              <li class="p-2 lg:p-0">
+              <li class="mx-4 lg:m-0 xl:m-1 border-b lg:border-0 py-2 lg:py-0">
                 <a
-                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal font-roboto text-white mix-blend-difference transition-all duration-300"
+                  class="uppercase px-1 lg:text-[13px] xl:text-[15px] font-extrabold font-roboto text-brown transition-all duration-300"
                   href="/"
                   data-key="home"
                   >ANA SƏHİFƏ</a
                 >
               </li>
-              <li class="p-2 lg:p-0 relative dropdown_li">
+              <li class="mx-4 mt-2 lg:m-1 border-b lg:border-0 relative dropdown_li">
                 <a
-                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
-                  href="#"
-                  data-key="about_company"
-                  >qəhvə <i class="fa-solid fa-angle-down duration-500 pl-1"></i
-                ></a>
-                <div class="drop_div mt-2 px-3 bg-brown_bg overflow-hidden max-h-0 min-w-[200px] md:absolute">
+                  class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
+                  href="/"
+                  data-key="coffee"
+                  >qəhvə
+                </a>
+                <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
                   <ul>
                     <li class="pt-1">
                       <a
-                        data-key="info"
-                        class="capitalize inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
+                        class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
                         href="about.html?page=melumat"
+                        data-key="info"
                         >Məlumat</a
                       >
                     </li>
                   </ul>
                 </div>
               </li>
-              <li class="p-2 lg:p-0">
+              <li class="mx-4 mt-2 lg:m-1 border-b lg:border-0 relative dropdown_li">
                 <a
-                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
-                  href="contact.html"
-                  data-key="contact"
-                  >Kofe aparatlari</a
+                  class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
+                  href="#"
+                  ><span data-key="coffee-machines">qəhvə maşınları </span></a
                 >
+                <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
+                  <ul>
+                    <li class="pt-1">
+                      <a
+                        class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
+                        href="about.html?page=melumat"
+                        data-key="info"
+                        >Məlumat</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li class="p-2 lg:p-0">
+              <li class="mx-4 mt-2 lg:m-1 border-b lg:border-0 relative dropdown_li">
                 <a
-                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
-                  href="contact.html"
-                  data-key="contact"
-                  >aksesuarlar</a
-                >
+                  class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
+                  href="#"
+                  data-key="accessories"
+                  >aksesuarlar
+                </a>
+                <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
+                  <ul>
+                    <li class="pt-1">
+                      <a
+                        class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
+                        href="about.html?page=melumat"
+                        data-key="info"
+                        >Məlumat</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li class="p-2 lg:p-0">
+              <li class="mx-4 mt-2 lg:m-1 border-b lg:border-0 relative dropdown_li">
                 <a
-                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
-                  href="contact.html"
-                  data-key="contact"
-                  >Əlavələr</a
-                >
+                  class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
+                  href="#"
+                  data-key="addons"
+                  >əlavələr
+                </a>
+                <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
+                  <ul>
+                    <li class="pt-1">
+                      <a
+                        class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
+                        href="about.html?page=melumat"
+                        data-key="info"
+                        >Məlumat</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </li>
-
-              <li class="p-2 lg:p-0">
+              <li class="mx-4 lg:m-1 border-b lg:border-0 py-2 lg:py-0">
                 <a
-                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
+                  class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold leading-[20px] text-brown transition-all duration-300"
                   href="about.html"
-                  data-key="contact"
+                  data-key="about"
                   >haqqimizda</a
                 >
               </li>
-              <li class="p-2 lg:p-0">
+              <li class="mx-4 lg:m-1 border-b lg:border-0 py-2 lg:py-0">
                 <a
-                  class="uppercase px-1 xl:px-[10px] text-[15px] lg:text-[14px] xl:text-[15px] font-normal leading-[20px] text-white transition-all duration-300"
+                  class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold leading-[20px] text-brown transition-all duration-300"
                   href="contact.html"
                   data-key="contact"
                   >ƏLAQƏ</a
                 >
               </li>
               <li
-                class="hidden md:block dropdown_li_lang cursor-pointer p-2 lg:p-0 relative uppercase text-base font-normal text-white transition-all duration-300"
+                class="mx-1 hidden lg:block dropdown_li_lang cursor-pointer p-2 lg:p-0 relative uppercase text-base font-extrabold text-brown transition-all duration-300"
               >
-                <span id="lang">az</span><i class="fa-solid fa-angle-down duration-500 pl-1"></i>
+                <span id="lang" data-key="language">az</span>
                 <div
-                  class="drop_div_lang mt-2 px-3 bg-brown_bg overflow-hidden max-h-0 min-w-[40px] md:absolute md:left-1/2 md:-translate-x-1/2"
+                  class="drop_div_lang mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[40px] md:absolute md:left-1/2 md:-translate-x-1/2"
                 >
                   <ul>
                     <li
                       onclick="changeLanguage('az')"
-                      class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
+                      class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
                     >
                       AZ
                     </li>
                     <li
                       onclick="changeLanguage('en')"
-                      class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
+                      class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
                     >
-                      en
+                      EN
                     </li>
                     <li
                       onclick="changeLanguage('ru')"
-                      class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
+                      class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
                     >
-                      ru
+                      RU
                     </li>
                   </ul>
                 </div>
               </li>
-              <li class="p-2 lg:p-0 hidden md:block">
-                <i onclick="searchBar()" class="fa-solid fa-magnifying-glass text-white block px-2"></i>
+              <li class="p-2 lg:p-0 mx-2 hidden lg:block">
+                <img onclick="searchBar()" class="w-4 block" src="img/magnifying-glass (1).png" alt="search" />
                 <span
                   class="absolute searchbox rounded-md !overflow-hidden bg-brown_bg top-full right-0 w-[300px] text-center font-montserrat text-sm"
                 >
@@ -158,26 +194,29 @@
                     type="text"
                     placeholder="Axtarış..."
                   />
-                  <ul class="text-white text-left p-2 resultList">
+                  <ul class="text-brown text-left p-2 resultList">
                     <li class="border-b-2 border-brown py-1 text-center">
                       <i class="fa-regular fa-folder-open text-2xl text-white"></i>
                     </li>
                   </ul>
                 </span>
               </li>
-              <li onclick="openBasketSidebar()" class="p-2 lg:p-0 relative hidden md:block">
-                <a class="uppercase xl:px-2 pb-1 block text-white transition-all duration-300" href="#" data-key="about_company">
+              <li onclick="openBasketSidebar()" class="p-2 lg:p-0 relative hidden lg:block">
+                <a class="uppercase xl:px-2 pb-1 block transition-all duration-300" href="#">
                   <span
                     id="basket-quantity"
-                    class="absolute bg-green -top-2 right-0 w-4 h-4 text-center rounded-full font-mono text-[10px] hidden"
+                    class="absolute text-white bg-green -top-2 right-0 w-4 h-4 text-center rounded-full font-mono text-[10px] hidden"
                     >1</span
                   >
-                  <img class="w-6" src="./img/food-basket.png" alt="basket" />
+                  <img class="w-6" src="./img/food-basket2.png" alt="basket" />
+                </a>
+              </li>
+              <li class="p-2 lg:p-0 ml-3 xl:ml-0 relative hidden lg:block">
+                <a class="uppercase transition-all duration-300" href="#">
+                  <i class="fa-regular fa-user text-xl"></i>
                 </a>
               </li>
             </ul>
-
-            <i onclick="closeDropdown()" class="fa-solid fa-bars text-[2rem] text-white ml-2 lg:hidden"></i>
           </div>
         </div>
       </nav>
@@ -248,36 +287,10 @@
         </ul>
       </div>
 
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide slide-1">
-            <div class="text-white font-montserrat title text-left max-w-[700px]">
-              <h1 class="text-3xl md:text-5xl font-light capitalize" data-key="slide3_title">
-                Hər yudumda mükəmməllik, hər fincanda zövq
-              </h1>
-            </div>
-          </div>
-          <div class="swiper-slide slide-2">
-            <div class="text-white font-montserrat title text-left max-w-[700px]">
-              <h1 class="text-3xl md:text-5xl font-light capitalize" data-key="slide3_title">
-                Hər yudumda mükəmməllik, hər fincanda zövq
-              </h1>
-            </div>
-          </div>
-          <div class="swiper-slide slide-3">
-            <div class="text-white font-montserrat title text-left max-w-[700px]">
-              <h1 class="text-3xl md:text-5xl font-light capitalize" data-key="slide3_title">
-                Hər yudumda mükəmməllik, hər fincanda zövq
-              </h1>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
+     
     </header>
 
-    <main>
+    <main class=" mt-28">
       <!-- <section class="bg-white dark:bg-gray-900">
         <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
