@@ -350,3 +350,23 @@ document.addEventListener("DOMContentLoaded", () => {
   BasketManager.init();
 });
 
+
+function sendBasket(id) {
+  event.stopPropagation();
+  // Swal.fire({
+  //   icon: "success",
+  // });
+  console.log("basket", id);
+  
+  Swal.fire({
+    icon: "success",
+    // title: "aaa",
+    html: '<i class="fa fa-shopping-cart text-green text-4xl"></i>',
+    showConfirmButton: false,
+    width: "200px", 
+  
+    timer: 600, // 3 saniye sonra otomatik kapan
+  });
+  let newObj = allData.products.find((item) => item.id == id);
+  BasketManager.addItem(newObj);
+}

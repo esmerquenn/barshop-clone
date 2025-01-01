@@ -23,7 +23,7 @@ function getDiscountCarousel() {
     .map((item) => {
       const shortenedDescription = item.description.split(" ").slice(0, 2).join(" ") + "...";
 
-      return ` <div data-aos="fade-up" class="item grid place-items-center grid1-con">
+      return ` <div  onclick="goToDetailPage('${item.id}')" data-aos="fade-up" class="item grid place-items-center grid1-con">
         <div style="background: url(../img/${item.img}) center/cover no-repeat;" class="grid1 grid-slide font-montserrat">
           <span class="bg-green text-white px-4 py-1">${item.discount}%</span>
           <div class="w-full flex flex-col justify-center items-center">
@@ -134,23 +134,7 @@ function animationProduct() {
 }
 
 // // /////////////////////////////////////////////////////////
-function sendBasket(id) {
-  event.stopPropagation();
-  // Swal.fire({
-  //   icon: "success",
-  // });
-  Swal.fire({
-    icon: "success",
-    // title: "aaa",
-    html: '<i class="fa fa-shopping-cart text-green text-4xl"></i>',
-    showConfirmButton: false,
-    width: "200px", 
-  
-    timer: 600, // 3 saniye sonra otomatik kapan
-  });
-  let newObj = allData.products.find((item) => item.id == id);
-  BasketManager.addItem(newObj);
-}
+
 
 let currentPage = 1;
 const itemsPerPage = 4;
