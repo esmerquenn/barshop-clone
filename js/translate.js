@@ -14,6 +14,9 @@ const translations = {
     contact: "ƏLAQƏ",
     info: "Məlumat",
     language: "az",
+    slide1_text: "Hər yudumda mükəmməllik, hər fincanda zövq",
+    slide2_text: "Təbiətin incəliyindən gələn dad",
+    slide3_text: "Hər fincanda həyat enerjisi",
   },
   ru: {
     home: "ГЛАВНАЯ",
@@ -25,6 +28,9 @@ const translations = {
     contact: "КОНТАКТ",
     info: "Информация",
     language: "ру",
+    slide1_text: "Совершенство в каждом глотке, радость в каждой чашке",
+    slide2_text: "Вкус изысканности природы",
+    slide3_text: "Энергия жизни в каждой чашке",
   },
   en: {
     home: "HOME",
@@ -36,6 +42,9 @@ const translations = {
     contact: "CONTACT",
     info: "Information",
     language: "en",
+    slide1_text: "Perfection in every sip, joy in every cup",
+    slide2_text: "The taste from the delicacy of nature",
+    slide3_text: "Life energy in every cup",
   },
 };
 const lang1 = document.querySelector("#lang");
