@@ -186,11 +186,11 @@
               <li class="p-2 lg:p-0 mx-2 hidden lg:block">
                 <img onclick="searchBar()" class="w-4 block" src="img/magnifying-glass (1).png" alt="search" />
                 <span
-                  class="absolute searchbox rounded-md !overflow-hidden bg-brown_bg top-full right-0 w-[300px] text-center font-montserrat text-sm"
+                  class="absolute searchbox rounded-md !overflow-hidden bg-brown top-full right-0 w-[300px] text-center font-montserrat text-sm"
                 >
                   <input
                     oninput="searchData()"
-                    class="w-full p-2 outline-none border-b-2 border-brown_bg text-white placeholder:text-white bg-brown"
+                    class="w-full p-2 outline-none border-b-2 border-brown text-white placeholder:text-white bg-brown"
                     type="text"
                     placeholder="Axtarış..."
                   />
@@ -220,34 +220,24 @@
           </div>
         </div>
       </nav>
-      <div class="bg-brown fixed bottom-0 h-[8vh] w-full z-20 px-3 text-xl lg:hidden">
+      <div
+        id="bottomBar"
+        class="bg-brown fixed bottom-[-100%] h-[8vh] w-full z-20 px-3 text-xl lg:hidden transition-all duration-300"
+      >
         <ul class="flex justify-between items-center h-full">
           <li
-            class="dropdown_li_lang2 cursor-pointer p-2 lg:p-0 relative uppercase text-base font-normal text-white transition-all duration-300"
+            onclick="openLangMobile()"
+            class="cursor-pointer p-2 lg:p-0 relative uppercase text-base font-normal text-white transition-all duration-300"
           >
-            <span id="lang2">az</span> <i class="fa-solid fa-angle-up duration-500 pl-1"></i>
+            <span id="lang2">az</span>
+            <i class="fa-solid fa-angle-up duration-500 pl-[2px]"></i>
             <div
               class="drop_div_lang2 mt-2 px-3 bg-brown overflow-hidden min-w-full absolute bottom-10 max-h-0 left-1/2 -translate-x-1/2"
             >
               <ul class="w-full text-center py-1">
-                <li
-                  onclick="changeLanguage('az')"
-                  class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
-                >
-                  AZ
-                </li>
-                <li
-                  onclick="changeLanguage('en')"
-                  class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
-                >
-                  en
-                </li>
-                <li
-                  onclick="changeLanguage('ru')"
-                  class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-normal text-[#fff] transition-all duration-300"
-                >
-                  ru
-                </li>
+                <li onclick="changeLanguage('az')" class="pt-1 cursor-pointer text-white">AZ</li>
+                <li onclick="changeLanguage('en')" class="pt-1 cursor-pointer text-white">EN</li>
+                <li onclick="changeLanguage('ru')" class="pt-1 cursor-pointer text-white">RU</li>
               </ul>
             </div>
           </li>
@@ -257,15 +247,16 @@
             </a>
           </li>
           <li onclick="openBasketSidebar()" class="p-2 lg:p-0 relative">
-            <a class="uppercase xl:px-2 pb-1 block text-white transition-all duration-300" href="#" data-key="about_company">
+            <a class="uppercase xl:px-2 pb-1 block text-white transition-all duration-300" href="#">
               <span
                 id="basket-quantity-mobile"
-                class="absolute bg-green -top-1 right-0 w-4 h-4 text-center rounded-full font-mono text-[10px] hidden"
+                class="absolute text-white bg-green -top-1 right-0 w-4 h-4 text-center rounded-full font-mono text-[10px] hidden"
                 >1</span
               >
               <img class="w-6" src="./img/food-basket.png" alt="basket" />
             </a>
           </li>
+          <i class="fa-regular fa-user text-white"></i>
           <li class="p-3 lg:p-0 relative">
             <i onclick="searchBar()" class="fa-solid fa-magnifying-glass text-white block px-2"></i>
             <span
@@ -286,11 +277,9 @@
           </li>
         </ul>
       </div>
-
-     
     </header>
 
-    <main class=" mt-28">
+    <main class="mt-28">
       <!-- <section class="bg-white dark:bg-gray-900">
         <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
@@ -340,8 +329,8 @@
         <div class="text-center mb-10">
           <h2 class="text-balance text-4xl font-semibold tracking-tight text-brown font-montserrat sm:text-5xl">Contact sales</h2>
         </div>
-        <div class=" flex flex-col lg:flex-row gap-2">
-          <div class="isolate w-full lg:w-1/2 bg-white px-6  lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-2">
+          <div class="isolate w-full lg:w-1/2 bg-white px-6 lg:px-8">
             <div
               class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
               aria-hidden="true"
@@ -370,8 +359,8 @@
                 "
               ></div>
             </div>
-            
-            <form action="#" method="POST" class="mx-auto mt-3 ">
+
+            <form action="#" method="POST" class="mx-auto mt-3">
               <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div>
                   <label for="first-name" class="block text-sm/6 font-semibold text-gray-900">First name</label>
@@ -470,16 +459,15 @@
                       name="message"
                       id="message"
                       rows="4"
-                      class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 "
+                      class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2"
                     ></textarea>
                   </div>
                 </div>
-             
               </div>
               <div class="mt-10">
                 <button
                   type="submit"
-                  class="block w-full rounded-md bg-brown px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
+                  class="block w-full rounded-md bg-brown px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                 >
                   Let's talk
                 </button>
@@ -488,7 +476,7 @@
           </div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.3344996875053!2d49.83885647552578!3d40.379278457918694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d00673abcab%3A0xe1bca78e66178e5e!2sBARSHOP-%20MMC!5e0!3m2!1str!2saz!4v1734340499576!5m2!1str!2saz"
-            class="border-0 w-full lg:w-1/2 min-h-[50vh] "
+            class="border-0 w-full lg:w-1/2 min-h-[50vh]"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
@@ -563,7 +551,7 @@
     <script src="js/nav.js"></script>
     <script src="js/search.js"></script>
     <script src="js/basket.js"></script>
-<script src="js/contact.js"></script>
+    <script src="js/contact.js"></script>
     <script></script>
   </body>
 </html>
