@@ -25,7 +25,6 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
   </head>
   <body class="bg-brown_bg_light font-roboto">
     <header>
@@ -174,11 +173,11 @@
               <li class="p-2 lg:p-0 mx-2 hidden lg:block">
                 <img onclick="searchBar()" class="w-4 block" src="img/magnifying-glass (1).png" alt="search" />
                 <span
-                  class="absolute searchbox rounded-md !overflow-hidden bg-brown_bg top-full right-0 w-[300px] text-center font-montserrat text-sm"
+                  class="absolute searchbox rounded-md !overflow-hidden bg-brown top-full right-0 w-[300px] text-center font-montserrat text-sm"
                 >
                   <input
                     oninput="searchData()"
-                    class="w-full p-2 outline-none border-b-2 border-brown_bg text-white placeholder:text-white bg-brown"
+                    class="w-full p-2 outline-none border-b-2 border-brown text-white placeholder:text-white bg-brown"
                     type="text"
                     placeholder="Axtarış..."
                   />
@@ -218,7 +217,7 @@
             class="cursor-pointer p-2 lg:p-0 relative uppercase text-base font-normal text-white transition-all duration-300"
           >
             <span id="lang2">az</span>
-            <i class="fa-solid fa-angle-up duration-500 pl-1"></i>
+            <i class="fa-solid fa-angle-up duration-500 pl-[2px]"></i>
             <div
               class="drop_div_lang2 mt-2 px-3 bg-brown overflow-hidden min-w-full absolute bottom-10 max-h-0 left-1/2 -translate-x-1/2"
             >
@@ -244,9 +243,7 @@
               <img class="w-6" src="./img/food-basket.png" alt="basket" />
             </a>
           </li>
-          <!-- <li class="p-3 lg:p-0 relative">
-            <i onclick="searchBar()" class="  fa-solid fa-magnifying-glass text-white block px-2"></i>
-          </li> -->
+          <i class="fa-regular fa-user text-white"></i>
           <li class="p-3 lg:p-0 relative">
             <i onclick="searchBar()" class="fa-solid fa-magnifying-glass text-white block px-2"></i>
             <span
@@ -278,12 +275,11 @@
 
           <div class="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
             <div class="mx-auto w-full lg:w-2/3">
-              <div class="space-y-6 sebet-box">
-              </div>
+              <div class="space-y-6 sebet-box"></div>
             </div>
 
             <div class="mt-6 w-full lg:w-1/3 flex-1 space-y-6 lg:mt-0">
-             <div id="basket-summary" class="space-y-4 border border-gray-200 bg-white p-4 shadow-sm sm:p-6">
+              <div id="basket-summary" class="space-y-4 border border-gray-200 bg-white p-4 shadow-sm sm:p-6">
                 <p class="text-xl font-semibold text-brown">Sifariş məbləği</p>
 
                 <div class="space-y-4">
@@ -349,9 +345,8 @@
               </div>
 
               <div class="space-y-4 border border-gray-200 bg-white p-4 shadow-sm sm:p-6">
-               
                 <button
-                onclick="resetBasket()"
+                  onclick="resetBasket()"
                   class="flex w-full items-center justify-center bg-red-600 text-white px-5 py-2.5 text-sm font-montserrat font-medium focus:outline-none"
                 >
                   Səbəti sıfırla
@@ -365,37 +360,66 @@
     <footer class="py-6 bg-brown font-montserrat">
       <div class="container_my flex flex-col md:flex-row items-start justify-between">
         <div class="md:w-1/3">
-          <h4 class="text-lg font-bold text-white">Bizimlə əlaqə</h4>
+          <h4 class="text-lg font-bold text-white mb-1">Bizimlə əlaqə</h4>
 
           <div class="flex flex-col items-start">
             <!-- Sosyal Medya Linkleri -->
-            <a href="#" class="footer-span font-montserrat text-white flex w-[140px] py-2 gap-3 items-center">
+            <a
+              href="https://www.instagram.com/barshop.az/"
+              class="footer-span font-montserrat text-white flex w-[140px] pb-2 pt-1 gap-3 items-center"
+            >
               <div class="footer-hover-div duration-500 transition-all !w-8 !h-6 flex justify-center items-center rounded-md">
                 <i class="fa-brands fa-instagram"></i>
               </div>
               Instagram
             </a>
-            <a href="#" class="footer-span font-montserrat text-white flex w-[140px] py-2 gap-3 items-center">
+            <a
+              href="https://wa.me/+994552238338"
+              class="footer-span font-montserrat text-white flex w-[140px] pb-2 pt-1 gap-3 items-center"
+            >
               <div class="footer-hover-div duration-500 transition-all !w-8 !h-6 flex justify-center items-center rounded-md">
                 <i class="fa-brands fa-whatsapp"></i>
               </div>
               Whatsapp
             </a>
-            <a href="#" class="footer-span font-montserrat text-white flex w-[140px] py-2 gap-3 items-center">
+            <a
+              href="https://www.facebook.com/barshopaz/"
+              class="footer-span font-montserrat text-white flex w-[140px] pb-2 pt-1 gap-3 items-center"
+            >
               <div class="footer-hover-div duration-500 transition-all !w-8 !h-6 flex justify-center items-center rounded-md">
                 <i class="fa-brands fa-facebook-f"></i>
               </div>
               Facebook
             </a>
+            <div>
+              <a
+                href="mailto:Info@barshop.az"
+                class="footer-span font-montserrat text-white flex w-[200px] pt-1 pb-2 gap-3 items-center"
+              >
+                <div class="footer-hover-div duration-500 transition-all !w-8 !h-6 flex justify-center items-center rounded-md">
+                  <i class="fa-regular fa-envelope text-white"></i>
+                </div>
+                Info@barshop.az
+              </a>
+
+              <a
+                href="mailto:sales@barshop.az"
+                class="footer-span font-montserrat text-white flex w-[200px] pt-1 pb-2 gap-3 items-center"
+              >
+                <div class="footer-hover-div duration-500 transition-all !w-8 !h-6 flex justify-center items-center rounded-md">
+                  <i class="fa-solid fa-business-time"></i>
+                </div>
+                sales@barshop.az
+              </a>
+            </div>
           </div>
         </div>
         <!-- Çalışma Saatleri -->
-        <div class="mt-6 w-1/3 text-white font-montserrat">
+        <div class="mt-6 lg:mt-0 mb-6 w-full lg:w-1/3 text-white font-montserrat">
           <h4 class="text-lg font-bold">Çalışma Saatlarimiz</h4>
           <ul class="mt-2 space-y-1">
-            <li class="my-2">Bazar ertəsi - Cümə: 09:00 - 18:00</li>
-            <li class="my-2">Şənbə: 10:00 - 16:00</li>
-            <li class="my-2">Bazar: Bağlıdır</li>
+            <li class="my-2">Bazar ertəsi - Cümə: 09:00 - 22:00</li>
+            <li class="my-2">Şənbə-Bazar: 10:00 - 18:00</li>
           </ul>
         </div>
 
@@ -410,6 +434,7 @@
         ></iframe>
       </div>
     </footer>
+
     <section>
       <div class="sebet-sidebar-bg z-20 bg-[#00000085] fixed w-full bottom-0 top-0 left-0 right-0"></div>
       <div class="bg-white fixed sebet-sidebar h-screen w-full top-0 bottom-0 z-20">
@@ -418,9 +443,7 @@
           <i onclick="openBasketSidebar()" class="fa-solid fa-x text-xl !font-medium"></i>
         </span>
         <div class="h-[92vh] flex flex-col justify-between">
-          <!-- ///////////////////////// -->
-          <div class="all-card-baskets"></div>
-          <!-- ///////////////////// -->
+          <div class="all-card-baskets overflow-y-auto"></div>
           <div class="flex flex-col justify-center gap-2 p-4">
             <span class="flex justify-between items-center py-2 font-semibold font-montserrat text-lg">
               <b class="font-semibold">Ümumi :</b> <span id="total-price" class="border-b-2 border-green">0₼</span>
@@ -428,23 +451,44 @@
             <button
               class="bg-slate-50 hover:bg-gray-100 transition duration-300 text-brown border border-green font-montserrat font-medium text-lg p-2"
             >
-              Səbətə keç
+              <a href="basket.html">Səbətə keç</a>
             </button>
             <button
               class="bg-green hover:bg-greenDark transition duration-300 text-white font-montserrat font-medium text-lg p-2"
             >
-              Rəsmiləşdir
+              <a href="check.html">Rəsmiləşdir</a>
             </button>
           </div>
         </div>
       </div>
     </section>
 
+    <div class="fixed bottom-11 right-3 z-10 p-2">
+      <div
+        id="icon-container"
+        class="flex flex-col items-center gap-1 transform translate-y-full opacity-0 transition-all duration-500"
+      >
+        <a target="_blank" href="https://wa.me/">
+          <i class="fa-brands fa-whatsapp text-2xl text-green"></i>
+        </a>
+        <a target="_blank" href="">
+          <i class="fa-brands fa-instagram text-2xl text-pink-600"></i>
+        </a>
+        <a target="_blank" href="">
+          <i class="fa-brands fa-facebook-f text-2xl text-blue-700"></i>
+        </a>
+      </div>
+      <div id="message-icon" class="w-10 h-10 flex justify-center items-center text-3xl text-brown cursor-pointer">
+        <i class="fa-solid fa-message"></i>
+      </div>
+    </div>
+
     <script src="js/nav.js"></script>
     <script src="js/search.js"></script>
     <script src="js/basket.js"></script>
+    <script src="js/translate.js"></script>
+    <script src="js/sendToDetails.js"></script>
 
-    <script>
-  </script>
+    <script></script>
   </body>
 </html>

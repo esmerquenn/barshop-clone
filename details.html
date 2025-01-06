@@ -546,27 +546,83 @@
                         <p class="text-gray-700 my-6">
                           ${findItem.description}
                         </p>
-                        <button onclick="sendBasket('${findItem.id}')" class="px-4 py-2 bg-green text-white hover:bg-greenDark transition">
-                          Səbətə əlavə et
-                        </button>
+                      ${
+                        category.name == "Qəhvə"
+                          ? ` <div>
+
+                        <div class="flex md:justify-between mb-4 gap-5 items-center">
+                          <h5 class="font-medium pt-1">
+                            Paket Ölçüsü
+                          </h5>
+                          <select class="w-[180px] py-2 px-1">
+                            <option>1 kg</option>
+                            <option>500 g</option>
+                            <option>2 kg</option>
+                          </select>
+                        </div>
+                        <div class="flex  md:justify-between gap-5 items-center">
+                          <h5 class="font-medium pt-1">
+                            Üyüdmə üsulu
+                          </h5>
+                          <select class="w-[180px] py-2 px-1">
+                            <option>Üyüdülmüş</option>
+                            <option>Dənli</option>
+                            <option>French press</option>
+                          </select>
+                        </div>
+                      </div>`
+                          : ""
+                      }
+                       ${
+                         findItem.stock == 0
+                           ? `<button
+                             class="py-2 my-3 bg-transparent text-red-600 transition"
+                           >
+                             Anbarda bitib
+                           </button>`
+                           : `<button
+                             onclick="sendBasket('${findItem.id}')"
+                             class="px-4 py-2 bg-green text-white hover:bg-greenDark transition"
+                           >
+                             Səbətə əlavə et
+                           </button>`
+                       }
                       </div>
                       <h4 class="text-brown text-lg">Kategoriya: <span class="font-bold ">${category.name}</span></h4>
                     `;
-            let relatedProducts = allData.products.filter(
-              (item) => item.category_id == findItem.category_id && item.id != findItem.id
-            );
-            related_slider.innerHTML = ""; 
-            relatedProducts.forEach((product) => {
-              let is_new = product.isnew
-                ? ` <div 
+            writeRelatedProducts(allData, findItem, category);
+            initializeCarousel();
+          } else {
+            console.log("Ürün bulunamadı");
+          }
+        }
+      }
+
+      function writeRelatedProducts(allData, findItem, category) {
+        let relatedProducts = allData?.products.filter(
+          (item) => item.category_id == findItem?.category_id && item.id != findItem.id
+        );
+        related_slider.innerHTML = "";
+
+        relatedProducts.forEach((product) => {
+          let products_stock =
+            product.stock != 0
+              ? `<h6 class="font-montserrat text-green capitalize  text-sm">Stokdadır</h6>`
+              : `<h6 class="font-montserrat  text-red-500 capitalize  text-sm">Anbarda bitib</h6>`;
+          let is_new = product.isnew
+            ? ` <div
                 class="bg-green text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute top-10 lg:top-2 left-2"
                 >new</div>`
-                : "";
-                let have_discount = product.discount ? ` <div class="bg-red-600 text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute left-2  ${is_new ?' top-[71px] lg:top-[50px]': 'top-10 lg:top-2'}">
+            : "";
+          let have_discount = product.discount
+            ? ` <div class="bg-red-600 text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute left-2  ${
+                is_new ? " top-[71px] lg:top-[50px]" : "top-10 lg:top-2"
+              }">
                 ${product.discount}
                 <i class="fa-solid fa-percent"></i>
-              </div>` : ""
-              related_slider.innerHTML += `
+              </div>`
+            : "";
+          related_slider.innerHTML += `
           <div  onclick="goToDetailPage('${product.id}')" class=" cursor-pointer item grid border font-montserrat detail-box">
             <div class="box-div relative w-full">
               <img class="box-img w-full max-h-72 object-cover" src="img/${product.img}" alt="${product.name}" />
@@ -580,16 +636,12 @@
             <div class="p-4">
               <h5 class="mt-2 font-semibold capitalize text-brown">${product.name}</h5>
               <h6 class="capitalize my-2 text-sm text-brown">${category.name}</h6>
-              <h6 class="font-montserrat text-green capitalize my-2 text-sm">Stokdadır</h6>
+            ${products_stock}
               <span class="font-bold text-lg text-brown">${product.price} ₼</span>
             </div>
           </div>`;
-            });
-            initializeCarousel();
-          } else {
-            console.log("Ürün bulunamadı");
-          }
-        }
+        });
+        initializeCarousel();
       }
 
       function initializeSliders() {

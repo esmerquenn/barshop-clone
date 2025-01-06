@@ -178,7 +178,7 @@ function showProduct(id, slideIndex) {
     let stock =
       product.stock != 0
         ? `<h6 class="font-montserrat text-green capitalize  text-sm">Stokdadır</h6>`
-        : `<h6 class="font-montserrat  text-gray-500 capitalize  text-sm">Anbarda tükənmişdir</h6>`;
+        : `<h6 class="font-montserrat  text-red-500 capitalize  text-sm">Anbarda tükənmişdir</h6>`;
     write_to_card(product, price, stock);
   });
 
