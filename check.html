@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barshop</title>
+    <link rel="shortcut icon" href="logo2.png" type="image/x-icon" />
+    <link href="./css/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/basket.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body class="bg-brown_bg_light font-roboto">
+    <header>
+      <nav class="py-2 bg-white shadow-lg fixed top-0 left-0 z-20 w-full">
+        <div class="container_my flex items-center justify-between">
+          <i onclick="closeDropdown()" class="fa-solid fa-bars text-[2rem] text-brown lg:hidden"></i>
+
+          <div class="text-center">
+            <a href="/"><img class="block w-full" src="./img/logo.png" alt="birS" /></a>
+          </div>
+
+          <div class="flex justify-center items-center">
+            <ul class="hidden_dropdown md:py-4 lg:flex">
+              <li class="mx-4 lg:m-0 xl:m-1 border-b lg:border-0 py-2 lg:py-0">
+                <a
+                  class="uppercase px-1 lg:text-[13px] xl:text-[15px] font-extrabold font-roboto text-brown transition-all duration-300"
+                  href="/"
+                  data-key="home"
+                  >ANA SƏHİFƏ</a
+                >
+              </li>
+              <li class="mx-4 mt-2 lg:m-1 border-b lg:border-0 relative dropdown_li">
+                <a
+                  class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
+                  href="/"
+                  data-key="coffee"
+                  >qəhvə
+                </a>
+                <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
+                  <ul>
+                    <li class="pt-1">
+                      <a
+                        class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
+                        href="about.html?page=melumat"
+                        data-key="info"
+                        >Məlumat</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mx-4 mt-2 lg:m-1 border-b lg:border-0 relative dropdown_li">
+                <a
+                  class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
+                  href="#"
+                  ><span data-key="coffee-machines">qəhvə maşınları </span></a
+                >
+                <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
+                  <ul>
+                    <li class="pt-1">
+                      <a
+                        class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
+                        href="about.html?page=melumat"
+                        data-key="info"
+                        >Məlumat</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mx-4 mt-2 lg:m-1 border-b lg:border-0 relative dropdown_li">
+                <a
+                  class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
+                  href="#"
+                  data-key="accessories"
+                  >aksesuarlar
+                </a>
+                <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
+                  <ul>
+                    <li class="pt-1">
+                      <a
+                        class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
+                        href="about.html?page=melumat"
+                        data-key="info"
+                        >Məlumat</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mx-4 mt-2 lg:m-1 border-b lg:border-0 relative dropdown_li">
+                <a
+                  class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
+                  href="#"
+                  data-key="addons"
+                  >əlavələr
+                </a>
+                <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
+                  <ul>
+                    <li class="pt-1">
+                      <a
+                        class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
+                        href="about.html?page=melumat"
+                        data-key="info"
+                        >Məlumat</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mx-4 lg:m-1 border-b lg:border-0 py-2 lg:py-0">
+                <a
+                  class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold leading-[20px] text-brown transition-all duration-300"
+                  href="about.html"
+                  data-key="about"
+                  >haqqimizda</a
+                >
+              </li>
+              <li class="mx-4 lg:m-1 border-b lg:border-0 py-2 lg:py-0">
+                <a
+                  class="uppercase px-1 text-base lg:text-[13px] xl:text-[15px] font-extrabold leading-[20px] text-brown transition-all duration-300"
+                  href="contact.html"
+                  data-key="contact"
+                  >ƏLAQƏ</a
+                >
+              </li>
+              <li
+                class="mx-1 hidden lg:block dropdown_li_lang cursor-pointer p-2 lg:p-0 relative uppercase text-base font-extrabold text-brown transition-all duration-300"
+              >
+                <span id="lang" data-key="language">az</span>
+                <div
+                  class="drop_div_lang mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[40px] md:absolute md:left-1/2 md:-translate-x-1/2"
+                >
+                  <ul>
+                    <li
+                      onclick="changeLanguage('az')"
+                      class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
+                    >
+                      AZ
+                    </li>
+                    <li
+                      onclick="changeLanguage('en')"
+                      class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
+                    >
+                      EN
+                    </li>
+                    <li
+                      onclick="changeLanguage('ru')"
+                      class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
+                    >
+                      RU
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="p-2 lg:p-0 mx-2 hidden lg:block">
+                <img onclick="searchBar()" class="w-4 block" src="img/magnifying-glass (1).png" alt="search" />
+                <span
+                  class="absolute searchbox rounded-md !overflow-hidden bg-brown top-full right-0 w-[300px] text-center font-montserrat text-sm"
+                >
+                  <input
+                    oninput="searchData()"
+                    class="w-full p-2 outline-none border-b-2 border-brown text-white placeholder:text-white bg-brown"
+                    type="text"
+                    placeholder="Axtarış..."
+                  />
+                  <ul class="text-brown text-left p-2 resultList">
+                    <li class="border-b-2 border-brown py-1 text-center">
+                      <i class="fa-regular fa-folder-open text-2xl text-white"></i>
+                    </li>
+                  </ul>
+                </span>
+              </li>
+              <li onclick="openBasketSidebar()" class="p-2 lg:p-0 relative hidden lg:block">
+                <a class="uppercase xl:px-2 pb-1 block transition-all duration-300" href="#">
+                  <span
+                    id="basket-quantity"
+                    class="absolute text-white bg-green -top-2 right-0 w-4 h-4 text-center rounded-full font-mono text-[10px] hidden"
+                    >1</span
+                  >
+                  <img class="w-6" src="./img/food-basket2.png" alt="basket" />
+                </a>
+              </li>
+              <li class="p-2 lg:p-0 ml-3 xl:ml-0 relative hidden lg:block">
+                <a class="uppercase transition-all duration-300" href="#">
+                  <i class="fa-regular fa-user text-xl"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div
+        id="bottomBar"
+        class="bg-brown fixed bottom-[-100%] h-[8vh] w-full z-20 px-3 text-xl lg:hidden transition-all duration-300"
+      >
+        <ul class="flex justify-between items-center h-full">
+          <li
+            onclick="openLangMobile()"
+            class="cursor-pointer p-2 lg:p-0 relative uppercase text-base font-normal text-white transition-all duration-300"
+          >
+            <span id="lang2">az</span>
+            <i class="fa-solid fa-angle-up duration-500 pl-[2px]"></i>
+            <div
+              class="drop_div_lang2 mt-2 px-3 bg-brown overflow-hidden min-w-full absolute bottom-10 max-h-0 left-1/2 -translate-x-1/2"
+            >
+              <ul class="w-full text-center py-1">
+                <li onclick="changeLanguage('az')" class="pt-1 cursor-pointer text-white">AZ</li>
+                <li onclick="changeLanguage('en')" class="pt-1 cursor-pointer text-white">EN</li>
+                <li onclick="changeLanguage('ru')" class="pt-1 cursor-pointer text-white">RU</li>
+              </ul>
+            </div>
+          </li>
+          <li class="p-2 lg:p-0 relative">
+            <a class="uppercase xl:px-2 pb-1 block text-white transition-all duration-300" href="#">
+              <i class="fa-brands fa-whatsapp text-2xl"></i>
+            </a>
+          </li>
+          <li onclick="openBasketSidebar()" class="p-2 lg:p-0 relative">
+            <a class="uppercase xl:px-2 pb-1 block text-white transition-all duration-300" href="#">
+              <span
+                id="basket-quantity-mobile"
+                class="absolute text-white bg-green -top-1 right-0 w-4 h-4 text-center rounded-full font-mono text-[10px] hidden"
+                >1</span
+              >
+              <img class="w-6" src="./img/food-basket.png" alt="basket" />
+            </a>
+          </li>
+          <i class="fa-regular fa-user text-white"></i>
+          <li class="p-3 lg:p-0 relative">
+            <i onclick="searchBar()" class="fa-solid fa-magnifying-glass text-white block px-2"></i>
+            <span
+              class="rounded-md searchbox2 w-[300px] absolute bottom-[100%] right-0 bg-brown text-center font-montserrat text-sm"
+            >
+              <ul class="text-white text-left p-2 resultList2">
+                <li class="border-b-2 border-brown py-1 text-center">
+                  <i class="fa-regular fa-folder-open text-2xl text-white"></i>
+                </li>
+              </ul>
+              <input
+                oninput="searchData()"
+                class="w-full p-2 outline-none border-b-2 border-brown_bg text-white placeholder:text-white bg-brown"
+                type="text"
+                placeholder="Axtarış..."
+              />
+            </span>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="my-28 container_my px-4">
+      <section class="bg-white py-8 antialiased md:py-16">
+        <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
+          <h2 class="text-xl font-extrabold text-brown font-montserrat dark:text-white lg:text-4xl text-center uppercase">
+            Səbətİnİz
+          </h2>
+
+          <div class="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
+            <div class="mx-auto w-full lg:w-2/3">
+              <div class="space-y-6 sebet-box"></div>
+            </div>
+
+            <div class="mt-6 w-full lg:w-1/3 flex-1 space-y-6 lg:mt-0">
+              <div id="basket-summary" class="space-y-4 border border-gray-200 bg-white p-4 shadow-sm sm:p-6">
+                <p class="text-xl font-semibold text-brown">Sifariş məbləği</p>
+
+                <div class="space-y-4">
+                  <div class="space-y-2">
+                    <dl class="flex items-center justify-between gap-4">
+                      <dt class="text-base font-normal text-gray-500">Məhsulların sayı :</dt>
+                      <dd id="product-count" class="text-base font-medium text-greenDark">0</dd>
+                    </dl>
+
+                    <dl class="flex items-center justify-between gap-4">
+                      <dt class="text-base font-normal text-gray-500">Məbləğ :</dt>
+                      <dd id="total-amount" class="text-base font-medium text-brown">0 ₼</dd>
+                    </dl>
+                  </div>
+
+                  <dl class="flex items-center justify-between gap-4 border-t border-gray-200 pt-2">
+                    <dt class="text-base font-bold text-brown">Yekun məbləğ :</dt>
+                    <dd id="final-amount" class="text-base font-bold text-brown">0 ₼</dd>
+                  </dl>
+                </div>
+                <form class="space-y-4">
+                  <div>
+                    <label for="voucher" class="mb-2 block text-base font-montserrat font-medium text-brown"> Promo kod </label>
+                    <input
+                      type="text"
+                      id="voucher"
+                      class="block w-full border border-gray-300 bg-gray-50 p-2.5 text-base text-brown focus:outline-none"
+                      placeholder=""
+                      required
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    class="flex w-full items-center justify-center font-montserrat bg-green px-5 py-2.5 text-base font-semibold text-white hover:bg-greenDark focus:outline-none"
+                  >
+                    Kodu əlavə et
+                  </button>
+                </form>
+                <a
+                  href="#"
+                  class="flex w-full items-center justify-center bg-brown text-white px-5 py-2.5 text-sm font-montserrat font-medium focus:outline-none"
+                  >Rəsmiləşdir</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="py-6 bg-brown font-montserrat">
+      <div class="container_my flex flex-col md:flex-row items-start justify-between">
+        <div class="md:w-1/3">
+          <h4 class="text-lg font-bold text-white mb-1">Bizimlə əlaqə</h4>
+
+          <div class="flex flex-col items-start">
+            <!-- Sosyal Medya Linkleri -->
+            <a
+              href="https://www.instagram.com/barshop.az/"
+              class="footer-span font-montserrat text-white flex w-[140px] pb-2 pt-1 gap-3 items-center"
+            >
+              <div class="footer-hover-div duration-500 transition-all !w-8 !h-6 flex justify-center items-center rounded-md">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+              Instagram
+            </a>
+            <a
+              href="https://wa.me/+994552238338"
+              class="footer-span font-montserrat text-white flex w-[140px] pb-2 pt-1 gap-3 items-center"
+            >
+              <div class="footer-hover-div duration-500 transition-all !w-8 !h-6 flex justify-center items-center rounded-md">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              Whatsapp
+            </a>
+            <a
+              href="https://www.facebook.com/barshopaz/"
+              class="footer-span font-montserrat text-white flex w-[140px] pb-2 pt-1 gap-3 items-center"
+            >
+              <div class="footer-hover-div duration-500 transition-all !w-8 !h-6 flex justify-center items-center rounded-md">
+                <i class="fa-brands fa-facebook-f"></i>
+              </div>
+              Facebook
+            </a>
+            <div>
+              <a
+                href="mailto:Info@barshop.az"
+                class="footer-span font-montserrat text-white flex w-[200px] pt-1 pb-2 gap-3 items-center"
+              >
+                <div class="footer-hover-div duration-500 transition-all !w-8 !h-6 flex justify-center items-center rounded-md">
+                  <i class="fa-regular fa-envelope text-white"></i>
+                </div>
+                Info@barshop.az
+              </a>
+
+              <a
+                href="mailto:sales@barshop.az"
+                class="footer-span font-montserrat text-white flex w-[200px] pt-1 pb-2 gap-3 items-center"
+              >
+                <div class="footer-hover-div duration-500 transition-all !w-8 !h-6 flex justify-center items-center rounded-md">
+                  <i class="fa-solid fa-business-time"></i>
+                </div>
+                sales@barshop.az
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Çalışma Saatleri -->
+        <div class="mt-6 lg:mt-0 mb-6 w-full lg:w-1/3 text-white font-montserrat">
+          <h4 class="text-lg font-bold">Çalışma Saatlarimiz</h4>
+          <ul class="mt-2 space-y-1">
+            <li class="my-2">Bazar ertəsi - Cümə: 09:00 - 22:00</li>
+            <li class="my-2">Şənbə-Bazar: 10:00 - 18:00</li>
+          </ul>
+        </div>
+
+        <!-- Harita -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.3344996875057!2d49.83885647552581!3d40.37927845791869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d00673abcab%3A0xe1bca78e66178e5e!2sBARSHOP-%20MMC!5e0!3m2!1str!2saz!4v1733941021601!5m2!1str!2saz"
+          class="w-full md:w-1/3 min-h-[200px]"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </footer>
+
+    <section>
+      <div class="sebet-sidebar-bg z-20 bg-[#00000085] fixed w-full bottom-0 top-0 left-0 right-0"></div>
+      <div class="bg-white fixed sebet-sidebar h-screen w-full top-0 bottom-0 z-20">
+        <span class="h-[8vh] flex justify-between items-center border-b border-brown p-4">
+          <h3 class="font-semibold font-montserrat text-lg">Səbətiniz</h3>
+          <i onclick="openBasketSidebar()" class="fa-solid fa-x text-xl !font-medium"></i>
+        </span>
+        <div class="h-[92vh] flex flex-col justify-between">
+          <div class="all-card-baskets overflow-y-auto"></div>
+          <div class="flex flex-col justify-center gap-2 p-4">
+            <span class="flex justify-between items-center py-2 font-semibold font-montserrat text-lg">
+              <b class="font-semibold">Ümumi :</b> <span id="total-price" class="border-b-2 border-green">0₼</span>
+            </span>
+            <button
+              class="bg-slate-50 hover:bg-gray-100 transition duration-300 text-brown border border-green font-montserrat font-medium text-lg p-2"
+            >
+              <a href="basket.html">Səbətə keç</a>
+            </button>
+            <button
+              class="bg-green hover:bg-greenDark transition duration-300 text-white font-montserrat font-medium text-lg p-2"
+            >
+              <a href="check.html">Rəsmiləşdir</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="fixed bottom-11 right-3 z-10 p-2">
+      <div
+        id="icon-container"
+        class="flex flex-col items-center gap-1 transform translate-y-full opacity-0 transition-all duration-500"
+      >
+        <a target="_blank" href="https://wa.me/">
+          <i class="fa-brands fa-whatsapp text-2xl text-green"></i>
+        </a>
+        <a target="_blank" href="">
+          <i class="fa-brands fa-instagram text-2xl text-pink-600"></i>
+        </a>
+        <a target="_blank" href="">
+          <i class="fa-brands fa-facebook-f text-2xl text-blue-700"></i>
+        </a>
+      </div>
+      <div id="message-icon" class="w-10 h-10 flex justify-center items-center text-3xl text-brown cursor-pointer">
+        <i class="fa-solid fa-message"></i>
+      </div>
+    </div>
+
+    <script src="js/nav.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/basket.js"></script>
+    <script src="js/translate.js"></script>
+    <script src="js/sendToDetails.js"></script>
+
+    <script></script>
+  </body>
+</html>
