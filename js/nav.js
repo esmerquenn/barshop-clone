@@ -15,7 +15,7 @@ const bottomBar = document.getElementById("bottomBar");
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (currentScroll > window.innerHeight/2) {
+  if (currentScroll > 90) {
     bottomBar.classList.remove("bottom-[-100%]");
     bottomBar.classList.add("bottom-0");
   } else {
