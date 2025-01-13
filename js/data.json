@@ -11,7 +11,7 @@
       "brend_id": 1,
       "isnew": true,
       "stock": 150,
-      "img": "2.webp",
+      "img": "6ss.jpg",
       "sumImages": ["2.webp", "2.webp"],
       "model": "AB123",
       "weight": "500g"
@@ -27,7 +27,7 @@
       "brend_id": 2,
       "isnew": true,
       "stock": 0,
-      "img": "111.jpg",
+      "img": "5s.jpg",
       "sumImages": ["111.jpg", "111.jpg"],
       "model": "ES456",
       "weight": "3kg"
@@ -43,7 +43,7 @@
       "brend_id": 3,
       "isnew": false,
       "stock": 200,
-      "img": "111.jpg",
+      "img": "4s.jpg",
       "sumImages": ["111.jpg", "111.jpg"],
       "model": "CM789",
       "weight": "350g"
@@ -59,7 +59,7 @@
       "brend_id": 4,
       "isnew": true,
       "stock": 300,
-      "img": "2.webp",
+      "img": "7s.jpg",
       "sumImages": ["2.webp", "2.webp", "2.webp"],
       "model": "CF012",
       "weight": "200g"
@@ -91,7 +91,7 @@
       "brend_id": 6,
       "isnew": true,
       "stock": 120,
-      "img": "2.webp",
+      "img": "9s.jpg",
       "sumImages": ["111.jpg", "111.jpg"],
       "model": "SCC567",
       "weight": "400g"
@@ -123,7 +123,7 @@
       "brend_id": 6,
       "isnew": true,
       "stock": 120,
-      "img": "2.webp",
+      "img": "8s.jpg",
       "sumImages": ["111.jpg", "111.jpg"],
       "model": "SCC567",
       "weight": "400g"
@@ -139,7 +139,7 @@
       "brend_id": 6,
       "isnew": true,
       "stock": 120,
-      "img": "2.webp",
+      "img": "3s.jpg",
       "sumImages": ["111.jpg", "111.jpg"],
       "model": "SCC567",
       "weight": "400g"
@@ -155,7 +155,7 @@
       "brend_id": 6,
       "isnew": true,
       "stock": 120,
-      "img": "2.webp",
+      "img": "2s.jpg",
       "sumImages": ["111.jpg", "111.jpg"],
       "model": "SCC567",
       "weight": "400g"
@@ -171,7 +171,7 @@
       "brend_id": 6,
       "isnew": true,
       "stock": 120,
-      "img": "2.webp",
+      "img": "1s.jpg",
       "sumImages": ["111.jpg", "111.jpg"],
       "model": "SCC567",
       "weight": "400g"
