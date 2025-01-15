@@ -68,7 +68,7 @@ const translations = {
       "Bakıda çatdırılma müddəti müştərinin yerindən və sifarişin alınma vaxtından asılı olaraq 2 ilə 24 saat arasında dəyişir. Digər şəhərlərə çatdırılma fərdi şəkildə razılaşdırılır və seçilmiş xidmət və üsuldan asılıdır.",
     paymentTitle: "Ödəniş",
     paymentDescription:
-      "www.barshop.az saytından sifariş verdikdən sonra sifarişin ümumi dəyərini, o cümlədən çatdırılma və ödəniş üçün koordinatlarımızı qeyd etdiyiniz e-poçt ünvanına göndəririk.",
+      "saytından sifariş verdikdən sonra sifarişin ümumi dəyərini, o cümlədən çatdırılma və ödəniş üçün koordinatlarımızı qeyd etdiyiniz e-poçt ünvanına göndəririk.",
     paymentMethodsTitle: "Ödəniş Yolları",
     paymentMethod1: "Nağd pul.",
     paymentMethod2: "Nağdsız ödənişlər (kart və ya hesabdan köçürmə ilə).",

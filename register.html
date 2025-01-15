@@ -198,7 +198,7 @@
                   <img class="w-6" src="./img/food-basket2.png" alt="basket" />
                 </a>
               </li>
-              <li onclick="openLogin()" class="p-2 lg:p-0 ml-3 xl:ml-0 relative hidden lg:block">
+              <li class="p-2 lg:p-0 ml-3 xl:ml-0 relative hidden lg:block">
                 <a class="uppercase transition-all duration-300" href="#">
                   <i class="fa-regular fa-user text-xl"></i>
                 </a>
@@ -266,266 +266,74 @@
       </div>
     </header>
 
-    <main class="my-28 container_my px-4">
+    <main class="my-14 container_my px-4 font-montserrat">
       <section class="bg-white py-8 antialiased md:py-16">
-        <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
-          <h2 class="text-xl font-extrabold text-brown font-montserrat lg:text-4xl text-center uppercase">
-            Səbətİnİzİ Rəsmİləşdİrİn
-          </h2>
-
-          <div class="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
-            <div class="mx-auto w-full lg:w-2/3">
-              <!-- sifarisci -->
-              <section>
-                <div class="flex justify-between">
-                  <h4 class="text-xl text-brown font-medium uppercase font-montserrat">Sifarişçi</h4>
-                  <button onclick="openLogin()" class="border border-green p-2 rounded-md hover:bg-green hover:text-white">
-                    Daxil ol
-                  </button>
-                </div>
-                <div class="my-4 bg-slate-100 p-2 rounded-md flex justify-center flex-wrap gap-1">
-                  <label class="w-[225px]" for="name">
-                    <span class="p-1 block text-gray-400 text-sm">Ad və soyad</span>
-                    <input
-                      name="name"
-                      type="text"
-                      class="focus:ring-2 focus:ring-green outline-none border rounded-md p-2 block w-full"
-                    />
-                  </label>
-                  <label class="w-[225px]" for="phone">
-                    <span class="p-1 block text-gray-400 text-sm capitalize">tel:</span>
-                    <input
-                      name="phone"
-                      type="text"
-                      class="focus:ring-2 focus:ring-green outline-none border rounded-md p-2 block w-full"
-                    />
-                  </label>
-                  <label class="w-[230px]" for="mail">
-                    <span class="p-1 block text-gray-400 text-sm capitalize">e-mail</span>
-                    <input
-                      name="mail"
-                      type="email"
-                      class="focus:ring-2 focus:ring-green outline-none border rounded-md p-2 block w-full"
-                    />
-                  </label>
-                </div>
-              </section>
-              <!-- sifarisler -->
-              <section>
-                <div class="flex justify-between my-4">
-                  <h4 class="text-xl text-brown font-medium uppercase font-montserrat">Məhsullar</h4>
-                  <a href="basket.html" class="border-b border-green p-2">
-                    <i class="fa-regular fa-pen-to-square text-green"></i> Səbətə geri dön
-                  </a>
-                </div>
-                <div class="space-y-6 sebet-box flex flex-col items-center">
-                  <div
-                    class="max-w-[350px] md:max-w-[initial] card-basket relative bg-white border hover:bg-slate-50 transition duration-500 flex flex-col md:flex-row items-center gap-2 p-4"
-                  >
-                    <img class="w-1/3 object-cover md:w-[15%]" src="img/10s.jpg" alt="${item.name}" />
-                    <span class="w-full flex flex-col md:flex-row">
-                      <h5 class="font-medium font-montserrat text-sm pt-2 mb-2 md:mb-0 md:max-w-[120px]">
-                        İncə dənəli granul koffee
-                      </h5>
-                      <div class="flex w-full justify-between">
-                        <div class="flex flex-col gap-2">
-                          <span class="capitalize text-black font-normal"> Qiymət</span>
-                          <span class="text-base text-brown border-b-2 border-green text-center">30₼</span>
-                        </div>
-                        <div class="flex flex-col gap-2">
-                          <span class="capitalize text-black font-normal"> say</span>
-                          <span class="text-base text-brown border-b-2 border-green text-center">5</span>
-                        </div>
-                        <div class="text-gray-500 flex gap-2 flex-col items-center">
-                          <span class="capitalize text-black font-normal"> məbləğ</span>
-                          <span class="text-base text-brown border-b-2 border-green">150₼</span>
-                        </div>
-                      </div>
-                    </span>
-                  </div>
-                  <div
-                    class="max-w-[350px] md:max-w-[initial] card-basket relative bg-white border hover:bg-slate-50 transition duration-500 flex flex-col md:flex-row items-center gap-2 p-4"
-                  >
-                    <img class="w-1/3 object-cover md:w-[15%]" src="img/10s.jpg" alt="${item.name}" />
-                    <span class="w-full flex flex-col md:flex-row">
-                      <h5 class="font-medium font-montserrat text-sm pt-2 mb-2 md:mb-0 md:max-w-[120px]">
-                        İncə dənəli granul koffee
-                      </h5>
-                      <div class="flex w-full justify-between">
-                        <div class="flex flex-col gap-2">
-                          <span class="capitalize text-black font-normal"> Qiymət</span>
-                          <span class="text-base text-brown border-b-2 border-green text-center">30₼</span>
-                        </div>
-                        <div class="flex flex-col gap-2">
-                          <span class="capitalize text-black font-normal"> say</span>
-                          <span class="text-base text-brown border-b-2 border-green text-center">5</span>
-                        </div>
-                        <div class="text-gray-500 flex gap-2 flex-col items-center">
-                          <span class="capitalize text-black font-normal"> məbləğ</span>
-                          <span class="text-base text-brown border-b-2 border-green">150₼</span>
-                        </div>
-                      </div>
-                    </span>
-                  </div>
-                  <div
-                    class="max-w-[350px] md:max-w-[initial] card-basket relative bg-white border hover:bg-slate-50 transition duration-500 flex flex-col md:flex-row items-center gap-2 p-4"
-                  >
-                    <img class="w-1/3 object-cover md:w-[15%]" src="img/10s.jpg" alt="${item.name}" />
-                    <span class="w-full flex flex-col md:flex-row">
-                      <h5 class="font-medium font-montserrat text-sm pt-2 mb-2 md:mb-0 md:max-w-[120px]">
-                        İncə dənəli granul koffee
-                      </h5>
-                      <div class="flex w-full justify-between">
-                        <div class="flex flex-col gap-2">
-                          <span class="capitalize text-black font-normal"> Qiymət</span>
-                          <span class="text-base text-brown border-b-2 border-green text-center">30₼</span>
-                        </div>
-                        <div class="flex flex-col gap-2">
-                          <span class="capitalize text-black font-normal"> say</span>
-                          <span class="text-base text-brown border-b-2 border-green text-center">5</span>
-                        </div>
-                        <div class="text-gray-500 flex gap-2 flex-col items-center">
-                          <span class="capitalize text-black font-normal"> məbləğ</span>
-                          <span class="text-base text-brown border-b-2 border-green">150₼</span>
-                        </div>
-                      </div>
-                    </span>
-                  </div>
-                  <div
-                    class="max-w-[350px] md:max-w-[initial] card-basket relative bg-white border hover:bg-slate-50 transition duration-500 flex flex-col md:flex-row items-center gap-2 p-4"
-                  >
-                    <img class="w-1/3 object-cover md:w-[15%]" src="img/10s.jpg" alt="${item.name}" />
-                    <span class="w-full flex flex-col md:flex-row">
-                      <h5 class="font-medium font-montserrat text-sm pt-2 mb-2 md:mb-0 md:max-w-[120px]">
-                        İncə dənəli granul koffee
-                      </h5>
-                      <div class="flex w-full justify-between">
-                        <div class="flex flex-col gap-2">
-                          <span class="capitalize text-black font-normal"> Qiymət</span>
-                          <span class="text-base text-brown border-b-2 border-green text-center">30₼</span>
-                        </div>
-                        <div class="flex flex-col gap-2">
-                          <span class="capitalize text-black font-normal"> say</span>
-                          <span class="text-base text-brown border-b-2 border-green text-center">5</span>
-                        </div>
-                        <div class="text-gray-500 flex gap-2 flex-col items-center">
-                          <span class="capitalize text-black font-normal"> məbləğ</span>
-                          <span class="text-base text-brown border-b-2 border-green">150₼</span>
-                        </div>
-                      </div>
-                    </span>
-                  </div>
-                </div>
-              </section>
-              <!-- Catdirilma -->
-              <section>
-                <div class="flex justify-between my-4">
-                  <h4 class="text-xl text-brown font-medium uppercase font-montserrat">Çatdırılma</h4>
-                </div>
-                <div class="my-4 bg-slate-100 p-2 rounded-md flex justify-center flex-wrap gap-1">
-                  <label class="w-[48%]" for="city">
-                    <span class="p-1 block text-gray-400 text-sm">Şəhər</span>
-                    <input
-                      name="city"
-                      type="text"
-                      class="focus:ring-2 focus:ring-green outline-none border rounded-md p-2 block w-full"
-                    />
-                  </label>
-                  <label class="w-1/2" for="area">
-                    <span class="p-1 block text-gray-400 text-sm capitalize">Bölgə</span>
-                    <input
-                      name="area"
-                      type="text"
-                      class="focus:ring-2 focus:ring-green outline-none border rounded-md p-2 block w-full"
-                    />
-                  </label>
-                  <label class="w-full" for="address">
-                    <span class="p-1 block text-gray-400 text-sm capitalize">Çatdırılma üçün ünvan</span>
-                    <input
-                      name="address"
-                      type="type"
-                      class="focus:ring-2 focus:ring-green outline-none border rounded-md p-2 block w-full"
-                    />
-                  </label>
-                </div>
-              </section>
-              <!-- Catdirilma -->
-              <section>
-                <div class="flex justify-between my-4">
-                  <h4 class="text-xl text-brown font-medium uppercase font-montserrat">Ödəniş üsulu</h4>
-                </div>
-                <label class="w-full" for="payment-method">
-                  <select
-                    id="payment-method"
-                    class="w-full p-2 border border-gray-300 rounded-md shadow-sm text-gray-700 focus:outline-none focus:ring focus:ring-green focus:border-green"
-                  >
-                    <option value="online">Onlayn ödəniş</option>
-                    <option value="cash">Çatdırılma zamanı nağd ödəniş</option>
-                    <option value="phone">Telefonla müzakirə edin</option>
-                  </select>
-                </label>
-                <div class="flex justify-between my-4">
-                  <h4 class="text-xl text-brown font-medium uppercase font-montserrat">Sifarişçinin qeydləri</h4>
-                </div>
-                <label class="w-full" for="msj">
-                  <textarea
-                    class="focus:ring-2 focus:ring-green outline-none border rounded-md p-2 block w-full"
-                    name="msj"
-                    id="msj"
-                    rows="10"
-                  ></textarea>
-                </label>
-              </section>
-            </div>
-
-            <div class="md:sticky top-24 mt-6 w-full lg:w-1/3 flex-1 space-y-6 lg:mt-0">
-              <div id="basket-summary" class="space-y-4 border border-gray-200 bg-white p-4 shadow-sm sm:p-6">
-                <p class="text-xl font-semibold text-brown">Sifariş məbləği</p>
-
-                <div class="space-y-4">
-                  <div class="space-y-2">
-                    <dl class="flex items-center justify-between gap-4">
-                      <dt class="text-base font-normal text-gray-500">Məhsulların sayı :</dt>
-                      <dd id="product-count" class="text-base font-medium text-greenDark">0</dd>
-                    </dl>
-
-                    <dl class="flex items-center justify-between gap-4">
-                      <dt class="text-base font-normal text-gray-500">Məbləğ :</dt>
-                      <dd id="total-amount" class="text-base font-medium text-brown">0 ₼</dd>
-                    </dl>
-                  </div>
-
-                  <dl class="flex items-center justify-between gap-4 border-t border-gray-200 pt-2">
-                    <dt class="text-base font-bold text-brown">Yekun məbləğ :</dt>
-                    <dd id="final-amount" class="text-base font-bold text-brown">0 ₼</dd>
-                  </dl>
-                </div>
-                <form class="space-y-4">
-                  <div>
-                    <label for="voucher" class="mb-2 block text-base font-montserrat font-medium text-brown"> Promo kod </label>
-                    <input
-                      type="text"
-                      id="voucher"
-                      class="block w-full border border-gray-300 bg-gray-50 p-2.5 text-base text-brown focus:outline-none"
-                      placeholder=""
-                      required
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    class="flex w-full items-center justify-center font-montserrat bg-green px-5 py-2.5 text-base font-semibold text-white hover:bg-greenDark focus:outline-none"
-                  >
-                    Kodu əlavə et
-                  </button>
-                </form>
-                <a
-                  href="#"
-                  class="flex w-full items-center justify-center bg-brown text-white px-5 py-2.5 text-sm font-montserrat font-medium focus:outline-none"
-                  >Rəsmiləşdir</a
-                >
+        <div class="mt-10">
+          <h2 class="text-xl font-extrabold mb-4 text-brown font-montserrat lg:text-4xl text-center uppercase">Qeydiyyatdan keç</h2>
+          <form>
+            <!-- Ad ve Soyad -->
+            <div class="grid md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label class="block text-gray-700 mb-1">Ad</label>
+                <input
+                  type="text"
+                  placeholder="Ad"
+                  class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green focus:border-green"
+                />
+              </div>
+              <div>
+                <label class="block text-gray-700 mb-1">Soyad</label>
+                <input
+                  type="text"
+                  placeholder="Soyad"
+                  class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green focus:border-green"
+                />
               </div>
             </div>
-          </div>
+
+            <!-- Əlaqə nömrəsi -->
+            <div class="mb-4">
+              <label class="block text-gray-700 mb-1">Əlaqə nömrəsi</label>
+              <div class="flex items-center">
+                <span class="p-2 border border-gray-300 rounded-l-md bg-gray-100">+994</span>
+                <input
+                  type="text"
+                  placeholder="Əlaqə nömrəsi"
+                  class="w-full p-2 border border-gray-300 rounded-r-md focus:outline-none focus:ring focus:ring-green focus:border-green"
+                />
+              </div>
+            </div>
+
+            <!-- E-mail -->
+            <div class="mb-4">
+              <label class="block text-gray-700 mb-1">E-mail *</label>
+              <input
+                type="email"
+                placeholder="E-mailinizi daxil edin"
+                class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green focus:border-green"
+                required
+              />
+            </div>
+
+            <!-- Şifrə -->
+            <div class="mb-4">
+              <label class="block text-gray-700 mb-1">Şifrə *</label>
+              <input
+                type="password"
+                placeholder="Şifrənizi daxil edin"
+                class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green focus:border-green"
+                required
+              />
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              class="w-full bg-green text-white py-2 rounded-md hover:bg-brown focus:outline-none focus:ring focus:ring-brown"
+            >
+              Qeydiyyatdan keç
+            </button>
+          </form>
         </div>
       </section>
     </main>
@@ -655,70 +463,9 @@
       </div>
     </div>
 
-    <div class="font-montserrat">
-      <div id="modal" class="fixed inset-0 bg-gray-800 z-30 bg-opacity-50 flex items-center justify-center hidden">
-        <div class="bg-white w-96 rounded-lg shadow-lg relative">
-          <div class="flex justify-between items-center p-4 border-b">
-            <h2 class="text-lg font-semibold">Daxil ol</h2>
-            <button id="closeModal" class="text-gray-400 hover:text-gray-600 font-roboto font-medium text-2xl">x</button>
-          </div>
-          <div class="p-6">
-            <form>
-              <label class="block mb-2">
-                <span class="text-gray-700">E-mail *</span>
-                <input
-                  type="email"
-                  class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green focus:border-green"
-                  placeholder="E-mailinizi daxil edin"
-                  required
-                />
-              </label>
-              <label class="block mb-2 relative">
-                <span class="text-gray-700 mb-2"
-                  >Şifrə *
-                  <a href="#" class="absolute right-2 top-0 text-sm text-green hover:underline"> Şifrənizi unutmusuz? </a></span
-                >
-                <input
-                  type="password"
-                  class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green focus:border-green"
-                  placeholder="Şifrənizi daxil edin"
-                  required
-                />
-              </label>
-
-              <button type="submit" class="bg-brown my-3 text-white w-full py-2 rounded-md hover:bg-gray-700">Daxil ol</button>
-            </form>
-            <p class="mt-4 text-center text-sm text-gray-600">
-              Hesabınız yoxdur? <a href="register.html" class="text-green hover:underline">Qeydiyyatdan keçin</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <script src="js/nav.js"></script>
     <script src="js/search.js"></script>
     <script src="js/basket.js"></script>
     <script src="js/translate.js"></script>
-    <script src="js/sendToDetails.js"></script>
-
-    <script>
-      // document.getElementById("openModal").addEventListener("click", () => {
-      // });
-      function openLogin() {
-        document.getElementById("modal").classList.remove("hidden");
-      }
-
-      document.getElementById("closeModal").addEventListener("click", () => {
-        document.getElementById("modal").classList.add("hidden");
-      });
-
-      window.addEventListener("click", (event) => {
-        const modal = document.getElementById("modal");
-        if (event.target === modal) {
-          modal.classList.add("hidden");
-        }
-      });
-    </script>
   </body>
 </html>

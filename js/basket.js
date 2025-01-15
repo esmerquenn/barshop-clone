@@ -123,7 +123,7 @@ const sebet = document.querySelector(".sebet-box");
 //     if (basket.length == 0) {
 //       sebet_side = `<div class="flex justify-center flex-col mt-10 items-center">
 //       <img class="w-1/3" src="img/empty-cart.png" alt="empty" />
-//       <a                     
+//       <a
 //       class="inline-flex items-center gap-2 text-sm font-medium text-greenDark underline hover:no-underline"
 //       href="mehsullar.html">
 //       Səbətiniz boşdur
@@ -141,7 +141,7 @@ const sebet = document.querySelector(".sebet-box");
 //       if (BasketManager.basket.length == 0) {
 //         sebetbox = `<div class="flex justify-center flex-col items-center">
 //         <img class="w-1/2" src="img/empty-cart.png" alt="empty" />
-//         <a                     
+//         <a
 //         class="inline-flex items-center gap-2 text-sm font-medium text-greenDark underline hover:no-underline"
 //         href="mehsullar.html">
 //         Səbətiniz boşdur
@@ -200,7 +200,6 @@ const sebet = document.querySelector(".sebet-box");
 //  function resetBasket(){
 //   localStorage.removeItem("basket")
 //  }
-
 
 const SidebarManager = {
   open() {
@@ -290,8 +289,8 @@ const BasketManager = {
   },
 };
 
-function resetBasket(){
-  BasketManager.resetBasket()
+function resetBasket() {
+  BasketManager.resetBasket();
 }
 
 const BasketUI = {
@@ -300,9 +299,7 @@ const BasketUI = {
     basket_quantity.innerHTML = basket.length;
 
     const basketHTML =
-      basket.length === 0
-        ? this.createEmptyBasketHTML()
-        : basket.map((item) => createBasketItemHTML(item)).join("");
+      basket.length === 0 ? this.createEmptyBasketHTML() : basket.map((item) => createBasketItemHTML(item)).join("");
 
     allCards.innerHTML = basketHTML;
     totalPricea.innerHTML = `${totalPrice.toFixed(2)}₼`;
@@ -350,22 +347,15 @@ document.addEventListener("DOMContentLoaded", () => {
   BasketManager.init();
 });
 
-
 function sendBasket(id) {
   event.stopPropagation();
-  // Swal.fire({
-  //   icon: "success",
-  // });
-  console.log("basket", id);
-  
   Swal.fire({
     icon: "success",
-    // title: "aaa",
     html: '<i class="fa fa-shopping-cart text-green text-4xl"></i>',
     showConfirmButton: false,
-    width: "200px", 
-  
-    timer: 600, // 3 saniye sonra otomatik kapan
+    width: "200px",
+
+    timer: 600,
   });
   let newObj = allData.products.find((item) => item.id == id);
   BasketManager.addItem(newObj);
