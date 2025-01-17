@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/basket.css" />
     <link rel="stylesheet" href="css/footer.css" />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -199,9 +198,8 @@
                 </a>
               </li>
               <li onclick="openLogin()" class="p-2 lg:p-0 ml-3 xl:ml-0 relative hidden lg:block">
-                <a class="uppercase transition-all duration-300" href="#">
                   <i class="fa-regular fa-user text-xl"></i>
-                </a>
+                
               </li>
             </ul>
           </div>
@@ -701,24 +699,11 @@
     <script src="js/basket.js"></script>
     <script src="js/translate.js"></script>
     <script src="js/sendToDetails.js"></script>
-
+<script src="js/login.js"></script>
     <script>
       // document.getElementById("openModal").addEventListener("click", () => {
       // });
-      function openLogin() {
-        document.getElementById("modal").classList.remove("hidden");
-      }
-
-      document.getElementById("closeModal").addEventListener("click", () => {
-        document.getElementById("modal").classList.add("hidden");
-      });
-
-      window.addEventListener("click", (event) => {
-        const modal = document.getElementById("modal");
-        if (event.target === modal) {
-          modal.classList.add("hidden");
-        }
-      });
+     
     </script>
   </body>
 </html>

@@ -269,8 +269,10 @@
     <main class="my-14 container_my px-4 font-montserrat">
       <section class="bg-white py-8 antialiased md:py-16">
         <div class="mt-10">
-          <h2 class="text-xl font-extrabold mb-4 text-brown font-montserrat lg:text-4xl text-center uppercase">Qeydiyyatdan keç</h2>
-          <form>
+          <h2 class="text-xl font-extrabold mb-4 text-brown font-montserrat lg:text-4xl text-center uppercase">
+            Qeydiyyatdan keç
+          </h2>
+          <form class="form_register">
             <!-- Ad ve Soyad -->
             <div class="grid md:grid-cols-2 gap-4 mb-4">
               <div>
@@ -467,5 +469,29 @@
     <script src="js/search.js"></script>
     <script src="js/basket.js"></script>
     <script src="js/translate.js"></script>
+    <script>
+      const registerForm = document.querySelector(".form_register");
+
+      registerForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const ad = registerForm.querySelector("input[placeholder='Ad']").value;
+        const soyad = registerForm.querySelector("input[placeholder='Soyad']").value;
+        const nomre = registerForm.querySelector("input[placeholder='Əlaqə nömrəsi']").value;
+        const email = registerForm.querySelector("input[type='email']").value;
+        const sifre = registerForm.querySelector("input[type='password']").value;
+
+        const formData = {
+          ad: ad,
+          soyad: soyad,
+          nomre: `+994${nomre}`,
+          email: email,
+          sifre: sifre,
+        };
+
+        // Gələcəkdə API-ə göndərmək üçün istifadə edilə bilər
+        console.log("Form Data:", formData);
+      });
+    </script>
   </body>
 </html>

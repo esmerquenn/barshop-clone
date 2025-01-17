@@ -7,6 +7,7 @@
       "description": "Freshly roasted Arabica coffee beans.",
       "region": "Ethiopia",
       "category_id": 1,
+      "subcategory_id": 1,
       "discount": 10,
       "brend_id": 1,
       "isnew": true,
@@ -39,6 +40,7 @@
       "description": "Stylish coffee mug for daily use.",
       "region": "China",
       "category_id": 3,
+      "subcategory_id": 1,
       "discount": 0,
       "brend_id": 3,
       "isnew": false,
@@ -55,6 +57,7 @@
       "description": "High-quality coffee filter paper for brewing.",
       "region": "USA",
       "category_id": 3,
+      "subcategory_id": 1,
       "discount": 0,
       "brend_id": 4,
       "isnew": true,
@@ -71,6 +74,7 @@
       "description": "Manual coffee grinder for fresh ground coffee.",
       "region": "Germany",
       "category_id": 3,
+      "subcategory_id": 1,
       "discount": 66,
       "brend_id": 5,
       "isnew": false,
@@ -119,6 +123,7 @@
       "description": "A smart coffee cup that maintains your drink's temperature.",
       "region": "South Korea",
       "category_id": 3,
+      "subcategory_id": 1,
       "discount": 15,
       "brend_id": 6,
       "isnew": true,
@@ -135,6 +140,7 @@
       "description": "A smart coffee cup that maintains your drink's temperature.",
       "region": "South Korea",
       "category_id": 3,
+      "subcategory_id": 1,
       "discount": 15,
       "brend_id": 6,
       "isnew": true,
@@ -151,6 +157,7 @@
       "description": "A smart coffee cup that maintains your drink's temperature.",
       "region": "South Korea",
       "category_id": 3,
+      "subcategory_id": 1,
       "discount": 15,
       "brend_id": 6,
       "isnew": true,
@@ -167,6 +174,7 @@
       "description": "A smart coffee cup that maintains your drink's temperature.",
       "region": "South Korea",
       "category_id": 3,
+      "subcategory_id": 1,
       "discount": 15,
       "brend_id": 6,
       "isnew": true,
@@ -180,19 +188,53 @@
   "categories": [
     {
       "id": 1,
-      "name": "Qəhvə"
+      "name": "Qəhvə",
+      "subcategories": [
+        {
+          "id": 1,
+          "name": "Arabic Qəhvə"
+        },
+        {
+          "id": 2,
+          "name": "Türk Qəhvəsi"
+        },
+        {
+          "id": 3,
+          "name": "Qəhvə Çayı"
+        }
+      ]
     },
     {
       "id": 2,
-      "name": "Qəhvə maşınları"
+      "name": "Qəhvə maşınları",
+      "subcategories": []
     },
     {
       "id": 3,
-      "name": "Aksesuarlar"
+      "name": "Aksesuarlar",
+      "subcategories": [
+        {
+          "id": 1,
+          "name": "Digər aksessuar və komponentlər"
+        },
+        {
+          "id": 2,
+          "name": "Kağız filterlər"
+        },
+        {
+          "id": 3,
+          "name": "Əsas barista aksesuarları"
+        },
+        {
+          "id": 4,
+          "name": "Avadanlıqlara qulluq məhsulları"
+        }
+      ]
     },
     {
       "id": 4,
-      "name": "Əlavələr"
+      "name": "Əlavələr",
+      "subcategories": []
     }
   ],
   "brands": [

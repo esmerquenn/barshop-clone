@@ -1,4 +1,3 @@
-// SEARCHBAR START
 const searchbox = document.querySelector(".searchbox");
 const searchbox2 = document.querySelector(".searchbox2");
 const searchmenu = document.querySelector(".searchmenu");
@@ -47,4 +46,3 @@ function updateResults(filteredData, resultElement) {
     : writeUnFound();
 }
 
-// SEARCHBAR END

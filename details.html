@@ -624,10 +624,11 @@
                            </button>`
                            : `<button
                              onclick="sendBasket('${findItem.id}')"
-                             class="px-4 mt-4 py-2 bg-green text-white hover:bg-greenDark transition"
+                             class="px-4 mt-4 py-2 bg-white w-[150px] text-brown rounded-md border hover:text-white hover:bg-greenDark transition duration-500"
                            >
-                             Səbətə əlavə et
-                           </button>`
+                              <i class="fa-solid fa-cart-shopping "></i>
+                           </button>
+                           `
                        }
                       </div>
                       <h4 class="text-brown text-lg">Kategoriya: <span class="font-bold ">${category.name}</span></h4>

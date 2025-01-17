@@ -75,8 +75,13 @@
 .searchbox,
 .searchbox2 {
   max-height: 0;
-  overflow: hidden;
+  overflow-y: auto;
   transition: 1s;
+  scrollbar-width: none; 
+}
+.searchbox::-webkit-scrollbar,
+.searchbox2::-webkit-scrollbar {
+  display: none; /* Chrome, Safari və digər WebKit əsaslı brauzerlər */
 }
 .searchbox.active {
   max-height: 200px;

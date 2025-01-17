@@ -102,7 +102,7 @@ function write_to_card(product, price, stock) {
                     </div> `
                           : ""
                       }
-                    <div onclick="sendBasket('${product.id}')" class="bg-white my_absolute">
+                      <div onclick="sendBasket('${product.id}')" class="bg-white my_absolute">
                         <i class="fa-solid fa-cart-shopping text-brown"></i>
                       </div>
                       </div>
