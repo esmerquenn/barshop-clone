@@ -329,7 +329,6 @@ const lang1 = document.querySelector("#lang");
 const lang2 = document.querySelector("#lang2");
 function changeLanguage(language) {
   const lang = isMobileView() ? lang2 : lang1;
-
   lang.innerHTML = language;
   localStorage.setItem("selectedLanguage", language);
 
