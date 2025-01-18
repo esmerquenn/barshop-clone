@@ -6,6 +6,7 @@ document.getElementById("closeModal").addEventListener("click", () => {
   document.getElementById("modal").classList.add("hidden");
 });
 
+
 window.addEventListener("click", (event) => {
   const modal = document.getElementById("modal");
   if (event.target === modal) {
@@ -25,5 +26,6 @@ document.querySelector(".form_login").addEventListener("submit", function (event
   };
 
   console.log("Form Data:", formData);
+  localStorage.setItem("user", JSON.stringify(formData));
   modal.classList.add("hidden");
 });
