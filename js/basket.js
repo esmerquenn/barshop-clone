@@ -330,7 +330,7 @@ function createBasketItemHTML(item) {
   return `
       <div class="card-basket relative hover:bg-slate-50 transition duration-500 flex gap-2 p-4">
         <i class="fa-solid fa-x text-sm text-gray-500 !font-medium absolute top-4 right-4" onclick="BasketManager.removeItem(${item.id})"></i>
-        <img class="w-1/3 object-cover md:w-1/5" src="img/${item.img}" alt="${item.name}" />
+        <img class="w-1/3 object-cover md:w-1/5 !max-h-28" src="img/${item.img}" alt="${item.name}" />
         <span class="flex flex-col justify-between items-start">
           <h5 class="font-semibold font-montserrat text-sm">${item.name}</h5>
           <div class="flex my-1 bg-white">
