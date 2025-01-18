@@ -15,7 +15,8 @@
       "img": "6ss.jpg",
       "sumImages": ["2.webp", "2.webp"],
       "model": "AB123",
-      "weight": "500g"
+      "weight": ["2 kg", "1 kg"," 500 g"],
+      "type": ["French press", "Dənli","Üyüdülmüş"]
     },
     {
       "id": 2,

@@ -326,7 +326,12 @@
         ></section>
       </div>
       <section class="my-20">
-        <h3 class="text-2xl md:text-3xl font-montserrat font-extrabold uppercase text-left text-brown mb-8">Oxşar məhsullar</h3>
+        <h3
+          class="text-2xl md:text-3xl font-montserrat font-extrabold uppercase text-left text-brown mb-8"
+          data-key="same_category_products"
+        >
+          Oxşar məhsullar
+        </h3>
 
         <div class="image-slider owl-carousel owl-theme">
           <div class="item grid border font-montserrat detail-box">
@@ -623,23 +628,20 @@
                           ? ` <div>
 
                         <div class="flex md:justify-between mb-4 gap-5 items-center">
-                          <h5 class="font-medium pt-1">
+                          <h5 class="font-medium pt-1" data-key="package_size_title">
                             Paket Ölçüsü
                           </h5>
                           <select class="w-[180px] py-2 px-1">
-                            <option>1 kg</option>
-                            <option>500 g</option>
-                            <option>2 kg</option>
+                           ${findItem.weight.map((item) => `<option>${item}</option>`).join("")}
+                            
                           </select>
                         </div>
                         <div class="flex  md:justify-between gap-5 items-center">
-                          <h5 class="font-medium pt-1">
+                          <h5 class="font-medium pt-1" data-key="grinding_method_title">
                             Üyüdmə üsulu
                           </h5>
                           <select class="w-[180px] py-2 px-1">
-                            <option>Üyüdülmüş</option>
-                            <option>Dənli</option>
-                            <option>French press</option>
+                           ${findItem.type.map((item) => `<option>${item}</option>`).join("")}
                           </select>
                         </div>
                       </div>`
@@ -649,6 +651,7 @@
                          findItem.stock == 0
                            ? `<button
                              class="py-2 my-3 bg-transparent text-red-600 transition"
+                              data-key="out_of_stock_button"
                            >
                              Anbarda bitib
                            </button>`
@@ -661,7 +664,7 @@
                            `
                        }
                       </div>
-                      <h4 class="text-brown text-lg">Kategoriya: <span class="font-bold ">${category.name}</span></h4>
+                      <h4 class="text-brown text-lg"><span data-key="category_title">Kategoriya: </span><span class="font-bold ">${category.name}</span></h4>
                     `;
             writeRelatedProducts(allData, findItem, category);
             initializeCarousel();

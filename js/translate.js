@@ -126,6 +126,11 @@ const translations = {
     customer_notes_title: "Sifarişçinin qeydləri",
     count: "Say",
     price: "Qiymət",
+    same_category_products: "Oxşar məhsullar",
+    category_title: "Kategoriya: ",
+    out_of_stock_button: "Anbarda bitib",
+    package_size_title: "Paket Ölçüsü",
+    grinding_method_title: "Üyüdmə üsulu",
   },
   ru: {
     home: "ГЛАВНАЯ",
@@ -247,9 +252,13 @@ const translations = {
     payment_phone: "Обсудите по телефону",
     customer_notes_title: "Заметки заказчика",
     customer_notes_placeholder: "Введите свои заметки здесь",
-   
+    same_category_products: "Похожие товары",
     count: "Количество",
     price: "Цена",
+    category_title: "Категория: ",
+    out_of_stock_button: "Нет в наличии",
+    package_size_title: "Размер упаковки",
+    grinding_method_title: "Метод помола",
   },
   en: {
     home: "HOME",
@@ -370,7 +379,12 @@ const translations = {
     customer_notes_title: "Customer Notes",
     customer_notes_placeholder: "Enter your notes here",
     count: "Quantity",
-    price: "Price", 
+    price: "Price",
+    same_category_products: "Similar Products",
+    category_title: "Category: ",
+    out_of_stock_button: "Out of Stock",
+    package_size_title: "Package Size",
+    grinding_method_title: "Grinding Method",
   },
 };
 const lang1 = document.querySelector("#lang");
