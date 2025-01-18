@@ -103,7 +103,21 @@
     display: none !important;
   }
   .dark .hidden_dropdown {
-    background-color: transparent; /* Dark mode background color */
+    background-color: transparent; 
+  }
+}
+
+.rotating-border {
+  animation: spin 10s linear infinite;
+  border: 3px dashed #3d8c30;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 

@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!--
-    #3c2117
-    #4e2d21
-    #60382b
-    #724336
-    #854e40
-    #97694c 
-    -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Qəhvə haqqında hər şey - Ən yaxşı qəhvə növləri, Türk qəhvəsi, Arabic qəhvəsi, qəhvə çayı, avtomatik qəhvə maşınları, professional qəhvə aparatları, qəhvə aksesuarları və daha çox. Keyfiyyətli qəhvə dadını yaşayın. Azərbaycanda ən yaxşı qəhvə seçimləri!"
+    />
+    <meta name="keywords" content="qəhvə, Türk qəhvəsi, Arabic qəhvəsi, qəhvə maşınları, aksesuarlar, Azərbaycanda qəhvə" />
+    <meta name="robots" content="index, follow" />
+
     <title>Barshop</title>
     <link rel="shortcut icon" href="logo2.png" type="image/x-icon" />
     <link href="./css/output.css" rel="stylesheet" />
@@ -53,189 +52,9 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <style>
-      .rotating-border {
-        animation: spin 10s linear infinite;
-        border: 3px dashed #3d8c30;
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-    </style>
   </head>
   <body class="bg-brown_bg_light font-roboto">
     <header>
-      <!-- <nav class="py-2 bg-white fixed top-0 left-0 z-20 w-full">
-        <div class="container_my flex items-center justify-between">
-          <i onclick="closeDropdown()" class="fa-solid fa-bars text-[2rem] text-brown lg:hidden"></i>
-
-          <div class="text-center">
-            <a href="/"><img class="block w-full" src="./img/logo.png" alt="birS" /></a>
-          </div>
-
-          <div class="flex justify-center items-center">
-            <ul class="hidden_dropdown md:py-4 lg:flex">
-              <li class="mx-4 lg:m-0 border-b lg:border-0 py-2 lg:py-0 ">
-                <a
-                  class="uppercase px-1  lg:text-[13px] xl:text-[15px] font-extrabold font-roboto text-brown transition-all duration-300"
-                  href="/"
-                  >ANA SƏHİFƏ</a
-                >
-              </li>
-              <li class="mx-4 mt-2 lg:m-0 border-b lg:border-0 relative dropdown_li">
-                <a
-                  class="uppercase px-1  text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
-                  href="#"
-                  >qəhvə <i class="fa-solid fa-angle-down duration-500 pl-[2px]"></i
-                ></a>
-                <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
-                  <ul>
-                    <li class="pt-1">
-                      <a
-                        class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
-                        href="about.html?page=melumat"
-                        >Məlumat</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="mx-4 mt-2 lg:m-0 border-b lg:border-0 relative dropdown_li">
-                <a
-                  class="uppercase px-1  text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
-                  href="#"
-                  >qəhvə maşınları<i class="fa-solid fa-angle-down duration-500 pl-[2px]"></i
-                ></a>
-                <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
-                  <ul>
-                    <li class="pt-1">
-                      <a
-                        class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
-                        href="about.html?page=melumat"
-                        >Məlumat</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="mx-4 mt-2 lg:m-0 border-b lg:border-0 relative dropdown_li">
-                <a
-                  class="uppercase px-1  text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
-                  href="#"
-                  >aksesuarlar <i class="fa-solid fa-angle-down duration-500 pl-[2px]"></i
-                ></a>
-                <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
-                  <ul>
-                    <li class="pt-1">
-                      <a
-                        class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
-                        href="about.html?page=melumat"
-                        >Məlumat</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="mx-4 mt-2 lg:m-0 border-b lg:border-0 relative dropdown_li">
-                <a
-                  class="uppercase px-1  text-base lg:text-[13px] xl:text-[15px] font-extrabold text-brown transition-all duration-300"
-                  href="#"
-                  >əlavələr <i class="fa-solid fa-angle-down duration-500 pl-[2px]"></i
-                ></a>
-                <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
-                  <ul>
-                    <li class="pt-1">
-                      <a
-                        class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
-                        href="about.html?page=melumat"
-                        >Məlumat</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="mx-4 lg:m-0 border-b lg:border-0 py-2 lg:py-0">
-                <a
-                  class="uppercase px-1  text-base lg:text-[13px] xl:text-[15px] font-extrabold leading-[20px] text-brown transition-all duration-300"
-                  href="about.html"
-                  >haqqimizda</a
-                >
-              </li>
-              <li class="mx-4 lg:m-0 border-b lg:border-0 py-2 lg:py-0">
-                <a
-                  class="uppercase px-1  text-base lg:text-[13px] xl:text-[15px] font-extrabold leading-[20px] text-brown transition-all duration-300"
-                  href="contact.html"
-                  >ƏLAQƏ</a
-                >
-              </li>
-              <li
-                class="hidden lg:block dropdown_li_lang cursor-pointer p-2 lg:p-0 relative uppercase text-base font-extrabold text-brown transition-all duration-300"
-              >
-                <span id="lang">az</span><i class="fa-solid fa-angle-down !font-bold duration-500 pl-[2px]"></i>
-                <div
-                  class="drop_div_lang mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[40px] md:absolute md:left-1/2 md:-translate-x-1/2"
-                >
-                  <ul>
-                    <li
-                      onclick="changeLanguage('az')"
-                      class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
-                    >
-                      AZ
-                    </li>
-                    <li
-                      onclick="changeLanguage('en')"
-                      class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
-                    >
-                      en
-                    </li>
-                    <li
-                      onclick="changeLanguage('ru')"
-                      class="pt-1 cursor-pointer uppercase inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
-                    >
-                      ru
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="p-2 lg:p-0 mx-2 hidden lg:block">
-                <img onclick="searchBar()" class="w-4 block" src="img/magnifying-glass (1).png" alt="search" />
-                <span
-                  class="absolute searchbox rounded-md !overflow-hidden bg-brown_bg top-full right-0 w-[300px] text-center font-montserrat text-sm"
-                >
-                  <input
-                    oninput="searchData()"
-                    class="w-full p-2 outline-none border-b-2 border-brown_bg text-white placeholder:text-white bg-brown"
-                    type="text"
-                    placeholder="Axtarış..."
-                  />
-                  <ul class="text-brown text-left p-2 resultList">
-                    <li class="border-b-2 border-brown py-1 text-center">
-                      <i class="fa-regular fa-folder-open text-2xl text-white"></i>
-                    </li>
-                  </ul>
-                </span>
-              </li>
-              <li onclick="openBasketSidebar()" class="p-2 lg:p-0 relative hidden lg:block">
-                <a class="uppercase xl:px-2 pb-1 block transition-all duration-300" href="#">
-                  <span
-                    id="basket-quantity"
-                    class="absolute text-white bg-green -top-2 right-0 w-4 h-4 text-center rounded-full font-mono text-[10px] hidden"
-                    >1</span
-                  >
-                  <img class="w-6" src="./img/food-basket2.png" alt="basket" />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      -->
       <nav class="py-2 bg-white shadow-lg fixed top-0 left-0 z-20 w-full">
         <div class="container_my flex items-center justify-between">
           <i onclick="closeDropdown()" class="fa-solid fa-bars text-[2rem] text-brown lg:hidden"></i>
@@ -262,16 +81,7 @@
                   >qəhvə
                 </a>
                 <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
-                  <ul class="coffee_sub">
-                    <li class="pt-1">
-                      <a
-                        class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
-                        href="about.html?page=melumat"
-                        data-key="info"
-                        >Məlumat</a
-                      >
-                    </li>
-                  </ul>
+                  <ul class="coffee_sub"></ul>
                 </div>
               </li>
               <li class="mx-4 mt-2 lg:m-1 border-b lg:border-0 relative dropdown_li">
@@ -281,16 +91,7 @@
                   ><span data-key="coffee-machines">qəhvə maşınları </span></a
                 >
                 <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
-                  <ul>
-                    <li class="pt-1">
-                      <a
-                        class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
-                        href="about.html?page=melumat"
-                        data-key="info"
-                        >Məlumat</a
-                      >
-                    </li>
-                  </ul>
+                  <ul class="coffee_machine_sub"></ul>
                 </div>
               </li>
               <li class="mx-4 mt-2 lg:m-1 border-b lg:border-0 relative dropdown_li">
@@ -301,16 +102,7 @@
                   >aksesuarlar
                 </a>
                 <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
-                  <ul>
-                    <li class="pt-1">
-                      <a
-                        class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
-                        href="about.html?page=melumat"
-                        data-key="info"
-                        >Məlumat</a
-                      >
-                    </li>
-                  </ul>
+                  <ul class="accessories_sub"></ul>
                 </div>
               </li>
               <li class="mx-4 mt-2 lg:m-1 border-b lg:border-0 relative dropdown_li">
@@ -321,16 +113,7 @@
                   >əlavələr
                 </a>
                 <div class="drop_div mt-2 px-3 bg-white overflow-hidden max-h-0 min-w-[200px] md:absolute">
-                  <ul>
-                    <li class="pt-1">
-                      <a
-                        class="capitalize inline-block border-b-2 border-transparent font-extrabold text-brown transition-all duration-300"
-                        href="about.html?page=melumat"
-                        data-key="info"
-                        >Məlumat</a
-                      >
-                    </li>
-                  </ul>
+                  <ul class="others_sub"></ul>
                 </div>
               </li>
               <li class="mx-4 lg:m-1 border-b lg:border-0 py-2 lg:py-0">
@@ -435,19 +218,21 @@
             </div>
           </li>
           <li class="p-2 lg:p-0 relative">
-            <a class="uppercase xl:px-2 pb-1 block text-white transition-all duration-300" href="#">
+            <a
+              target="_blank"
+              class="uppercase xl:px-2 pb-1 block text-white transition-all duration-300"
+              href="https://wa.me/+994552238338"
+            >
               <i class="fa-brands fa-whatsapp text-2xl"></i>
             </a>
           </li>
           <li onclick="openBasketSidebar()" class="p-2 lg:p-0 relative">
-            <a class="uppercase xl:px-2 pb-1 block text-white transition-all duration-300" href="#">
-              <span
-                id="basket-quantity-mobile"
-                class="absolute text-white bg-green -top-1 right-0 w-4 h-4 text-center rounded-full font-mono text-[10px] hidden"
-                >1</span
-              >
-              <img class="w-6" src="./img/food-basket.png" alt="basket" />
-            </a>
+            <span
+              id="basket-quantity-mobile"
+              class="absolute text-white bg-green -top-1 right-0 w-4 h-4 text-center rounded-full font-mono text-[10px] hidden"
+              >1</span
+            >
+            <img class="w-6" src="./img/food-basket.png" alt="basket" />
           </li>
           <i onclick="openLogin()" class="fa-regular fa-user text-white"></i>
           <li class="p-3 lg:p-0 relative">
@@ -503,7 +288,9 @@
     <main>
       <!-- category start -->
       <div class="all_category container_my my-10 md:my-20 p-4">
-        <h3 class="text-2xl md:text-4xl font-montserrat font-extrabold uppercase text-center text-brown">Məhsullarımız</h3>
+        <h3 class="text-2xl md:text-4xl font-montserrat font-extrabold uppercase text-center text-brown" data-key="our_products">
+          Məhsullarımız
+        </h3>
 
         <div class="max-w-[670px] mx-auto">
           <div class="swiper mySwiper_scrollbar my-4 md:my-8">
@@ -522,13 +309,8 @@
           <div
             class="font-montserrat bg-yellow inline-flex flex-col justify-center items-start gap-2 md:w-60 h-1/2 md:h-[200px] p-3 text-white"
           >
-            <h4 class="uppercase font-semibold whitespace-nowrap">Kofe Həzzini Kəşf Edin</h4>
-            <p>Hər fincanda sizə unudulmaz zövq</p>
-            <button
-              class="border-b-2 border-green text-white hover:text-green p-2 btn-more text-base uppercase font-semibold font-montserrat"
-            >
-              Ətraflı bax
-            </button>
+            <h4 class="uppercase font-semibold whitespace-nowrap titleElement">Kofe Həzzini Kəşf Edin</h4>
+            <p class="descriptionElement">Hər fincanda sizə unudulmaz zövq</p>
           </div>
         </div>
         <div
@@ -536,48 +318,22 @@
           class="md:w-1/2 md:h-full pl-4 pt-10 font-montserrat text-green flex flex-col justify-between items-center gap-5"
         >
           <div class="h-1/2 flex justify-center flex-col items-center gap-1">
-            <h4 class="uppercase font-extrabold text-2xl mb-10">Yeni mehsul</h4>
+            <h4 class="uppercase font-extrabold text-2xl mb-10" data-key="new_product">Yeni mehsul</h4>
             <p class="text-xl text-center w-[90%]">Yeni kofe məhsulumuz sizin günə enerji ilə başlamanızı təmin edir.</p>
             <button class="p-2 btn-more2 text-base uppercase font-semibold font-montserrat">
-              <a href="about.html">Ətraflı bax</a>
+              <a class="buttonElement" href="#">Ətraflı bax</a>
             </button>
           </div>
-          <img class="w-full h-1/3 md:h-1/2 object-cover" src="./img/7.jpg" alt="" />
+          <img class="imageElement w-full h-1/3 md:h-1/2 object-cover" src="./img/7.jpg" alt="koffe" />
         </div>
       </section>
-      <!-- <section class="container_my flex flex-col md:flex-row my-20 md:h-[70vh]">
-        <div
-          data-aos="fade-up"
-          class="md:w-1/2 md:h-full order-2 md:order-1 px-4 pt-10 font-montserrat text-green flex flex-col justify-between items-center gap-5"
-        >
-          <div class="h-1/2 flex justify-center flex-col items-center gap-1">
-            <h4 class="uppercase font-extrabold text-2xl mb-10">Yeni mehsul</h4>
-            <p class="text-xl text-center w-[90%]">Mehsul haqqinda bir cumle qeyd et, ki qisa ve esas olsun.</p>
-            <button class="p-2 btn-more2 text-base uppercase font-semibold font-montserrat">
-              <a href="about.html">ətraflı</a>
-            </button>
-          </div>
-          <img class="w-full h-1/3 md:h-1/2 object-cover" src="./img/9.jpg" alt="" />
-        </div>
-        <div data-aos="fade-up" class="about_section2 order-1 md:order-2 w-full h-[50vh] md:h-full md:w-1/2 flex items-end gap-5">
-          <div
-            class="font-montserrat bg-yellow inline-flex flex-col justify-center items-start gap-2 md:w-60 h-1/2 md:h-[200px] p-3 text-white"
-          >
-            <h4 class="uppercase font-semibold">Lorem, ipsum dolor.</h4>
-            <p>Lorem ipsum dolor sit.</p>
-            <button
-              class="border-b-2 border-green text-white hover:text-green p-2 btn-more text-base uppercase font-semibold font-montserrat"
-            >
-              learn more
-            </button>
-          </div>
-        </div>
-      </section> -->
 
       <!-- About end -->
 
       <section>
-        <h3 class="text-2xl md:text-4xl font-montserrat font-extrabold uppercase text-center text-brown">Çox satılanlar</h3>
+        <h3 class="text-2xl md:text-4xl font-montserrat font-extrabold uppercase text-center text-brown" data-key="best_seller">
+          Çox satılanlar
+        </h3>
 
         <div class="my-20 md:h-[95vh] container_my grid justify-center grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-6 bg-white">
           <div data-aos="fade-up" class="bg-img-div md:col-span-2 md:row-span-2 shadow-md">
@@ -648,7 +404,10 @@
 
       <!-- OWL FIRST START -->
       <section class="my-20">
-        <h3 class="text-2xl md:text-4xl font-montserrat font-extrabold uppercase text-center text-brown mb-8">
+        <h3
+          data-key="discounted_products"
+          class="text-2xl md:text-4xl font-montserrat font-extrabold uppercase text-center text-brown mb-8"
+        >
           EndİRİMLİ məhsullar
         </h3>
 
@@ -659,10 +418,9 @@
     <footer class="py-6 bg-brown font-montserrat">
       <div class="container_my flex flex-col md:flex-row items-start justify-between">
         <div class="md:w-1/3">
-          <h4 class="text-lg font-bold text-white mb-1">Bizimlə əlaqə</h4>
+          <h4 class="text-lg font-bold text-white mb-1" data-key="connect_with_us">Bizimlə əlaqə</h4>
 
           <div class="flex flex-col items-start">
-            <!-- Sosyal Medya Linkleri -->
             <a
               href="https://www.instagram.com/barshop.az/"
               class="footer-span font-montserrat text-white flex w-[140px] pb-2 pt-1 gap-3 items-center"
@@ -713,16 +471,13 @@
             </div>
           </div>
         </div>
-        <!-- Çalışma Saatleri -->
         <div class="mt-6 lg:mt-0 mb-6 w-full lg:w-1/3 text-white font-montserrat">
-          <h4 class="text-lg font-bold">Çalışma Saatlarimiz</h4>
+          <h4 class="text-lg font-bold" data-key="working_hours">Çalışma Saatlarimiz</h4>
           <ul class="mt-2 space-y-1">
-            <li class="my-2">Bazar ertəsi - Cümə: 09:00 - 22:00</li>
-            <li class="my-2">Şənbə-Bazar: 10:00 - 18:00</li>
+            <li class="my-2" data-key="days">Bazar ertəsi - Cümə: 09:00 - 22:00</li>
+            <li class="my-2" data-key="weekends">Şənbə-Bazar: 10:00 - 18:00</li>
           </ul>
         </div>
-
-        <!-- Harita -->
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.3344996875057!2d49.83885647552581!3d40.37927845791869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d00673abcab%3A0xe1bca78e66178e5e!2sBARSHOP-%20MMC!5e0!3m2!1str!2saz!4v1733941021601!5m2!1str!2saz"
           class="w-full md:w-1/3 min-h-[200px]"
@@ -738,24 +493,24 @@
       <div class="sebet-sidebar-bg z-20 bg-[#00000085] fixed w-full bottom-0 top-0 left-0 right-0"></div>
       <div class="bg-white fixed sebet-sidebar h-screen w-full top-0 bottom-0 z-20">
         <span class="h-[8vh] flex justify-between items-center border-b border-brown p-4">
-          <h3 class="font-semibold font-montserrat text-lg">Səbətiniz</h3>
+          <h3 class="font-semibold font-montserrat text-lg" data-key="basket_title">Səbətiniz</h3>
           <i onclick="openBasketSidebar()" class="fa-solid fa-x text-xl !font-medium"></i>
         </span>
         <div class="h-[92vh] flex flex-col justify-between">
           <div class="all-card-baskets overflow-y-auto"></div>
           <div class="flex flex-col justify-center gap-2 p-4">
             <span class="flex justify-between items-center py-2 font-semibold font-montserrat text-lg">
-              <b class="font-semibold">Ümumi :</b> <span id="total-price" class="border-b-2 border-green">0₼</span>
+              <b class="font-semibold" data-key="total">Ümumi :</b> <span id="total-price" class="border-b-2 border-green">0₼</span>
             </span>
             <button
               class="bg-slate-50 hover:bg-gray-100 transition duration-300 text-brown border border-green font-montserrat font-medium text-lg p-2"
             >
-              <a href="basket.html">Səbətə keç</a>
+              <a href="basket.html" data-key="go_to_basket">Səbətə keç</a>
             </button>
             <button
               class="bg-green hover:bg-greenDark transition duration-300 text-white font-montserrat font-medium text-lg p-2"
             >
-              <a href="check.html">Rəsmiləşdir</a>
+              <a href="check.html" data-key="proceed_checkout">Rəsmiləşdir</a>
             </button>
           </div>
         </div>
@@ -787,13 +542,13 @@
       <div id="modal" class="fixed inset-0 bg-gray-800 z-30 bg-opacity-50 flex items-center justify-center hidden">
         <div class="bg-white w-96 rounded-lg shadow-lg relative">
           <div class="flex justify-between items-center p-4 border-b">
-            <h2 class="text-lg font-semibold">Daxil ol</h2>
+            <h2 class="text-lg font-semibold" data-key="login_title">Daxil ol</h2>
             <button id="closeModal" class="text-gray-400 hover:text-gray-600 font-roboto font-medium text-2xl">x</button>
           </div>
           <div class="p-6">
             <form class="form_login">
               <label class="block mb-2">
-                <span class="text-gray-700">E-mail *</span>
+                <span class="text-gray-700" data-key="email_label">E-mail *</span>
                 <input
                   type="email"
                   class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green focus:border-green"
@@ -802,10 +557,8 @@
                 />
               </label>
               <label class="block mb-2 relative">
-                <span class="text-gray-700 mb-2"
-                  >Şifrə *
-                  <a href="#" class="absolute right-2 top-0 text-sm text-green hover:underline"> Şifrənizi unutmusuz? </a></span
-                >
+                <span data-key="password_label" class="text-gray-700 mb-2"
+                  >Şifrə *</span>
                 <input
                   type="password"
                   class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green focus:border-green"
@@ -814,10 +567,10 @@
                 />
               </label>
 
-              <button type="submit" class="bg-brown my-3 text-white w-full py-2 rounded-md hover:bg-gray-700">Daxil ol</button>
+              <button type="submit" class="bg-brown my-3 text-white w-full py-2 rounded-md hover:bg-gray-700" data-key="login_title">Daxil ol</button>
             </form>
             <p class="mt-4 text-center text-sm text-gray-600">
-              Hesabınız yoxdur? <a href="register.html" class="text-green hover:underline">Qeydiyyatdan keçin</a>
+              <span data-key="no_account">Hesabınız yoxdur?</span> <a href="register.html" data-key="register_link" class="text-green hover:underline">Qeydiyyatdan keçin</a>
             </p>
           </div>
         </div>
@@ -840,15 +593,16 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/newProduct.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/owl.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/translate.js"></script>
-    <script src="js/category.js"></script>
     <script src="js/search.js"></script>
     <script src="js/basket.js"></script>
-    <script src="js/sendToDetails.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/category.js"></script>
+    <script src="js/sendToDetails.js"></script>
 
     <script>
       var swiper = new Swiper(".mySwiper_scrollbar", {

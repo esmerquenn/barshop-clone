@@ -41,7 +41,7 @@ function updateResults(filteredData, resultElement) {
   resultElement.innerHTML = "";
   resultElement.innerHTML = filteredData.length
     ? filteredData
-        .map((item) => `<li onclick="goToDetailPage('${item.id}')" class="border-b-2 border-brown py-1"><a class="text-white" href="#">${item.name}</a></li>`)
+        .map((item) => `<li onclick="goToDetailPage('${item.id}')" class="border-b-2 border-brown py-1 cursor-pointer text-white">${item.name}</li>`)
         .join("")
     : writeUnFound();
 }

@@ -73,6 +73,44 @@ const translations = {
     paymentMethod1: "Nağd pul.",
     paymentMethod2: "Nağdsız ödənişlər (kart və ya hesabdan köçürmə ilə).",
     paymentMethod3: "Bakı Poçtu və ya digər xidmət vasitəsilə mal göndərərkən ödəniş öncədən olunmalıdır.",
+    // /////////
+    connect_with_us: "Bizimlə əlaqə",
+    working_hours: "Çalışma saatlarımız",
+    days: "Bazar ertəsi - Cümə:  09:00 - 22:00",
+    weekends: "Şənbə-Bazar:  10:00 - 18:00",
+    /////////////
+    our_products: "Məhsullarımız",
+    new_product: "Yenİ mƏhsul",
+    best_seller: "Çox satılanlar",
+    discounted_products: "EndİRİMLİ məhsullar",
+    basket_title: "Səbətiniz",
+    total: "Ümumi :",
+    go_to_basket: "Səbətə keç",
+    proceed_checkout: "Rəsmiləşdir",
+    empty_basket: "Səbətiniz boşdur",
+    keep_shopping: "Alış verişə davam et",
+    add_code: "Kodu əlavə et",
+    reset_basket: "Səbəti sıfırla",
+    order_amount: "Sifariş məbləği", // Azərbaycan
+    product_count: "Məhsulların sayı :", // Azərbaycan
+    amount: "Məbləğ :", // Azərbaycan
+    total_amount: "Yekun məbləğ :", // Azərbaycan
+    promo_code: "Promo kod",
+    login_title: "Daxil ol",
+    email_label: "E-mail *",
+    password_label: "Şifrə *",
+    no_account: "Hesabınız yoxdur?",
+    register_link: "Qeydiyyatdan keçin",
+    first_name_label: "Ad",
+    last_name_label: "Soyad",
+    email_label: "E-mail",
+    phone_number_label: "Telefon nömrəsi",
+    country_select: "Ölkə seçin",
+    country_az: "Az",
+    country_tr: "Tr",
+    country_ru: "Ru",
+    message_label: "Mesaj",
+    send_button: "Mesaj göndərin",
   },
   ru: {
     home: "ГЛАВНАЯ",
@@ -143,6 +181,43 @@ const translations = {
     paymentMethod1: "Наличные.",
     paymentMethod2: "Безналичные платежи (карта или банковский перевод).",
     paymentMethod3: "При доставке товара через Почту Баку или другие службы оплата производится заранее.",
+    // ///////////////////////
+    working_hours: "Наши рабочие часы",
+    days: "Понедельник - Пятница: 09:00 - 22:00",
+    weekends: "Суббота - Воскресенье: 10:00 - 18:00",
+    connect_with_us: "Связаться с нами",
+    our_products: "Наши Продукты",
+    new_product: "новый продукт",
+    best_seller: "Бестселлеры",
+    discounted_products: "Товары со скидкой",
+    basket_title: "Ваша корзина",
+    total: "Итого :",
+    go_to_basket: "Перейти в корзину",
+    proceed_checkout: "Оформить заказ",
+    empty_basket: "Ваша корзина пуста",
+    keep_shopping: "Продолжить покупки",
+    add_code: "Добавьте код",
+    reset_basket: "Сбросить корзину",
+    order_amount: "Сумма заказа",
+    product_count: "Количество товаров :",
+    amount: "Сумма :",
+    total_amount: "Итоговая сумма :",
+    promo_code: "Промо-код",
+    login_title: "Войти",
+    email_label: "Электронная почта *",
+    password_label: "Пароль *",
+    no_account: "У вас нет аккаунта?",
+    register_link: "Зарегистрироваться",
+    first_name_label: "Имя",
+    last_name_label: "Фамилия",
+    email_label: "Электронная почта",
+    phone_number_label: "Номер телефона",
+    country_select: "Выберите страну",
+    country_az: "Аз",
+    country_tr: "Тр",
+    country_ru: "Ру",
+    message_label: "Сообщение",
+    send_button: "Отправить сообщение",
   },
   en: {
     home: "HOME",
@@ -212,14 +287,48 @@ const translations = {
     paymentMethod1: "Cash",
     paymentMethod2: "Cashless payment (Cart) (by transfer from an account)",
     paymentMethod3: "When sending goods via Baku Post or another service, payment must be made in advance",
+    connect_with_us: "Contact us",
+    working_hours: "Our working hours",
+    days: "Monday - Friday: 09:00 - 22:00",
+    weekends: "Saturday - Sunday: 10:00 - 18:00",
+    our_products: "Our Products",
+    new_product: "New product",
+    best_seller: "Best Sellers",
+    discounted_products: "Discounted Products",
+    basket_title: "Your Basket",
+    total: "Total :",
+    go_to_basket: "Go to Basket",
+    proceed_checkout: "Proceed to Checkout",
+    empty_basket: "Your cart is empty",
+    keep_shopping: "Continue shopping",
+    add_code: "Add code",
+    reset_basket: "Reset cart",
+    order_amount: "Order Amount",
+    product_count: "Number of Products :",
+    amount: "Amount :",
+    total_amount: "Total Amount :",
+    promo_code: "Promo Code",
+    login_title: "Login",
+    email_label: "E-mail *",
+    password_label: "Password *",
+    no_account: "Don't have an account?",
+    register_link: "Register",
+    first_name_label: "First name",
+    last_name_label: "Last name",
+    email_label: "E-mail",
+    phone_number_label: "Phone number",
+    country_select: "Select country",
+    country_az: "AZ",
+    country_tr: "TR",
+    country_ru: "RU",
+    message_label: "Message",
+    send_button: "Send message",
   },
 };
 const lang1 = document.querySelector("#lang");
 const lang2 = document.querySelector("#lang2");
 function changeLanguage(language) {
   const lang = isMobileView() ? lang2 : lang1;
-
-  console.log("beli bu valdi", language);
 
   lang.innerHTML = language;
   localStorage.setItem("selectedLanguage", language);
@@ -228,22 +337,20 @@ function changeLanguage(language) {
     const key = element.getAttribute("data-key");
     element.innerHTML = translations[language][key];
   });
-  const params = new URLSearchParams(window.location.search);
-  const page = params.get("page");
-  updateContent(page, language);
+  // const params = new URLSearchParams(window.location.search);
+  // const page = params.get("page");
+  // updateContent(page, language);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const selectedLanguage = localStorage.getItem("selectedLanguage") || "AZ"; // Varsayılan dil 'az'
+  const selectedLanguage = localStorage.getItem("selectedLanguage") || "AZ";
 
-  // Seçilen dili sayfaya uygula
   document.querySelectorAll("[data-key]").forEach((element) => {
     const key = element.getAttribute("data-key");
     element.innerHTML = translations[selectedLanguage][key];
   });
+  const selectedElement = document.querySelector("[x-text=\"selected === '' ? 'AZ' : selected\"]");
 
-  // Eğer bir dil seçilmişse, dil seçim menüsünü de güncelle
-  const selectedElement = document.querySelector("[x-text='selected === '' ? 'AZ' : selected']");
   if (selectedElement) {
     selectedElement.textContent = selectedLanguage.toUpperCase();
   }
