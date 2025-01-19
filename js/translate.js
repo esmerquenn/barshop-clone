@@ -133,7 +133,10 @@ const translations = {
     grinding_method_title: "Üyüdmə üsulu",
     outOfStock: "Anbarda bitib",
     inStock: "Stokdadır",
-    add_to_cart:"Səbətə əlavə et"
+    add_to_cart: "Səbətə əlavə et",
+    filter: "qiymət Filterlə",
+    increase_product: "Endirimli məhsullar",
+    new_product: " Yeni mehsullar",
   },
   ru: {
     home: "ГЛАВНАЯ",
@@ -265,8 +268,12 @@ const translations = {
 
     outOfStock: "Нет в наличии",
     inStock: "В наличии",
-    
-    add_to_cart:" Добавить в корзину"
+
+    filter: " Фильтр по цене",
+    add_to_cart: " Добавить в корзину",
+
+    new_product: "Новые товары",
+    increase_product: "Товары со скидкой",
   },
   en: {
     home: "HOME",
@@ -398,6 +405,10 @@ const translations = {
     inStock: "In stock",
 
     add_to_cart: "Add to Cart",
+    filter: "Filter by Price",
+
+    new_product: "New Products",
+    increase_product: "Discounted Products",
   },
 };
 const lang1 = document.querySelector("#lang");

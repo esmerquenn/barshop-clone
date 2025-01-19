@@ -342,6 +342,7 @@
           <button
             onclick="filterProducts('discount')"
             data-filter="discount"
+            data-key="increase_product"
             class="md:px-2 py-1 border-b-2 border-brown font-semibold cursor-pointer btn-filter filter-button"
           >
             Endirimli mehsullar
@@ -349,6 +350,7 @@
           <button
             onclick="filterProducts('new')"
             data-filter="new"
+            data-key="new_product"
             class="md:px-2 py-1 border-b-2 border-brown font-semibold cursor-pointer btn-filter filter-button"
           >
             Yeni mehsullar
@@ -364,7 +366,8 @@
         <div class="flex flex-col md:flex-row items-start gap-4">
           <div class="flex flex-col gap-4 md:gap-0 w-full md:w-1/3 lg:w-1/4">
             <div class="md:order-2 flex flex-col w-full mt-4 shadow-lg p-4 rounded-xl">
-              <h4 class="mb-4 uppercase font-poppins">qiymət Filterlə</h4>
+              <h4 data-key="filter" class="mb-4 uppercase font-poppins">qiymət Filterlə</h4>
+
               <div class="wrapper">
                 <div class="slider">
                   <div class="progress"></div>
@@ -644,6 +647,11 @@
 
         let cards = filteredProducts
           .map((item) => {
+            const price = item.discount
+              ? ` ${(item.price - (item.price / 100) * item.discount).toFixed(
+                  2
+                )}₼ <s class="!text-red-600 ml-2 text-sm">${item.price}₼</s>`
+              : `${item.price}₼`;
             let stock =
               item.stock > 0
                 ? `<h6 data-key="inStock" class="font-montserrat capitalize text-sm text-gray-500 truncate">Stokdadır</h6>`
@@ -685,9 +693,9 @@
                 </div>
                 <div class="p-1 sm:p-4 h-1/3 flex flex-col justify-between">
                   <h5 class="text-base font-montserrat font-semibold text-brown capitalize truncate">${item.name}</h5>
-                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">category</h6>
+                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">${findCategory.name}</h6>
                 ${stock}
-                  <span class="font-bold font-montserrat text-base text-brown">${item.price} </span>
+                  <span class="font-bold font-montserrat text-base text-brown">${price} </span>
                 </div>
               </div>`;
           })
@@ -768,4 +776,3 @@
     </script>
   </body>
 </html>
-
