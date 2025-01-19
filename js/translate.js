@@ -131,6 +131,8 @@ const translations = {
     out_of_stock_button: "Anbarda bitib",
     package_size_title: "Paket Ölçüsü",
     grinding_method_title: "Üyüdmə üsulu",
+    outOfStock: "Anbarda bitib",
+    inStock: "Stokdadır",
   },
   ru: {
     home: "ГЛАВНАЯ",
@@ -259,6 +261,9 @@ const translations = {
     out_of_stock_button: "Нет в наличии",
     package_size_title: "Размер упаковки",
     grinding_method_title: "Метод помола",
+
+    outOfStock: "Нет в наличии",
+    inStock: "В наличии",
   },
   en: {
     home: "HOME",
@@ -385,6 +390,9 @@ const translations = {
     out_of_stock_button: "Out of Stock",
     package_size_title: "Package Size",
     grinding_method_title: "Grinding Method",
+
+    outOfStock: "Out of stock",
+    inStock: "In stock",
   },
 };
 const lang1 = document.querySelector("#lang");

@@ -125,7 +125,11 @@
         -moz-appearance: none;
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
       }
+      .btn-filter.active {
+        background: green;
+      }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body class="bg-brown_bg_light font-roboto">
     <header>
@@ -333,15 +337,33 @@
 
     <main class="my-28 container_my px-4">
       <div class="font-poppins text-brown">
-        <h1 class="text-2xl md:text-3xl my-4 sm:my-6 uppercase font-extrabold">Kategoriya adi</h1>
+        <h1 id="category_name" class="text-2xl md:text-3xl my-4 sm:my-6 uppercase font-extrabold">Kategoriya adi</h1>
         <div class="flex justify-between sm:justify-end sm:gap-10 my-4 text-sm sm:text-base">
-          <button class="md:px-2 py-1 border-b-2 border-brown font-semibold cursor-pointer">Endirimli mehsullar</button>
-          <button class="md:px-2 py-1 border-b-2 border-brown font-semibold cursor-pointer">Yeni mehsullar</button>
-          <button class="md:px-2 py-1 border-b-2 border-brown font-semibold cursor-pointer">a-z</button>
+          <button
+            onclick="filterProducts('discount')"
+            data-filter="discount"
+            class="md:px-2 py-1 border-b-2 border-brown font-semibold cursor-pointer btn-filter filter-button"
+          >
+            Endirimli mehsullar
+          </button>
+          <button
+            onclick="filterProducts('new')"
+            data-filter="new"
+            class="md:px-2 py-1 border-b-2 border-brown font-semibold cursor-pointer btn-filter filter-button"
+          >
+            Yeni mehsullar
+          </button>
+          <button
+            onclick="filterProducts('a-z')"
+            data-filter="a-z"
+            class="md:px-2 py-1 border-b-2 border-brown font-semibold cursor-pointer btn-filter filter-button"
+          >
+            a-z
+          </button>
         </div>
         <div class="flex flex-col md:flex-row items-start gap-4">
           <div class="flex flex-col gap-4 md:gap-0 w-full md:w-1/3 lg:w-1/4">
-            <div class="md:order-2 flex flex-col w-full mt-4 bg-brown_bg shadow-lg p-4 rounded-xl">
+            <div class="md:order-2 flex flex-col w-full mt-4 shadow-lg p-4 rounded-xl">
               <h4 class="mb-4 uppercase font-poppins">qiymət Filterlə</h4>
               <div class="wrapper">
                 <div class="slider">
@@ -365,22 +387,18 @@
               </div>
             </div>
             <div class="md:order-1 flex flex-col xs:flex-row md:flex-col gap-4">
-              <div class="flex flex-col w-full bg-brown_bg shadow-lg p-4 rounded-xl">
+              <div class="flex flex-col w-full shadow-lg p-4 rounded-xl">
                 <div>
-                  <h2 class="text-base sm:text-xl font-semibold mb-2 sm:mb-4 text-gray-800 uppercase">qəhvə dənələri</h2>
-
+                  <h2 id="category_name2" class="text-base sm:text-xl font-semibold mb-2 sm:mb-4 text-gray-800 uppercase">
+                    qəhvə dənələri
+                  </h2>
                   <div>
-                    <ul class="flex flex-wrap gap-2 md:flex-col">
-                      <li class="text-black md:font-semibold cursor-pointer">Espresso</li>
-                      <li class="text-black md:font-semibold cursor-pointer">Filter qəhvə</li>
-                      <li class="text-black md:font-semibold cursor-pointer">Türk qəhvəsi</li>
-                      <li class="text-black md:font-semibold cursor-pointer">Qəhvə çayı</li>
-                    </ul>
+                    <ul id="sub_categories" class="flex flex-wrap gap-2 md:flex-col"></ul>
                   </div>
                 </div>
               </div>
 
-              <div class="w-full bg-brown_bg shadow-lg p-4 rounded-xl">
+              <!-- <div class="w-full  shadow-lg p-4 rounded-xl">
                 <h2 class="text-base sm:text-xl font-semibold mb-2 sm:mb-4 text-gray-800 uppercase">Brendlər</h2>
 
                 <div class="">
@@ -393,127 +411,12 @@
                     <li class="text-black md:font-semibold active:border-b-2 border-green cursor-pointer">SmartBrew</li>
                   </ul>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
 
           <div class="w-full md:w-2/3 lg:w-3/4">
-            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
-              <div
-                class="detail-box relative text-center shadow-md overflow-hidden transition-transform transform hover:scale-105"
-                style="max-height: 380px; min-height: 340px"
-              >
-                <div class="box-div h-2/3 w-full bg-red-400 overflow-hidden relative">
-                  <img class="box-img w-full h-full object-cover" src="img/1.jpeg" alt="product" />
-                  <div
-                    class="bg-green text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute top-10 lg:top-2 left-2"
-                  >
-                    new
-                  </div>
-                  <div
-                    class="bg-red-600 text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute left-2 top-[70px] lg:top-14"
-                  >
-                    20
-                    <i class="fa-solid fa-percent"></i>
-                  </div>
-                  <div onclick="sendBasket()" class="bg-white my_absolute">
-                    <i class="fa-solid fa-cart-shopping text-brown"></i>
-                  </div>
-                </div>
-                <div class="p-1 sm:p-4 h-1/3 flex flex-col justify-between">
-                  <h5 class="text-base font-montserrat font-semibold text-brown capitalize truncate">name</h5>
-                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">category</h6>
-                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">stock</h6>
-                  <span class="font-bold font-montserrat text-base text-brown"> 19.60 </span>
-                </div>
-              </div>
-              <div
-                class="detail-box relative text-center shadow-md overflow-hidden transition-transform transform hover:scale-105"
-                style="max-height: 380px; min-height: 340px"
-              >
-                <div class="box-div h-2/3 w-full bg-red-400 overflow-hidden relative">
-                  <img class="box-img w-full h-full object-cover" src="img/1.jpeg" alt="product" />
-                  <div
-                    class="bg-green text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute top-10 lg:top-2 left-2"
-                  >
-                    new
-                  </div>
-                  <div
-                    class="bg-red-600 text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute left-2 top-[70px] lg:top-14"
-                  >
-                    20
-                    <i class="fa-solid fa-percent"></i>
-                  </div>
-                  <div onclick="sendBasket()" class="bg-white my_absolute">
-                    <i class="fa-solid fa-cart-shopping text-brown"></i>
-                  </div>
-                </div>
-                <div class="p-1 sm:p-4 h-1/3 flex flex-col justify-between">
-                  <h5 class="text-base font-montserrat font-semibold text-brown capitalize truncate">name</h5>
-                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">category</h6>
-                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">stock</h6>
-                  <span class="font-bold font-montserrat text-base text-brown"> 19.60 </span>
-                </div>
-              </div>
-              <div
-                class="detail-box relative text-center shadow-md overflow-hidden transition-transform transform hover:scale-105"
-                style="max-height: 380px; min-height: 340px"
-              >
-                <div class="box-div h-2/3 w-full bg-red-400 overflow-hidden relative">
-                  <img class="box-img w-full h-full object-cover" src="img/1.jpeg" alt="product" />
-                  <div
-                    class="bg-green text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute top-10 lg:top-2 left-2"
-                  >
-                    new
-                  </div>
-                  <div
-                    class="bg-red-600 text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute left-2 top-[70px] lg:top-14"
-                  >
-                    20
-                    <i class="fa-solid fa-percent"></i>
-                  </div>
-                  <div onclick="sendBasket()" class="bg-white my_absolute">
-                    <i class="fa-solid fa-cart-shopping text-brown"></i>
-                  </div>
-                </div>
-                <div class="p-1 sm:p-4 h-1/3 flex flex-col justify-between">
-                  <h5 class="text-base font-montserrat font-semibold text-brown capitalize truncate">name</h5>
-                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">category</h6>
-                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">stock</h6>
-                  <span class="font-bold font-montserrat text-base text-brown"> 19.60 </span>
-                </div>
-              </div>
-              <div
-                class="detail-box relative text-center shadow-md overflow-hidden transition-transform transform hover:scale-105"
-                style="max-height: 380px; min-height: 340px"
-              >
-                <div class="box-div h-2/3 w-full bg-red-400 overflow-hidden relative">
-                  <img class="box-img w-full h-full object-cover" src="img/1.jpeg" alt="product" />
-                  <div
-                    class="bg-green text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute top-10 lg:top-2 left-2"
-                  >
-                    new
-                  </div>
-                  <div
-                    class="bg-red-600 text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute left-2 top-[70px] lg:top-14"
-                  >
-                    20
-                    <i class="fa-solid fa-percent"></i>
-                  </div>
-                  <div onclick="sendBasket()" class="bg-white my_absolute">
-                    <i class="fa-solid fa-cart-shopping text-brown"></i>
-                  </div>
-                </div>
-                <div class="p-1 sm:p-4 h-1/3 flex flex-col justify-between">
-                  <h5 class="text-base font-montserrat font-semibold text-brown capitalize truncate">name</h5>
-                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">category</h6>
-                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">stock</h6>
-                  <span class="font-bold font-montserrat text-base text-brown"> 19.60 </span>
-                </div>
-              </div>
-
-              <!-- Ürün Kartı sonu -->
-            </div>
+            <div class="category_carts grid grid-cols-2 lg:grid-cols-3 gap-4"></div>
           </div>
         </div>
       </div>
@@ -603,7 +506,8 @@
           <div class="all-card-baskets overflow-y-auto"></div>
           <div class="flex flex-col justify-center gap-2 p-4">
             <span class="flex justify-between items-center py-2 font-semibold font-montserrat text-lg">
-              <b class="font-semibold" data-key="total">Ümumi :</b> <span id="total-price" class="border-b-2 border-green">0₼</span>
+              <b class="font-semibold" data-key="total">Ümumi :</b>
+              <span id="total-price" class="border-b-2 border-green">0₼</span>
             </span>
             <button
               class="bg-slate-50 hover:bg-gray-100 transition duration-300 text-brown border border-green font-montserrat font-medium text-lg p-2"
@@ -660,8 +564,7 @@
                 />
               </label>
               <label class="block mb-2 relative">
-                <span data-key="password_label" class="text-gray-700 mb-2"
-                  >Şifrə *</span>
+                <span data-key="password_label" class="text-gray-700 mb-2">Şifrə *</span>
                 <input
                   type="password"
                   class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green focus:border-green"
@@ -670,10 +573,17 @@
                 />
               </label>
 
-              <button type="submit" class="bg-brown my-3 text-white w-full py-2 rounded-md hover:bg-gray-700" data-key="login_title">Daxil ol</button>
+              <button
+                type="submit"
+                class="bg-brown my-3 text-white w-full py-2 rounded-md hover:bg-gray-700"
+                data-key="login_title"
+              >
+                Daxil ol
+              </button>
             </form>
             <p class="mt-4 text-center text-sm text-gray-600">
-              <span data-key="no_account">Hesabınız yoxdur?</span> <a href="register.html" data-key="register_link" class="text-green hover:underline">Qeydiyyatdan keçin</a>
+              <span data-key="no_account">Hesabınız yoxdur?</span>
+              <a href="register.html" data-key="register_link" class="text-green hover:underline">Qeydiyyatdan keçin</a>
             </p>
           </div>
         </div>
@@ -684,28 +594,149 @@
     <script src="js/search.js"></script>
     <script src="js/basket.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/sendToDetails.js"></script>
     <script>
+      const category_name = document.querySelector("#category_name");
+      const category_name2 = document.querySelector("#category_name2");
+      const sub_categories = document.querySelector("#sub_categories");
+      const carts = document.querySelector(".category_carts");
+
       const params = new URLSearchParams(window.location.search);
-      const subcategoryId = params.get("subcategory");
-      console.log("Seçilmiş Subkateqoriya ID:", subcategoryId);
+      const subcategorySlug = params.get("subcategory");
+      const categorySlug = params.get("category");
+      let allData = {};
+
+      function fetchData() {
+        fetch("./js/data.json")
+          .then((res) => res.json())
+          .then((data) => {
+            allData = data;
+            findCategories();
+          });
+      }
+      fetchData();
+
+      function findCategories(filterType = null) {
+        let findCategory = allData.categories.find((item) => {
+          return item.slug == categorySlug;
+        });
+        let subcategory = findCategory.subcategories.find((item) => item.slug == subcategorySlug);
+        let filteredProducts = allData.products.filter(
+          (product) => product.category_id == findCategory.id && product.subcategory_id == subcategory.id
+        );
+
+        if (filterType === "discount") {
+          filteredProducts = filteredProducts.filter((product) => product.discount > 0);
+        } else if (filterType === "new") {
+          filteredProducts = filteredProducts.filter((product) => product.isnew);
+        } else if (filterType === "a-z") {
+          filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
+        }
+        let allSubCategories = findCategory.subcategories
+          .map((item) => {
+            let isActive = item.slug === subcategorySlug ? "border-b-2 border-green" : "";
+            return `<li class=" text-black md:font-semibold cursor-pointer ${isActive}">
+               <a href="/products.html?category=${findCategory.slug}&subcategory=${item.slug}"> ${item.name}</a></li>`;
+          })
+          .join("");
+
+        filteredProducts = filteredProducts.filter((product) => product.price >= minPrice && product.price <= maxPrice);
+
+        let cards = filteredProducts
+          .map((item) => {
+            let stock =
+              item.stock > 0
+                ? `<h6 data-key="inStock" class="font-montserrat capitalize text-sm text-gray-500 truncate">Stokdadır</h6>`
+                : `<h6 data-key="outOfStock" class="font-montserrat capitalize text-sm text-gray-500 truncate">Anbarda bitib </h6>`;
+
+            return `<div
+              onclick="goToDetailPage('${item.id}')"
+                class="detail-box cursor-pointer relative text-center shadow-md overflow-hidden transition-transform transform hover:scale-105"
+                style="max-height: 380px; min-height: 340px"
+              >
+                <div class="box-div h-2/3 w-full bg-red-400 overflow-hidden relative">
+                  <img class="box-img w-full h-full object-cover " src="img/${item.img}" alt="product" />
+                   ${
+                     item.isnew
+                       ? ` <div
+                                class="bg-green text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute top-10 lg:top-2 left-2">
+                                  new
+                                </div> `
+                       : ""
+                   }
+                      ${
+                        item.discount != 0
+                          ? ` <div class="bg-red-600 text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute  left-2 ${
+                              item.isnew ? "top-[70px] lg:top-14 " : "top-10 lg:top-2"
+                            } ">
+                      ${item.discount}
+                      <i class="fa-solid fa-percent"></i>
+                    </div> `
+                          : ""
+                      }
+                ${
+                  item.stock
+                    ? ` <div onclick="sendBasket('${item.id}')" class="bg-white my_absolute">
+                    <i class="fa-solid fa-cart-shopping text-brown"></i>
+                  </div>`
+                    : ""
+                }
+
+                </div>
+                <div class="p-1 sm:p-4 h-1/3 flex flex-col justify-between">
+                  <h5 class="text-base font-montserrat font-semibold text-brown capitalize truncate">${item.name}</h5>
+                  <h6 class="font-montserrat capitalize text-sm text-gray-500 truncate">category</h6>
+                ${stock}
+                  <span class="font-bold font-montserrat text-base text-brown">${item.price} </span>
+                </div>
+              </div>`;
+          })
+          .join("");
+
+        category_name.innerHTML = findCategory.name;
+        category_name2.innerHTML = findCategory.name;
+        sub_categories.innerHTML = allSubCategories;
+        carts.innerHTML = cards;
+      }
+
+      function filterProducts(filterType) {
+        document.querySelectorAll(".filter-button").forEach((button) => {
+          button.classList.remove("active");
+        });
+
+        const clickedButton = document.querySelector(`[data-filter="${filterType}"]`);
+        if (clickedButton) {
+          clickedButton.classList.add("active");
+        }
+        findCategories(filterType);
+      }
+
+      // ///////////////////////////////////
+      let minPrice = 0;
+      let maxPrice = 2000;
+
       const rangeInput = document.querySelectorAll(".range-input input"),
         priceInput = document.querySelectorAll(".price-input input"),
         range = document.querySelector(".slider .progress");
-      let priceGap = 1000;
+      let priceGap = 10;
 
       priceInput.forEach((input) => {
         input.addEventListener("input", (e) => {
-          let minPrice = parseInt(priceInput[0].value),
-            maxPrice = parseInt(priceInput[1].value);
+          let minPriceVal = parseInt(priceInput[0].value),
+            maxPriceVal = parseInt(priceInput[1].value);
 
-          if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
+          if (maxPriceVal - minPriceVal >= priceGap && maxPriceVal <= rangeInput[1].max) {
             if (e.target.className === "input-min") {
-              rangeInput[0].value = minPrice;
-              range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
+              rangeInput[0].value = minPriceVal;
+              range.style.left = (minPriceVal / rangeInput[0].max) * 100 + "%";
             } else {
-              rangeInput[1].value = maxPrice;
-              range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+              rangeInput[1].value = maxPriceVal;
+              range.style.right = 100 - (maxPriceVal / rangeInput[1].max) * 100 + "%";
             }
+            minPrice = minPriceVal;
+            maxPrice = maxPriceVal;
+
+            findCategories();
           }
         });
       });
@@ -726,9 +757,15 @@
             priceInput[1].value = maxVal;
             range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
             range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+
+            minPrice = minVal;
+            maxPrice = maxVal;
+
+            findCategories();
           }
         });
       });
     </script>
   </body>
 </html>
+

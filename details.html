@@ -334,7 +334,7 @@
         </h3>
 
         <div class="image-slider owl-carousel owl-theme">
-          <div class="item grid border font-montserrat detail-box">
+          <!-- <div class="item grid border font-montserrat detail-box">
             <div class="box-div relative w-full">
               <img class="box-img w-full max-h-72 object-cover" src="img/111.jpg" alt="coffee" />
               <div
@@ -359,7 +359,7 @@
               <h6 class="font-montserrat text-green capitalize my-2 text-sm">Stokdadır</h6>
               <span class="font-bold text-lg text-brown">price </span>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
     </main>
@@ -664,7 +664,9 @@
                            `
                        }
                       </div>
-                      <h4 class="text-brown text-lg"><span data-key="category_title">Kategoriya: </span><span class="font-bold ">${category.name}</span></h4>
+                      <h4 class="text-brown text-lg"><span data-key="category_title">Kategoriya: </span><span class="font-bold ">${
+                        category.name
+                      }</span></h4>
                     `;
             writeRelatedProducts(allData, findItem, category);
             initializeCarousel();
@@ -683,8 +685,8 @@
         relatedProducts.forEach((product) => {
           let products_stock =
             product.stock != 0
-              ? `<h6 class="font-montserrat text-green capitalize  text-sm">Stokdadır</h6>`
-              : `<h6 class="font-montserrat  text-red-500 capitalize  text-sm">Anbarda bitib</h6>`;
+              ? `<h6 data-key="inStock" class="font-montserrat text-green capitalize  text-sm">Stokdadır</h6>`
+              : `<h6 data-key="outOfStock" class="font-montserrat  text-red-500 capitalize  text-sm">Anbarda bitib</h6>`;
           let is_new = product.isnew
             ? ` <div
                 class="bg-green text-white text-[10px] lg:text-xs flex items-center justify-center uppercase gap-1 rounded-full w-7 lg:w-10 h-7 lg:h-10 absolute top-10 lg:top-2 left-2"
@@ -698,6 +700,7 @@
                 <i class="fa-solid fa-percent"></i>
               </div>`
             : "";
+
           related_slider.innerHTML += `
           <div  onclick="goToDetailPage('${product.id}')" class=" cursor-pointer item grid border font-montserrat detail-box">
             <div class="box-div relative w-full">
@@ -705,9 +708,13 @@
 
             ${is_new}
             ${have_discount}
-              <div onclick="sendBasket('${product.id}')" class="bg-white my_absolute">
+            ${
+              product.stock
+                ? `<div onclick="sendBasket('${product.id}')" class="bg-white my_absolute">
                 <i class="fa-solid fa-cart-shopping text-brown"></i>
-              </div>
+              </div>`
+                : ""
+            }
             </div>
             <div class="p-4">
               <h5 class="mt-2 font-semibold capitalize text-brown">${product.name}</h5>
@@ -756,7 +763,6 @@
         fetchData();
       });
       function initializeCarousel() {
-        console.log("hello", related_slider);
         $(related_slider).owlCarousel({
           loop: true,
           margin: 10,
