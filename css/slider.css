@@ -10,7 +10,6 @@ body {
 
 .mySwiper_slide {
   text-align: center;
-  font-size: 18px;
   height: 95vh !important;
   display: flex;
   justify-content: center;
