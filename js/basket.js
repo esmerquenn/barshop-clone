@@ -168,7 +168,7 @@ const BasketUI = {
         <img class="w-1/3" src="img/empty-cart.png" alt="empty" />
         <a
           class="inline-flex items-center gap-2 text-sm font-medium text-greenDark underline hover:no-underline"
-          href="products.html"
+          href="products.html?category=qehve&subcategory=arabic-qehve"
           data-key="empty_basket"
         >
           Səbətiniz boşdur
