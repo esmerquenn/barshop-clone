@@ -76,8 +76,8 @@ const translations = {
     // /////////
     connect_with_us: "Bizimlə əlaqə",
     working_hours: "Çalışma saatlarımız",
-    days: "Bazar ertəsi - Cümə:  09:00 - 22:00",
-    weekends: "Şənbə-Bazar:  10:00 - 18:00",
+    days: "Bazar ertəsi - Cümə:  08:00 - 22-00",
+    weekends: "Şənbə-Bazar:  10:00 -  22-00",
     /////////////
     our_products: "Məhsullarımız",
     new_product: "Yenİ mƏhsul",
@@ -209,8 +209,8 @@ const translations = {
     paymentMethod3: "При доставке товара через Почту Баку или другие службы оплата производится заранее.",
     // ///////////////////////
     working_hours: "Наши рабочие часы",
-    days: "Понедельник - Пятница: 09:00 - 22:00",
-    weekends: "Суббота - Воскресенье: 10:00 - 18:00",
+    days: "Понедельник - Пятница: 08:00 - 22-00",
+    weekends: "Суббота - Воскресенье: 10:00 -  22-00",
     connect_with_us: "Связаться с нами",
     our_products: "Наши Продукты",
     new_product: "новый продукт",
@@ -345,8 +345,8 @@ const translations = {
     paymentMethod3: "When sending goods via Baku Post or another service, payment must be made in advance",
     connect_with_us: "Contact us",
     working_hours: "Our working hours",
-    days: "Monday - Friday: 09:00 - 22:00",
-    weekends: "Saturday - Sunday: 10:00 - 18:00",
+    days: "Monday - Friday: 08:00 - 22-00",
+    weekends: "Saturday - Sunday: 10:00 -  22-00",
     our_products: "Our Products",
     new_product: "New product",
     best_seller: "Best Sellers",
