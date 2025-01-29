@@ -39,6 +39,9 @@
   max-height: 500px !important;
   transition: 0.9s ease-in;
 }
+#bottomBar{
+  bottom: 0 !important;
+}
 @layer base {
   .dark .bg-red-100 {
     background-color: #1a202c;

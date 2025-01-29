@@ -10,7 +10,7 @@ function fetchData() {
     .then((data) => {
       allData = data;
       showCategories(data);
-      showProduct(3);
+      showProduct(1);
       getDiscountCarousel();
       bestseller();
     });
@@ -19,7 +19,6 @@ fetchData();
 function bestseller() {
   const randomProducts = allData.products.sort(() => 0.5 - Math.random()).slice(0, 4);
   randomProducts.forEach((product, index) => {
-    // ID-ləri dinamik seçirik
     const imgElement = document.getElementById(`best_seller_img_${index + 1}`);
     const titleElement = document.getElementById(`best_seller_title_${index + 1}`);
     const priceElement = document.getElementById(`best_seller_price_${index + 1}`);
@@ -158,12 +157,11 @@ function animationProduct() {
 let currentPage = 1;
 const itemsPerPage = 4;
 
-let currentCategoryId = null; // Mevcut kategori ID'sini takip eden global değişken
+let currentCategoryId = null; 
 function showProduct(id, slideIndex) {
   const slidesPerView = swiper.params.slidesPerView;
   const totalSlides = swiper.slides.length;
 
-  // Slide pozisyonunu ayarla
   if (slideIndex === 0 || slideIndex === totalSlides - 1) {
     swiper.slideTo(slideIndex);
     return;
@@ -192,7 +190,6 @@ function showProduct(id, slideIndex) {
   const endIndex = startIndex + itemsPerPage;
   const paginatedData = data.slice(startIndex, endIndex);
 
-  // Ürün kartlarını oluştur
   paginatedData.forEach((product) => {
     let category = allData.categories.find((item) => item.id == product.category_id);
     const price = product.discount
@@ -207,7 +204,6 @@ function showProduct(id, slideIndex) {
     write_to_card(product, price, stock, category);
   });
 
-  // Pagination'ı oluştur
   renderPagination(totalPages, id);
 
   animationProduct();

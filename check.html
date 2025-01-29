@@ -310,6 +310,51 @@
                 <div class="flex justify-between my-4">
                   <h4 data-key="delivery" class="text-xl text-brown font-medium uppercase font-montserrat">Çatdırılma</h4>
                 </div>
+                <section class="mb-12">
+                  <h2 class="text-xl font-medium text-brown mb-4" data-key="deliveryTermsTitle">Çatdırılma Şərtləri</h2>
+                  <ul class="space-y-4 text-gray-700">
+                    <li class="flex items-center">
+                      <span class="w-6 h-6 flex-shrink-0 bg-green text-white rounded-full flex items-center justify-center mr-4"
+                        >1</span
+                      >
+                      <p class="text-lg" data-key="deliveryTerm1">
+                        Çatdırılma qiyməti malın qiymətinə daxil deyil və sifariş qəbul edildikdən sonra hesablanır. Hesablama
+                        seçilmiş çatdırılma xidmətinin tariflərinə əsaslanır.
+                      </p>
+                    </li>
+                    <li class="flex items-center">
+                      <span class="w-6 h-6 flex-shrink-0 bg-green text-white rounded-full flex items-center justify-center mr-4"
+                        >2</span
+                      >
+                      <p class="text-lg" data-key="deliveryTerm2">Bakı daxilində kuryerlə çatdırılma – 5 AZN.</p>
+                    </li>
+                    <li class="flex items-center">
+                      <span class="w-6 h-6 flex-shrink-0 bg-green text-white rounded-full flex items-center justify-center mr-4"
+                        >3</span
+                      >
+                      <p class="text-lg" data-key="deliveryTerm3">
+                        50 AZN-dən çox sifariş məbləği ilə Bakıda daxili pulsuz çatdırılma.
+                      </p>
+                    </li>
+                    <li class="flex items-center">
+                      <span class="w-6 h-6 flex-shrink-0 bg-green text-white rounded-full flex items-center justify-center mr-4"
+                        >4</span
+                      >
+                      <p class="text-lg" data-key="deliveryTerm4">
+                        Bakıda sifarişlər saat 14:00-dan əvvəl növbəti iş günündə çatdırılır. Saat 14:00-dan sonra alınan
+                        sifarişlər bir iş günü sonra çatdırılır.
+                      </p>
+                    </li>
+                    <li class="flex items-center">
+                      <span class="w-6 h-6 flex-shrink-0 bg-green text-white rounded-full flex items-center justify-center mr-4"
+                        >5</span
+                      >
+                      <p class="text-lg" data-key="deliveryTerm5">
+                        Digər şəhərlərə çatdırılma Bakı Poçtu və ya digər xidmət vasitəsilə həyata keçirilir.
+                      </p>
+                    </li>
+                  </ul>
+                </section>
                 <div class="my-4 bg-slate-100 p-2 rounded-md flex justify-center flex-wrap gap-1">
                   <label class="w-[48%]" for="city">
                     <span data-key="city" class="p-1 block text-gray-400 text-sm">Şəhər</span>
@@ -330,7 +375,9 @@
                     />
                   </label>
                   <label class="w-full" for="address">
-                    <span data-key="delivery_address" class="p-1 block text-gray-400 text-sm capitalize">Çatdırılma üçün ünvan</span>
+                    <span data-key="delivery_address" class="p-1 block text-gray-400 text-sm capitalize"
+                      >Çatdırılma üçün ünvan</span
+                    >
                     <input
                       name="address"
                       type="type"
@@ -343,20 +390,24 @@
               <!-- Catdirilma -->
               <section>
                 <div class="flex justify-between my-4">
-                  <h4 class="text-xl text-brown font-medium uppercase font-montserrat" data-key="payment_method_title">Ödəniş üsulu</h4>
+                  <h4 class="text-xl text-brown font-medium uppercase font-montserrat" data-key="payment_method_title">
+                    Ödəniş üsulu
+                  </h4>
                 </div>
                 <label class="w-full" for="payment-method">
                   <select
                     id="payment-method"
                     class="w-full p-2 border border-gray-300 rounded-md shadow-sm text-gray-700 focus:outline-none focus:ring focus:ring-green focus:border-green"
                   >
-                    <option value="online"  data-key="payment_online">Onlayn ödəniş</option>
+                    <option value="online" data-key="payment_online">Onlayn ödəniş</option>
                     <option value="cash" data-key="payment_cash">Çatdırılma zamanı nağd ödəniş</option>
-                    <option value="phone"  data-key="payment_phone">Telefonla müzakirə edin</option>
+                    <option value="phone" data-key="payment_phone">Telefonla müzakirə edin</option>
                   </select>
                 </label>
                 <div class="flex justify-between my-4">
-                  <h4 class="text-xl text-brown font-medium uppercase font-montserrat" data-key="customer_notes_title">Sifarişçinin qeydləri</h4>
+                  <h4 class="text-xl text-brown font-medium uppercase font-montserrat" data-key="customer_notes_title">
+                    Sifarişçinin qeydləri
+                  </h4>
                 </div>
                 <label class="w-full" for="msj">
                   <textarea

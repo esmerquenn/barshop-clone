@@ -12,20 +12,31 @@ function openLangMobile() {
   drop_div_lang2.classList.toggle("drop_active2");
 }
 let lastScrollTop = 0;
-const bottomBar = document.getElementById("bottomBar");
-window.addEventListener("scroll", () => {
-  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+// const bottomBar = document.getElementById("bottomBar");
+// window.addEventListener("scroll", () => {
+//   // if (currentScroll > 90) {
+//     bottomBar.classList.remove("bottom-[-100%]");
+//     if (bottomBar) return bottomBar.classList.add("bottom-0");
+//   // } else {
+//   //   bottomBar.classList.remove("bottom-0");
+//   //   bottomBar.classList.add("bottom-[-100%]");
+//   // }
 
-  if (currentScroll > 90) {
-    bottomBar.classList.remove("bottom-[-100%]");
-    bottomBar.classList.add("bottom-0");
-  } else {
-    bottomBar.classList.remove("bottom-0");
-    bottomBar.classList.add("bottom-[-100%]");
-  }
+//   // lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+// });
+// window.addEventListener("scroll", () => {
+//   const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-});
+//   if (currentScroll > 90) {
+//     bottomBar.classList.remove("bottom-[-100%]");
+//     bottomBar.classList.add("bottom-0");
+//   } else {
+//     bottomBar.classList.remove("bottom-0");
+//     bottomBar.classList.add("bottom-[-100%]");
+//   }
+
+//   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+// });
 
 function toggleDropdown(event, dropdownClass) {
   const dropdown = event.currentTarget.querySelector(dropdownClass);
@@ -193,3 +204,10 @@ populateDropdown(1, ".coffee_sub");
 populateDropdown(2, ".coffee_machine_sub");
 populateDropdown(3, ".accessories_sub");
 populateDropdown(4, ".others_sub");
+
+const messageIcon = document.getElementById("message-icon");
+const iconContainer = document.getElementById("icon-container");
+
+messageIcon.addEventListener("click", () => {
+  iconContainer.classList.toggle("active");
+});
