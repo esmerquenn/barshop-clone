@@ -9,3 +9,8 @@
 .footer-span:hover{
   border-bottom: 1px solid #4eb23e;
 }
+footer{
+  /* height: 50vh; */
+  padding-block: 100px !important;
+  background: linear-gradient(#0000001c, #0000001c), url(./../img/bbb.jpg)center/cover
+}

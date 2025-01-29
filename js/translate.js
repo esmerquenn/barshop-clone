@@ -1,8 +1,3 @@
-// const translations = {
-//   az: {},
-//   ru: {},
-//   en: {}
-// };
 const translations = {
   az: {
     home: "ANA SƏHİFƏ",
@@ -422,14 +417,12 @@ function changeLanguage(language) {
     const key = element.getAttribute("data-key");
     element.innerHTML = translations[language][key];
   });
-  // const params = new URLSearchParams(window.location.search);
-  // const page = params.get("page");
-  // updateContent(page, language);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   const selectedLanguage = localStorage.getItem("selectedLanguage") || "AZ";
-
+  const lang = isMobileView() ? lang2 : lang1;
+  lang.innerHTML = selectedLanguage;
   document.querySelectorAll("[data-key]").forEach((element) => {
     const key = element.getAttribute("data-key");
     element.innerHTML = translations[selectedLanguage][key];
