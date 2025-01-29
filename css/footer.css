@@ -11,6 +11,6 @@
 }
 footer{
   /* height: 50vh; */
-  padding-block: 100px !important;
+  padding-block: 50px !important;
   background: linear-gradient(#0000001c, #0000001c), url(./../img/coffee-5417663_1280.png)center/cover
 }
